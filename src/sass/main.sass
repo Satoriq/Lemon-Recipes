@@ -18,7 +18,7 @@ body
 .nav
     background-color: white
     align-items: center
-    margin-bottom: 80px
+    margin-bottom: 160px
 
     &__logo
     text-align: center
@@ -35,5 +35,40 @@ ul
     align-items: center
     padding: 30px 0
 
+.main-recipe
+    position: relative
+    align-items: center
+    padding-left: 7px
+
+.main-recipe__left
+    z-index: 10
+    padding-left: 80px
+
+    p
+        width: 350px 
+    &-img 
+        max-width: 100%
+        height: auto
 
 
+.main-recipe__img
+    position: absolute
+    z-index: 1
+    background-repeat: no-repeat
+    height: 445px
+    background-image: url('../img/main-recipe.png')
+    margin-bottom: 85px
+
+.sub-recipes
+    background-color: white 
+    margin-top: 160px
+    justify-content: space-between
+    padding-bottom: 60px
+    
+    &__item
+    
+         &-info 
+            
+
+         &-img 
+             margin-top: 40px

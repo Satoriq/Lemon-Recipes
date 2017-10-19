@@ -27,7 +27,7 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 160px;
   text-align: center;
 }
 
@@ -52,4 +52,50 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   padding: 30px 0;
+}
+
+.main-recipe {
+  position: relative;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 7px;
+}
+
+.main-recipe__left {
+  z-index: 10;
+  padding-left: 80px;
+}
+
+.main-recipe__left p {
+  width: 350px;
+}
+
+.main-recipe__left-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main-recipe__img {
+  position: absolute;
+  z-index: 1;
+  background-repeat: no-repeat;
+  height: 445px;
+  background-image: url("../img/main-recipe.png");
+  margin-bottom: 85px;
+}
+
+.sub-recipes {
+  background-color: white;
+  margin-top: 160px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 60px;
+}
+
+.sub-recipes__item-img {
+  margin-top: 40px;
 }
