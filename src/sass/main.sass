@@ -20,7 +20,7 @@ body
     align-items: center
     margin-bottom: 160px
 
-    &__logo
+   &__logo
     text-align: center
     
     &__input
@@ -62,13 +62,31 @@ ul
 .sub-recipes
     background-color: white 
     margin-top: 160px
-    justify-content: space-between
     padding-bottom: 60px
+
     
     &__item
-    
-         &-info 
+        padding-left: 30px 
+        display: flex
+        flex-direction: column
+        max-width: 375px
+        margin: 0 auto
+
+        &-img 
+             margin-top: 40px
+
+        &-text
+            max-width: 280px
+            background-color: red 
             
 
-         &-img 
-             margin-top: 40px
+        &-info 
+
+
+    .scroll-recipe
+         height: 435px
+         background-color: white 
+        
+        &__img
+            height: auto
+            max-width: 100%
