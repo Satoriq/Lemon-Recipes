@@ -20,10 +20,11 @@ body
     align-items: center
     margin-bottom: 160px
 
-   &__logo
-    text-align: center
+    &__logo
+        margin-left: 40px
     
     &__input
+        margin-left: 45px
         max-width: 160px
         text-align: center
 
@@ -36,28 +37,19 @@ ul
     padding: 30px 0
 
 .main-recipe
-    position: relative
-    align-items: center
-    padding-left: 7px
+    background-image: url('../img/main-recipe.png')
 
 .main-recipe__left
-    z-index: 10
-    padding-left: 80px
+
+    display: flex
+    flex-direction: column
 
     p
-        width: 350px 
+        max-width: 350px 
+        
     &-img 
         max-width: 100%
-        height: auto
 
-
-.main-recipe__img
-    position: absolute
-    z-index: 1
-    background-repeat: no-repeat
-    height: 445px
-    background-image: url('../img/main-recipe.png')
-    margin-bottom: 85px
 
 .sub-recipes
     background-color: white 
@@ -69,8 +61,8 @@ ul
         padding-left: 30px 
         display: flex
         flex-direction: column
-        max-width: 375px
         margin: 0 auto
+        max-width: 420px
 
         &-img 
              margin-top: 40px
@@ -79,14 +71,48 @@ ul
             max-width: 280px
             background-color: red 
             
-
         &-info 
 
 
-    .scroll-recipe
-         height: 435px
-         background-color: white 
-        
-        &__img
-            height: auto
-            max-width: 100%
+.scroll-recipe
+    margin-top: 80px
+    height: 435px
+    background-color: white 
+    background-image: url('../img/scroll-rec.png')
+    background-repeat: no-repeat
+    background-size:  46% 100%
+    justify-content: flex-end
+    
+    &__header 
+         d
+         max-width: 50%
+         margin-left: 20px
+
+    &__scroll
+        padding-right: 20px 
+        max-height: 300px
+        overflow-y: scroll
+
+
+.comments
+    padding-top: 115px
+    justify-content: space-between
+
+    &__sorry-404
+        position: relative
+        z-index: 23
+        background-color: white
+        height: 515px
+        width:  540px
+        background-image: url('../img/sorry-404.png')
+        background-repeat: no-repeat 
+        background-position: center
+
+    &__author
+        background-color: white
+        width: 515px
+        height: 515px
+
+        &-photo
+
+        &-text 
