@@ -114,31 +114,16 @@ ul {
 
 .scroll-recipe {
   margin-top: 80px;
-  height: 435px;
   background-color: white;
-  background-image: url("../img/scroll-rec.png");
-  background-repeat: no-repeat;
-  -webkit-background-size: 46% 100%;
-          background-size: 46% 100%;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.scroll-recipe__header {
-  max-width: 50%;
-  margin-left: 20px;
 }
 
 .scroll-recipe__scroll {
   padding-right: 20px;
-  max-height: 300px;
+  max-height: 69%;
   overflow-y: scroll;
 }
 
 .comments {
-  padding-top: 115px;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
@@ -146,6 +131,7 @@ ul {
 }
 
 .comments__sorry-404 {
+  margin-top: 115px;
   position: relative;
   z-index: 23;
   background-color: white;
@@ -157,7 +143,22 @@ ul {
 }
 
 .comments__author {
+  margin-top: 115px;
   background-color: white;
   width: 515px;
   height: 515px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.comments__author-photo {
+  -webkit-border-radius: 100px;
+          border-radius: 100px;
+}
+
+.card-block__face {
+  -webkit-border-radius: 100px;
+          border-radius: 100px;
 }

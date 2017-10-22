@@ -3,10 +3,12 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
   <title>Document</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/font-awesome.css">
   <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -69,7 +71,8 @@
 
   <section class="container">
     <div class="scroll-recipe row">
-      <div class="scroll-recipe__header">
+        <img src="img/scroll-rec.png" class="col-md-12 col-lg-6 "  alt="">
+      <div class="scroll-recipe__header col-md-12 col-lg-6">
         <h1>Bananas Foster Ice Cream Cake</h1>
         <span class="scroll-recipe__header-info"> 15 min easy</span>
         <button class="scroll-recipe__header-save">SAVE RECIPE</button>
@@ -106,17 +109,96 @@
           <hr>
           <a href="#">BACK</a>
         </div>
-        <div class="comments__author">
-          <p>Author</p>
-          <hr>
-          <div class="comments__author-photo">
-
-          </div>
-          <div class="comments__author-text" ></div>
-        </div>
+          <div class="comments__author">
+            <p>Author</p>
+            <hr>
+            <img src="img/author.png" width="120" height="120" class="comments__author-photo img-fluid" alt="">
+            <div class="comments__author-name" >
+                <h1 class=>Karen Gray</h1>
+                    United States
+                    icons
+                    <hr>
+                <div class="comments__author-text" >
+                  <h2 class=>About Lemon</h2>
+                  <p>Over the fifteen-year life span of Food.com, we’ve learned that – in addition to eating – sharing is what you do best. And thanks to the 20 million of you who come here each month, we now have 500,000 recipes to show for it, more than anywhere else in the digital universe. We also have tons crazy-tempting photos, troves of recipe reviews and more than 2 million Facebook likes. That’s a heck of a lot of Food. Thank you! </p>
+                </div>
+            </div>
+          </div> 
       </div>
-
   </section>
+  <!-- Bootstrap component - card  START-->
+  <section class="container">
+      <div class="card-columns">
+          <div class="card">
+            <div class="card-block ">
+              <h4 class="card-title">Chi-Chi or Chichi</h4>
+              <hr>
+              <div class="d-flex">
+                <img src="img/recipe-writter.png" class= "card-block__face" alt="">
+                <p class="card-text">Recipe by <br>
+                  Smuckersreg Toppings
+                  info
+                </p>
+              </div>
+              <img class="card-img-top img-fluid" src="img/recipe-wriiter__recipe (lol, bem) .png" alt="Card image cap">
+            </div>
+          </div>
+          <div class="card p-3">
+            <blockquote class="card-block card-blockquote">
+              <p>Targer</p> 
+                <hr>
+                <p> Presentation line </p>
+                
+            </blockquote>
+          </div>
+          <div class="card">
+            <img class="card-img-top img-fluid" src="..." alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+          <div class="card card-inverse card-primary p-3 text-center">
+            <blockquote class="card-blockquote">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+              <footer>
+                <small>
+                  Someone famous in <cite title="Source Title">Source Title</cite>
+                </small>
+              </footer>
+            </blockquote>
+          </div>
+          <div class="card text-center">
+            <div class="card-block">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img img-fluid" src="..." alt="Card image">
+          </div>
+          <div class="card p-3 text-right">
+            <blockquote class="card-blockquote">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <footer>
+                <small class="text-muted">
+                  Someone famous in <cite title="Source Title">Source Title</cite>
+                </small>
+              </footer>
+            </blockquote>
+          </div>
+          <div class="card">
+            <div class="card-block">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+  </section>
+  <!-- Bootstrap component - card  END-->
 </body>
 
 </html>
