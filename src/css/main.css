@@ -167,15 +167,6 @@ ul {
           flex-direction: column;
 }
 
-.card-block__target-1,
-.card-block__target-2,
-.card-block__target-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .eml-buttons {
   display: -webkit-box;
   display: -webkit-flex;
@@ -184,15 +175,6 @@ ul {
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-}
-
-.card-block__recipes-1,
-.card-block__recipes-2,
-.card-block__recipes-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 *, *:before, *:after {
@@ -302,20 +284,12 @@ thead td {
   background-color: red;
 }
 
-.row {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.bgwhite {
+  background-color: #fff;
+}
+
+.coffee {
+  max-width: 25%;
 }
 
 .coffee__pic {
@@ -323,5 +297,40 @@ thead td {
 }
 
 .coffee__text {
+  top: 150px;
   position: absolute;
+}
+
+.time__lines {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 210px;
+  height: 210px;
+  background-color: grey;
+  -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.bg-grey {
+  background-color: grey;
+  width: 75%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
 }
