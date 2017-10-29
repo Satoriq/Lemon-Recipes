@@ -1,50 +1,112 @@
 body 
     background-color: #eaeaea
+    
+    
+
+html 
+  box-sizing: border-box
+  -ms-overflow-style: scrollbar
+  
+  
+
+
+*,
+*::before,
+*::after 
+  box-sizing: inherit
+
+.wrapper
+    max-width: 1440px
+    margin-right: auto
+    margin-left: auto
+    padding-right: 15px
+    padding-left: 15px
+    display: flex
+    justify-content: center
+    align-items: center
+     
+
+.container 
+    margin-right: auto
+    margin-left: auto
+    padding-right: 15px
+    padding-left: 15px
+    width: 100%
+    @media (min-width: 576px) 
+        max-width: 540px
+    @media (min-width: 768px) 
+        max-width: 720px
+    @media (min-width: 992px) 
+        max-width: 960px
+    @media (min-width: 1200px) 
+        max-width: 1120px
+  
 
 .header__logo
     margin-top: 230px
     margin-bottom: 95px
     display: flex
     justify-content: center
+    align-items: center
+    max-width: 25.5%
+    min-width: 250px 
 
-    &-img
-        max-width: 383px
-        min-width: 300px
+   
 
+    
 
 .nav
     background-color: white
     display: flex 
     align-items: center
+    justify-content: space-between
     margin-bottom: 160px
     padding: 35px 0 
+    width: 77.777777777%
     &__logo
         margin-left: 5.3%
-        margin-right: 5.5%
+        @media (max-width: 1130px) 
+            display: none
     &__input 
         margin-left: 4% 
-        max-width: 160px
+        margin-right: 5%
+        max-width: 14%
+        @media (max-width: 1130px)
+            max-width: 18%
     &__menu
         text-transform: uppercase
         list-style-type: none
         display: flex 
-        width: 55%
+        justify-content: center 
+        min-width: 60%
+        @media (max-width: 1130px)
+            margin-left: -5% 
+            min-width: 75%
+            
         &-item 
             margin-left: 3%
+            @media (max-width: 1280px)
+                margin-left: 6%
+            &--hide 
+                @media (max-width: 1280px) 
+                    display: none
+
 
 .main-recipe
+    width: 77.7%
     background-image: url('../img/main-recipe.png')
 
 .main-recipe__left
-
     display: flex
     flex-direction: column
+    
 
     p
-        max-width: 350px 
+        max-width: 325px 
         
     &-img 
-        max-width: 100%
+        max-width: 350px 
+        
 
 
 .sub-recipes
