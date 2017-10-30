@@ -6,60 +6,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
   <title>Document</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
   <!-- HEADER START -->
-  <section>
-      <div class="header__logo wrapper">
-        <img src="img/logo.png"  alt="Logo">
+  <header>
+    <div class="header__logo">
+      <img src="img/logo.png"  alt="Logo">
+    </div>
+    <div class="wrapper">
+      <div class="nav">
+        <img src="img/logo--small.png " class="nav__logo"  alt="">
+          <ul class="nav__menu">
+            <li class="nav__menu-item">Home</li>
+            <li class="nav__menu-item">Recipes</li>
+            <li class="nav__menu-item nav__menu-item--hide">Photo galleries</li>
+            <li class="nav__menu-item">Videos</li>
+            <li class="nav__menu-item">All categories</li>
+          </ul>
+          <input class="nav__input" type="text" value="" placeholder="FIND A RECIPE">
       </div>
-        <div class="wrapper">
-          <div class="nav ">
-            <img src="img/logo--small.png " class="nav__logo"  alt="">
-              <ul class="nav__menu">
-                <li class="nav__menu-item">Home</li>
-                <li class="nav__menu-item">Recipes</li>
-                <li class="nav__menu-item nav__menu-item--hide">Photo galleries</li>
-                <li class="nav__menu-item">Videos</li>
-                <li class="nav__menu-item">All categories</li>
-              </ul>
-              <input class="nav__input" type="text" value="" placeholder="FIND A RECIPE">
-          </div>
-        </div>
-  </section>
+    </div>
+  </header>
     <!-- HEADER END -->
+
   <section class="wrapper">
-    <div class="main-recipe ">
-       <div class="main-recipe__left">
-         <img src="img/logo.png" class="main-recipe__left-img"  alt="" >
-         <h2>Bananas Foster Ice Cream Cake</h2>
-         <p>If you're looking for decadence, look no further — you've found the Holy Grail of desserts. Honestly, this cake makes us wonder why Bananas Foster hasn't always been served on top of ice cream cake.</p>
-         <button>Get It Recipe</button>
-       </div>
-        <div class="main-recipe__img"></div>
-      </div>
+    <div class="main-recipe">
+        <div class="main-recipe__left">
+          <img src="img/logo.png" class="main-recipe__left-logo"  alt="">
+          <h2>Bananas Foster Ice Cream Cake</h2>
+          <p>If you're looking for decadence, look no further — you've found the Holy Grail of desserts. Honestly, this cake makes us wonder why Bananas Foster hasn't always been served on top of ice cream cake.</p>
+          <a href="#">Get It Recipe</a>
+        </div>
+    </div>
   </section>
 
-  <section class="container">
-    <div class="sub-recipes row">
-      <div class="sub-recipes__item col">
+
+
+  <section class="wrapper">
+    <div class="sub-recipes">
+      <div class="sub-recipes__item">
         <img  class="sub-recipes__item-img" src= "img/sub-rec1.png" alt=""><br>
-        <span class="sub-recipes__item-text">Raspberry & Cream Frozen Yogurt Pie</span><br>
-        <span class="sub-recipes__item-info">1</span>
+        <span class="sub-recipes__item-text">Raspberry & Cream Frozen Yogurt Pie</span>
+        <span class="sub-recipes__item-info"><i class="fa fa-clock-o" aria-hidden="true">35 mins </i><i class="fa fa-comment-o" aria-hidden="true"></i>7<i class="fa fa-eye" aria-hidden="true"></i>14</span>
       </div>
-      <div class="sub-recipes__item col">
+      <div class="sub-recipes__item ">
         <img  class="sub-recipes__item-img" src= "img/sub-rec2.png" alt=""><br>
-        <span class="sub-recipes__item-text">Giant Ice Cream Sandwich</span><br>
-        <span class="sub-recipes__item-info">2</span>
+        <span class="sub-recipes__item-text">Giant Ice Cream Sandwich</span>
+        <span class="sub-recipes__item-info"><i class="fa fa-clock-o" aria-hidden="true">10 mins </i><i class="fa fa-comment-o" aria-hidden="true"></i>15<i class="fa fa-eye" aria-hidden="true"></i>120</span>
       </div>
-      <div class="sub-recipes__item col">
+      <div class="sub-recipes__item ">
         <img  class="sub-recipes__item-img" src= "img/sub-rec3.png" alt=""><br>
-        <div class="sub-recipes__item-text">Dark Chocolate Crunch Ice Cream  Sandwich Cake</div><br>
-        <span class="sub-recipes__item-info">3</span>
+        <div class="sub-recipes__item-text">Dark Chocolate Crunch Ice Cream  Sandwich Cake</div>
+        <span class="sub-recipes__item-info"><i class="fa fa-clock-o" aria-hidden="true">25 mins </i><i class="fa fa-comment-o" aria-hidden="true"></i>4<i class="fa fa-eye" aria-hidden="true"></i>345</span>
       </div>
     </div>
   </section>
