@@ -67,14 +67,12 @@ html
         max-width: 14%
         background-image: url("../img/find-icon.png")
         background-repeat: no-repeat 
-        background-size: 15px
+        background-size: 13px 17px
         border: 1px solid #798186
         @media (max-width: 1000px)
             max-width: 18%
         @media (max-width: 1300px)
              background: none
-            
-        
     &__menu
         text-transform: uppercase
         list-style-type: none
@@ -94,9 +92,9 @@ html
                     display: none
 // HEADER END
 
-
+//MAIN RECIPE START
 .main-recipe
-    width: 77.7%
+    width: 77.777777777%
     background-image: url('../img/main-recipe.png')
     background-position: center
     background-size: cover
@@ -128,72 +126,155 @@ html
         
     &-logo
         max-width: 250px 
-        
-    
+//MAIN RECIPE END
 
-
+//SUB-RECIPES START 
 .sub-recipes
     background-color: white 
     margin-top: 160px
     padding-bottom: 30px
     width: 77.7777777%
     display: flex
+    justify-content: space-around 
     flex-wrap: wrap
     &__item
-        padding-left: 30px 
         display: flex
         flex-direction: column
-        margin: 0 auto
+        min-width: 28%
+        height: auto
+        padding: 0 2%
+        &--tablets
+            display: none 
+            @media (max-width: 1434px) and (min-width: 937px)
+                display: flex
+                
         &-img 
-             margin-top: 40px
-
-        &-text
-            max-width: 280px
-            
-            
+            padding-top: 40px
+        &-name
+            font-size: 18px
+            max-width: 300px
         &-info 
             font-size: 12px
-            color: grey
+            color: #555555
         i
-            padding-left: 2px 
+            padding-top: 5px
+            padding-right: 7px 
+//SUB-RECIPES END 
 
-
+//RECIPE WITH SCROLL START 
 .scroll-recipe
-    margin-top: 80px
+    display: flex
     background-color: white 
-    
-    &__header 
-    
-
+    width: 77.7777777%
+    margin-top: 80px
+    @media (max-width: 1200px)
+        flex-wrap: wrap 
+        justify-content: center 
+        align-items: center
+    img 
+        max-width: 50%
+        min-width: 420px
+        @media (max-width: 1200px)
+            min-width: 339px
+            min-height: 275px 
+            padding-top: 20px
+        
+    &__header
+        display: flex
+        flex-direction: column
+        max-width: 55% 
+        height: 440px 
+        margin: 0 45px 10px 30px
+        @media (max-width: 1200px)
+            max-width: 100%
+        &-name
+            font-family: 'Playfair Display', serif
+            color: #055555
+            @media (max-width: 1200px)
+                text-align: center 
+        &-info
+            color: #555
+            margin-top: -10px
+            margin-bottom: 25px
+        &-save
+            background-color: white 
+            float: right 
+            padding: 3px
+            text-transform: uppercase
+            color: #555
+            border: 1px solid #555
+            font-size: 12px
+        
     &__scroll
-        padding-right: 20px 
-        max-height: 69%
         overflow-y: scroll
+        margin-bottom: 20px
+        &::-webkit-scrollbar-thumb 
+            background: #555
+        &::-webkit-scrollbar 
+            width: 2px
+            height: 7px
+            background-color: #ddd
+        p
+            font-family: 'Playfair Display', serif
+            font-weight: bold
+//RECIPE WITH SCROLL END 
+    
 
 
 .comments
+    display: flex 
     justify-content: space-between
+    width: 77.7777777%
 
-    &__sorry-404
+    &__sorry
         margin-top: 115px
-        position: relative
-        z-index: 23
         background-color: white
         height: 515px
-        width:  540px
+        width: 46%
         background-image: url('../img/sorry-404.png')
+        background-size: 100% 100% 
         background-repeat: no-repeat 
-        background-position: center
+        position: relative
+        &-404
+            padding-left: 9%
+            font-weight: 400  
+        &-text 
+            position: absolute 
+            right: 42%
+            bottom: 42%
+            font-size: 34px 
+            font-weight: bold 
+        a 
+            position: absolute 
+            right: 41%
+            bottom: 45px
+            padding: 5px 35px 
+            text-transform: uppercase
+            color: #3e3e3e
+            border: 1px solid #c2c2c2
+            font-size: 12px 
+        hr 
+            width: 85%
+            border-color: #ddd
+            margin-top: -10px 
+        span 
+            position: absolute 
+            right: 38.5%
+            bottom: 40%
+            text-align: center 
+            color: #a9a
+            font-family: 'Playfair Display', serif
+            text-transform: uppercase 
 
     &__author
         margin-top: 115px
         background-color: white
-        width: 515px
+        width: 46%
         height: 515px
         display: flex
 
         &-photo
-            border-radius: 100px;
+            border-radius: 100px
         &-name 
 
 .card-block__face
