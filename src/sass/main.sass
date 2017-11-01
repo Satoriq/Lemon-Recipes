@@ -220,62 +220,121 @@ html
 //RECIPE WITH SCROLL END 
     
 
-
+//COMMENTS START 
 .comments
     display: flex 
     justify-content: space-between
     width: 77.7777777%
 
     &__sorry
+        display: flex 
+        flex-direction: column 
+        align-items: center 
+        min-height: 515px
+        width: 46%
         margin-top: 115px
         background-color: white
-        height: 515px
-        width: 46%
         background-image: url('../img/sorry-404.png')
         background-size: 100% 100% 
-        background-repeat: no-repeat 
-        position: relative
-        &-404
-            padding-left: 9%
-            font-weight: 400  
+        @media (max-width:1000px)
+            background-position: center
+            background-size: 100% 60% 
+            background-repeat: no-repeat 
+        &-top
+            align-self: flex-start
+            padding-left: 9% 
+            padding-top: 7px 
         &-text 
-            position: absolute 
-            right: 42%
-            bottom: 42%
-            font-size: 34px 
-            font-weight: bold 
-        a 
-            position: absolute 
-            right: 41%
-            bottom: 45px
-            padding: 5px 35px 
+            margin-top: 170px
+            font-size: 32px 
+            font-weight: bold  
+        &-subtext 
+            margin-top: -22px
+            text-align: center 
             text-transform: uppercase
-            color: #3e3e3e
+            color: #a9a
+            font-family: 'Playfair Display', serif
+            font-weight: 600
+        &-back
+            padding: 5px 35px 
+            margin-top: 115px 
             border: 1px solid #c2c2c2
+            text-transform: uppercase
+            color: #3e3 
             font-size: 12px 
         hr 
             width: 85%
             border-color: #ddd
             margin-top: -10px 
-        span 
-            position: absolute 
-            right: 38.5%
-            bottom: 40%
-            text-align: center 
-            color: #a9a
-            font-family: 'Playfair Display', serif
-            text-transform: uppercase 
-
+        
     &__author
+        width: 46%
+        min-height: 515px
         margin-top: 115px
         background-color: white
-        width: 46%
-        height: 515px
-        display: flex
-
+        &-top 
+            padding-left: 9%
+            padding-top: 7px 
+        &-border 
+            border-color: #ddd
+            margin-top: -10px 
+            width: 85%
+        &-content 
+            display: flex
+            max-width: 90%
         &-photo
-            border-radius: 100px
+            align-self: flex-start
+            max-width: 30%
+            padding: 2% 
+            margin-left: 4%
+            border-radius: 50%
+            @media (max-width: 1250px)
+                min-width: 100px
+        &-info
+            padding-left: 2%
+        &-text 
+            font-style: italic
+            @media (max-width: 1250px)
+                margin-left: -45% 
+            @media (max-width: 830px)
+                margin-left: -80% 
+            &-header
+                font-style: normal
+                font-size: 20px 
+                font-weight: 400
         &-name 
+            display: inline-block
+            font-size: 1.5rem 
+            font-weight: bold
+            padding-top: 25px
+        &-location
+            display: inline-block
+            color: black 
+            padding: 8px 0
+        &-signature 
+            float: right 
+            max-width: 50%
+            @media (max-width: 900px)
+                display: none 
+        i 
+            padding-right: 7px 
+            padding-bottom: 8px
+            color: #aaa
+
+
+//Hover for social start
+.fa-google-plus:hover 
+    color: #DC473A
+.fa-twitter:hover 
+    color: #1DA1F2
+.fa-facebook:hover 
+    color: #4867AA
+.fa-pinterest:hover 
+    color: #BD081B 
+//Hover for social end
+
+//COMMENTS END
+
 
 .card-block__face
     border-radius: 100px
