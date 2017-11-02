@@ -72,7 +72,7 @@ html
         @media (max-width: 1000px)
             max-width: 18%
         @media (max-width: 1300px)
-             background: none
+            background: none
     &__menu
         text-transform: uppercase
         list-style-type: none
@@ -225,6 +225,8 @@ html
     display: flex 
     justify-content: space-between
     width: 77.7777777%
+    @media (max-width: 750px)
+        width: 100% 
 
     &__sorry
         display: flex 
@@ -240,6 +242,7 @@ html
             background-position: center
             background-size: 100% 60% 
             background-repeat: no-repeat 
+            background-color: #FBFCFD
         &-top
             align-self: flex-start
             padding-left: 9% 
@@ -321,7 +324,6 @@ html
             padding-bottom: 8px
             color: #aaa
 
-
 //Hover for social start
 .fa-google-plus:hover 
     color: #DC473A
@@ -335,6 +337,21 @@ html
 
 //COMMENTS END
 
+.blocks
+    width: 77.777777777%
+    display: flex 
+    justify-content: space-between 
+
+.first-column
+    display: flex 
+    flex-direction: column  
+    &__small-recipe 
+        background-color: white 
+    &__header
+        font-family: 'Playfair Display', serif
+        font-weight: 600
+        font-size: 22px
+        color: #055555
 
 .card-block__face
     border-radius: 100px

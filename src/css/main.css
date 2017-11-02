@@ -399,6 +399,12 @@ html {
   width: 77.7777777%;
 }
 
+@media (max-width: 750px) {
+  .comments {
+    width: 100%;
+  }
+}
+
 .comments__sorry {
   display: -webkit-box;
   display: -webkit-flex;
@@ -428,6 +434,7 @@ html {
     -webkit-background-size: 100% 60%;
             background-size: 100% 60%;
     background-repeat: no-repeat;
+    background-color: #FBFCFD;
   }
 }
 
@@ -582,6 +589,41 @@ html {
 
 .fa-pinterest:hover {
   color: #BD081B;
+}
+
+.blocks {
+  width: 77.777777777%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.first-column {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.first-column__small-recipe {
+  background-color: white;
+}
+
+.first-column__header {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: #055555;
 }
 
 .card-block__face {
