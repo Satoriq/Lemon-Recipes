@@ -248,6 +248,12 @@ html {
   padding: 0 2%;
 }
 
+@media (max-width: 937px) {
+  .sub-recipes__item {
+    min-width: 65%;
+  }
+}
+
 .sub-recipes__item--tablets {
   display: none;
 }
@@ -272,7 +278,7 @@ html {
 
 .sub-recipes__item-info {
   font-size: 12px;
-  color: #555555;
+  color: #555;
 }
 
 .sub-recipes__item i {
@@ -399,9 +405,15 @@ html {
   width: 77.7777777%;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .comments {
-    width: 100%;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -421,6 +433,7 @@ html {
           align-items: center;
   min-height: 515px;
   width: 46%;
+  min-width: 250px;
   margin-top: 115px;
   background-color: white;
   background-image: url("../img/sorry-404.png");
@@ -428,13 +441,19 @@ html {
           background-size: 100% 100%;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .comments__sorry {
     background-position: center;
     -webkit-background-size: 100% 60%;
             background-size: 100% 60%;
     background-repeat: no-repeat;
     background-color: #FBFCFD;
+  }
+}
+
+@media (max-width: 800px) {
+  .comments__sorry {
+    display: none;
   }
 }
 
@@ -456,7 +475,7 @@ html {
   margin-top: -22px;
   text-align: center;
   text-transform: uppercase;
-  color: #a9a;
+  color: #a9a9a9;
   font-family: 'Playfair Display', serif;
   font-weight: 600;
 }
@@ -466,7 +485,7 @@ html {
   margin-top: 115px;
   border: 1px solid #c2c2c2;
   text-transform: uppercase;
-  color: #3e3;
+  color: #3e3e3e;
   font-size: 12px;
 }
 
@@ -481,6 +500,13 @@ html {
   min-height: 515px;
   margin-top: 115px;
   background-color: white;
+  min-width: 250px;
+}
+
+@media (max-width: 800px) {
+  .comments__author {
+    width: 100%;
+  }
 }
 
 .comments__author-top {
@@ -513,9 +539,9 @@ html {
           border-radius: 50%;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1200px) and (min-width: 800px) {
   .comments__author-photo {
-    min-width: 100px;
+    padding-top: 20px;
   }
 }
 
@@ -527,15 +553,15 @@ html {
   font-style: italic;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1280px) {
   .comments__author-text {
     margin-left: -45%;
   }
 }
 
-@media (max-width: 830px) {
+@media (max-width: 800px) and (min-width: 650px) {
   .comments__author-text {
-    margin-left: -80%;
+    padding-top: 30px;
   }
 }
 
@@ -563,12 +589,6 @@ html {
   max-width: 50%;
 }
 
-@media (max-width: 900px) {
-  .comments__author-signature {
-    display: none;
-  }
-}
-
 .comments__author i {
   padding-right: 7px;
   padding-bottom: 8px;
@@ -591,8 +611,7 @@ html {
   color: #BD081B;
 }
 
-.blocks {
-  width: 77.777777777%;
+.columns {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -601,6 +620,8 @@ html {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 0 auto;
+  width: 71.18055555%;
 }
 
 .first-column {
@@ -613,17 +634,69 @@ html {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 27.8%;
 }
 
-.first-column__small-recipe {
+.small-recipe {
   background-color: white;
 }
 
-.first-column__header {
+.small-recipe__header {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
   font-size: 22px;
   color: #055555;
+}
+
+.small-recipe__target {
+  background-color: white;
+}
+
+.small-recipe__target-top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.small-recipe__target-center {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.small-recipe__target-bottom {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.second-column {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 27.8%;
+}
+
+.third-column {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 27.8%;
 }
 
 .card-block__face {

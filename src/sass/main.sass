@@ -143,11 +143,12 @@ html
         min-width: 28%
         height: auto
         padding: 0 2%
+        @media (max-width: 937px)
+            min-width: 65%
         &--tablets
             display: none 
             @media (max-width: 1434px) and (min-width: 937px)
                 display: flex
-                
         &-img 
             padding-top: 40px
         &-name
@@ -155,7 +156,7 @@ html
             max-width: 300px
         &-info 
             font-size: 12px
-            color: #555555
+            color: #555
         i
             padding-top: 5px
             padding-right: 7px 
@@ -225,8 +226,9 @@ html
     display: flex 
     justify-content: space-between
     width: 77.7777777%
-    @media (max-width: 750px)
-        width: 100% 
+    @media (max-width:800px)
+        flex-wrap: wrap 
+        justify-content: center 
 
     &__sorry
         display: flex 
@@ -234,15 +236,18 @@ html
         align-items: center 
         min-height: 515px
         width: 46%
+        min-width: 250px 
         margin-top: 115px
         background-color: white
         background-image: url('../img/sorry-404.png')
         background-size: 100% 100% 
-        @media (max-width:1000px)
+        @media (max-width:1024px)
             background-position: center
             background-size: 100% 60% 
             background-repeat: no-repeat 
             background-color: #FBFCFD
+        @media (max-width:800px) 
+            display: none 
         &-top
             align-self: flex-start
             padding-left: 9% 
@@ -255,7 +260,7 @@ html
             margin-top: -22px
             text-align: center 
             text-transform: uppercase
-            color: #a9a
+            color: #a9a9a9
             font-family: 'Playfair Display', serif
             font-weight: 600
         &-back
@@ -263,7 +268,7 @@ html
             margin-top: 115px 
             border: 1px solid #c2c2c2
             text-transform: uppercase
-            color: #3e3 
+            color: #3e3e3e
             font-size: 12px 
         hr 
             width: 85%
@@ -275,6 +280,10 @@ html
         min-height: 515px
         margin-top: 115px
         background-color: white
+        min-width: 250px 
+        @media (max-width:800px) 
+            width: 100%
+             
         &-top 
             padding-left: 9%
             padding-top: 7px 
@@ -285,22 +294,25 @@ html
         &-content 
             display: flex
             max-width: 90%
+            
         &-photo
             align-self: flex-start
             max-width: 30%
             padding: 2% 
             margin-left: 4%
             border-radius: 50%
-            @media (max-width: 1250px)
-                min-width: 100px
+            @media (max-width:1200px) and (min-width:800px)
+                padding-top: 20px
+            
         &-info
             padding-left: 2%
         &-text 
             font-style: italic
-            @media (max-width: 1250px)
+            @media (max-width: 1280px)
                 margin-left: -45% 
-            @media (max-width: 830px)
-                margin-left: -80% 
+            @media (max-width: 800px) and (min-width: 650px)
+                padding-top: 30px
+            
             &-header
                 font-style: normal
                 font-size: 20px 
@@ -317,8 +329,7 @@ html
         &-signature 
             float: right 
             max-width: 50%
-            @media (max-width: 900px)
-                display: none 
+            
         i 
             padding-right: 7px 
             padding-bottom: 8px
@@ -337,22 +348,42 @@ html
 
 //COMMENTS END
 
-.blocks
-    width: 77.777777777%
+.columns
     display: flex 
-    justify-content: space-between 
+    justify-content: space-between
+    margin: 0 auto 
+    width: 71.18055555%
 
 .first-column
     display: flex 
     flex-direction: column  
-    &__small-recipe 
-        background-color: white 
+    width: 27.8% 
+.small-recipe 
+    background-color: white 
     &__header
         font-family: 'Playfair Display', serif
         font-weight: 600
         font-size: 22px
         color: #055555
+    &__target 
+        background-color: white 
+        &-top
+            display: flex
+        &-center 
+            display: flex
+        &-bottom 
+            display: flex
 
+.second-column
+    display: flex 
+    flex-direction: column  
+    width: 27.8% 
+
+.third-column
+    display: flex 
+    flex-direction: column  
+    width: 27.8% 
+    
 .card-block__face
     border-radius: 100px
 
