@@ -358,21 +358,54 @@ html
     display: flex 
     flex-direction: column  
     width: 27.8% 
+
 .small-recipe 
+    margin-top: 75px
     background-color: white 
     &__header
         font-family: 'Playfair Display', serif
         font-weight: 600
         font-size: 22px
         color: #055555
-    &__target 
-        background-color: white 
-        &-top
-            display: flex
-        &-center 
-            display: flex
-        &-bottom 
-            display: flex
+        text-align: center 
+    &__info 
+        display: flex 
+        padding-left: 8%
+    &__text 
+        margin-left: 6%
+    &__icons 
+        font-size: 12px
+        color: #555
+    &__author 
+        align-self: center 
+        border-radius: 50% 
+    &__img 
+        width: 100%
+    i
+        padding-top: 5px
+        padding-right: 7px 
+    hr 
+        width: 85%
+        border-color: #ddd
+        margin-top: -15px 
+
+.target 
+    margin-top: 40px
+    background-color: white 
+    &__top
+        padding-top: 10px
+        display: flex
+    &__center 
+        padding-top: 45px
+        display: flex
+    &__bottom 
+        padding-top: 45px
+        display: flex
+    hr 
+        width: 85%
+        border-color: #ddd
+        margin-top: -15px 
+
 
 .second-column
     display: flex 
