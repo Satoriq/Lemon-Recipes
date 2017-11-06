@@ -677,6 +677,7 @@ html {
 
 .small-recipe__img {
   width: 100%;
+  display: block;
 }
 
 .small-recipe i {
@@ -695,7 +696,23 @@ html {
   background-color: white;
 }
 
+.target__header {
+  font-size: 20px;
+  font-weight: 400;
+  padding-left: 8%;
+}
+
+.target__sub-header {
+  padding-left: 10%;
+  margin: 18px 0 30px 0;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #055555;
+}
+
 .target__top {
+  padding-left: 10%;
   padding-top: 10px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -703,7 +720,26 @@ html {
   display: flex;
 }
 
+.target__top-info {
+  margin: 0;
+  padding-left: 7%;
+}
+
+.target__top-header {
+  font-size: 18px;
+}
+
+.target__top-text {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.target__top-circle {
+  flex-align: center;
+}
+
 .target__center {
+  padding-left: 10%;
   padding-top: 45px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -711,7 +747,13 @@ html {
   display: flex;
 }
 
+.target__center-info {
+  margin: 0;
+  padding-left: 7%;
+}
+
 .target__bottom {
+  padding-left: 10%;
   padding-top: 45px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -723,6 +765,11 @@ html {
   width: 85%;
   border-color: #ddd;
   margin-top: -15px;
+}
+
+.target hr-info {
+  margin: 0;
+  padding-left: 7%;
 }
 
 .second-column {

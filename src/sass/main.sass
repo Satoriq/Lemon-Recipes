@@ -381,6 +381,7 @@ html
         border-radius: 50% 
     &__img 
         width: 100%
+        display: block 
     i
         padding-top: 5px
         padding-right: 7px 
@@ -391,20 +392,51 @@ html
 
 .target 
     margin-top: 40px
-    background-color: white 
+    background-color: white
+    &__header 
+        font-size: 20px
+        font-weight: 400
+        padding-left: 8% 
+    &__sub-header 
+        padding-left: 10%
+        margin: 18px 0 30px 0
+        font-family: 'Playfair Display', serif
+        font-weight: 600
+        font-size: 20px
+        color: #055555
+
     &__top
+        padding-left: 10%
         padding-top: 10px
         display: flex
+        &-info  
+            margin: 0
+            padding-left: 7%
+        &-header 
+            font-size: 18px 
+        &-text
+            font-size: 14px
+            font-style: italic
+        &-circle
+            flex-align: center 
     &__center 
+        padding-left: 10%
         padding-top: 45px
         display: flex
+        &-info  
+            margin: 0
+            padding-left: 7%
     &__bottom 
+        padding-left: 10%
         padding-top: 45px
         display: flex
     hr 
         width: 85%
         border-color: #ddd
         margin-top: -15px 
+        &-info  
+            margin: 0
+            padding-left: 7%
 
 
 .second-column
