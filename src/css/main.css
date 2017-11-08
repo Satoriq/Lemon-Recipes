@@ -707,6 +707,10 @@ a {
 }
 
 .target__header-icons {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   float: right;
   padding-right: 8%;
   font-size: 16px;
@@ -823,10 +827,15 @@ a {
 }
 
 .level-recipes__header-text {
+  line-height: 20px;
   font-size: 12px;
 }
 
 .level-recipes__header-icons {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   float: right;
   padding-right: 8%;
   font-size: 16px;
@@ -838,9 +847,10 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .level-recipes__text {
@@ -848,7 +858,7 @@ a {
   width: 70%;
 }
 
-.level-recipes__recipes {
+.level-recipes__recipe {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -856,7 +866,7 @@ a {
   padding-top: 35px;
 }
 
-.level-recipes__recipes--first {
+.level-recipes__recipe--first {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -864,7 +874,7 @@ a {
   padding-top: 20px;
 }
 
-.level-recipes__recipes-subtext {
+.level-recipes__recipe-subtext {
   font-size: 16px;
   font-weight: 600;
 }
@@ -872,11 +882,11 @@ a {
 .level-recipes__view {
   float: right;
   font-size: 12px;
-  text-transform: uppercase;
   padding: 3px;
+  padding-top: 5px;
   text-transform: uppercase;
-  color: #555;
-  border: 1px solid #555;
+  color: #010101;
+  border: 1px solid #999;
   margin-right: 10%;
   margin-top: 30px;
   margin-bottom: 15px;
@@ -897,6 +907,46 @@ a {
 
 .level-recipes i {
   padding-right: 10px;
+}
+
+.unpicked, .picked {
+  font-size: 12px;
+  line-height: 25px;
+  text-transform: uppercase;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  padding-left: 8%;
+  padding-right: 8%;
+  color: #999;
+}
+
+.picked {
+  color: #000;
+  font-weight: 700;
+}
+
+.tags {
+  background-color: white;
+  margin-top: 45px;
+}
+
+.tags__header {
+  padding-left: 8%;
+  line-height: 10px;
+}
+
+.tags__text {
+  padding-left: 8%;
+  text-transform: uppercase;
+  line-height: 25px;
+  font-size: 12px;
+}
+
+.tags hr {
+  width: 85%;
+  border-color: #ddd;
+  margin-top: -15px;
 }
 
 .third-column {

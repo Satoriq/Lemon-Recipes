@@ -396,6 +396,7 @@ a
     font-weight: 400
     padding-left: 8%
     &-icons
+      display: inline-flex
       float: right 
       padding-right: 8%
       font-size: 16px
@@ -468,19 +469,23 @@ a
     font-size: 20px 
     line-height: 30px 
     &-text 
+      line-height: 20px 
       font-size: 12px
     &-icons 
+      display: inline-flex
       float: right 
       padding-right: 8%
       font-size: 16px
       color: #555
   &__levels 
     display: flex 
-    justify-content: space-around
+    justify-content: center
+
+    
   &__text 
     padding-left: 20px
     width: 70%
-  &__recipes 
+  &__recipe
     display: flex 
     padding-top: 35px
     &--first
@@ -492,17 +497,15 @@ a
   &__view
     float: right 
     font-size: 12px 
-    text-transform: uppercase
     padding: 3px
+    padding-top: 5px
     text-transform: uppercase
-    color: #555
-    border: 1px solid #555
+    color: #010101
+    border: 1px solid #999
     margin-right: 10%
     margin-top: 30px
     margin-bottom: 15px 
   
-
-
   img 
     padding-left: 20px 
     align-self: flex-start
@@ -513,12 +516,40 @@ a
     margin-top: -15px
     
   i
-        padding-right: 10px
-  
-    
+    padding-right: 10px
 
+  // Customization for buttons start 
+.unpicked
+  font-size: 12px
+  line-height: 25px
+  text-transform: uppercase 
+  background-color: white
+  border: none
+  cursor: pointer
+  padding-left: 8%
+  padding-right: 8%
+  color: #999
+.picked
+  @extend .unpicked
+  color: #000
+  font-weight: 700
+  // Customization for buttons end
 
-
+.tags 
+  background-color: white  
+  margin-top: 45px
+  &__header 
+    padding-left: 8%
+    line-height: 10px
+  &__text
+    padding-left: 8%
+    text-transform: uppercase 
+    line-height: 25px
+    font-size: 12px 
+  hr
+    width: 85%
+    border-color: #ddd
+    margin-top: -15px
 
 
 
@@ -692,7 +723,7 @@ thead td
         width: 210px
         height: 210px
         background-color: grey
-        transform: rotate(270deg);
+        transform: rotate(270deg)
 
 
 
