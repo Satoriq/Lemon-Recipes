@@ -19,6 +19,10 @@ html
 a 
   color: inherit 
   
+%hr 
+  width: 85%
+  border-color: #ddd
+
 .wrapper
   padding-right: 15px
   padding-left: 15px
@@ -261,7 +265,7 @@ a
       margin-top: -22px
       text-align: center
       text-transform: uppercase
-      color: #a9a9a9
+      color: rgba(169, 169 ,169, 1)
       font-family: 'Playfair Display', serif
       font-weight: 600
     &-back
@@ -272,8 +276,7 @@ a
       color: #3e3e3e
       font-size: 12px
     hr
-      width: 85%
-      border-color: #ddd
+      @extend %hr 
       margin-top: -10px
   
   &__author
@@ -335,23 +338,26 @@ a
         
 //Hover for social start
 .fa-google-plus:hover
-        color: #DC473A
+        color: #dc473a
 .fa-twitter:hover
-        color: #1DA1F2
+        color: #1da1f2
 .fa-facebook:hover
-        color: #4867AA
+        color: #4867aa
 .fa-pinterest:hover
-        color: #BD081B
+        color: #bd081b
 //Hover for social end
 
 //COMMENTS END
 
+
+//COLUMNS START 
 .columns
   display: flex
   justify-content: space-between
   margin: 0 auto
   width: 71.18055555%
 
+//First column start
 .first-column
   display: flex
   flex-direction: column
@@ -359,13 +365,13 @@ a
 
 .small-recipe
   margin-top: 75px
-  background-color: white
+  background-color: white 
   &__header
+    text-align: center
     font-family: 'Playfair Display', serif
     font-weight: 600
     font-size: 22px
     color: #055555
-    text-align: center
   &__info
     display: flex
     padding-left: 8%
@@ -377,32 +383,31 @@ a
   &__author
     align-self: center
     border-radius: 50%
-  &__img
+  &__recipe
     width: 100%
     display: block
+  hr
+    @extend %hr 
+    margin-top: -15px
   i
     padding-top: 5px
     padding-right: 7px
-  hr
-    width: 85%
-    border-color: #ddd
-    margin-top: -15px
-
+  
 .target
   margin-top: 40px
   background-color: white
   &__header
+    padding-left: 8%
     font-size: 20px
     font-weight: 400
-    padding-left: 8%
     &-icons
       display: inline-flex
       float: right 
       padding-right: 8%
       font-size: 16px
-      color: #555
       i
         padding-right: 10px
+        color: #555
   &__sub-header
     padding-left: 10%
     margin: 18px 0px 30px 0px
@@ -411,11 +416,11 @@ a
     font-size: 20px
     color: #055555
   &__info
-    color: #9f9f9f
+    position: relative
     margin: 0px
     padding-left: 9%
     width: 66%
-    position: relative
+    color: #9f9f9f
     &-class
       font-size: 18px
     &-text
@@ -427,34 +432,33 @@ a
       right: 105%
       font-size: 21px
   &__top
+    display: flex
     padding-left: 10%
     padding-top: -10px
-    display: flex
   &__center
+    display: flex
     padding-left: 10%
     padding-top: 45px
-    display: flex
   &-info
     margin: 0
     padding-left: 7%
   &__bottom
-    padding-left: 10%
+    display: flex
     padding-top: 45px
     padding-bottom: 55px
-    display: flex
+    padding-left: 10%
   hr
-    width: 85%
-    border-color: #ddd
+    @extend %hr 
     margin-top: -15px
     
-//Hover for Target (print, mail) start
 .fa-envelope-o:hover
         color: #4867AA
 .fa-print:hover
         color: #BD081B
-//Hover for Target (print, mail) end
 
+//First column end
 
+//Second column start
 .second-column
         display: flex
         flex-direction: column
@@ -465,8 +469,8 @@ a
   background-color: white 
   &__header
     padding-left: 8%
-    font-weight: 400
     font-size: 20px 
+    font-weight: 400
     line-height: 30px 
     &-text 
       line-height: 20px 
@@ -480,115 +484,101 @@ a
   &__levels 
     display: flex 
     justify-content: center
-
     
   &__text 
     padding-left: 20px
     width: 70%
+    &-subtext
+      font-size: 16px 
+      font-weight: 600
   &__recipe
     display: flex 
     padding-top: 35px
     &--first
       display: flex 
       padding-top: 20px
-    &-subtext
-      font-size: 16px 
-      font-weight: 600
   &__view
     float: right 
-    font-size: 12px 
-    padding: 3px
-    padding-top: 5px
-    text-transform: uppercase
-    color: #010101
-    border: 1px solid #999
-    margin-right: 10%
-    margin-top: 30px
+    margin-right: 8%
+    margin-top: 25px
     margin-bottom: 15px 
-  
+    padding: 8px 12px 5px 12px  
+    border: 1px solid #999
+    text-align: center
+    text-transform: uppercase
+    font-size: 12px 
+    color: #010101
+
   img 
     padding-left: 20px 
     align-self: flex-start
-  
   hr
-    width: 85%
-    border-color: #ddd
+    @extend %hr 
     margin-top: -15px
-    
   i
     padding-right: 10px
 
-  // Customization for buttons start 
-.unpicked
+// customization for buttons start 
+%button
+  padding-left: 8%
+  padding-right: 8%
   font-size: 12px
   line-height: 25px
   text-transform: uppercase 
   background-color: white
   border: none
-  cursor: pointer
-  padding-left: 8%
-  padding-right: 8%
+
+.unpicked
+  @extend %button
   color: #999
+  cursor: pointer
 .picked
-  @extend .unpicked
+  @extend %button
   color: #000
   font-weight: 700
-  // Customization for buttons end
+// customization for buttons end
 
 .tags 
-  background-color: white  
   margin-top: 45px
+  margin-bottom: 45px
+  background-color: white  
   &__header 
     padding-left: 8%
     line-height: 10px
+    font-size: 20px 
+    font-weight: 400 
   &__text
+    margin: 0
     padding-left: 8%
-    text-transform: uppercase 
+    padding-bottom: 15px 
+    max-width: 90%
     line-height: 25px
+    word-spacing: 10px
+    text-transform: uppercase 
     font-size: 12px 
+    
   hr
-    width: 85%
-    border-color: #ddd
+    @extend %hr 
     margin-top: -15px
+    
 
+.calendar 
+  margin-top: 45px
+  margin-bottom: 95px
+  background-color: white 
+  &__header 
+    padding-left: 8%
+    line-height: 10px
+    font-size: 20px 
+    font-weight: 400 
 
-
-
-
-
-
-
-
-
-
-
-
-
-.third-column
-        display: flex
-        flex-direction: column
-        width: 27.8%
-
-.card-block__face
-        border-radius: 100px
-
-
-
-
-
-
-
-.cart-target__text
-
-
-.make-column
-        flex-direction: column
-
-.eml-buttons
-        display: flex
-        justify-content: space-around
-
-
+#btnPrev
+  padding-left: 9%
+#btnNext
+  padding-right: 9%
+hr 
+  @extend %hr 
+  margin-top: -15px
 
 $main-bg: rgb(40,40,59)
 $calendar-border: rgb(220,220,255)
@@ -596,8 +586,6 @@ $calendar-bg: #fff
 $calendar-standout: rgb(40,40,59)
 $calendar-color: #444
 $calendar-fade-color: #c0c0c0
-
-
 
 
 *, *:before, *:after
@@ -609,22 +597,6 @@ $calendar-fade-color: #c0c0c0
         content: ""
         display: table
         clear: both
-
-
-
-img
-    max-width: 100%
-    height: auto
-    vertical-align: baseline
-
-
-a
-    text-decoration: none
-
-
-
-
-
 
 
 .calendar-wrapper
@@ -691,6 +663,30 @@ thead td
     font-family: "Roboto Condensed", sans-serif
     text-transform: uppercase
     transition: all 0.3s ease
+
+//Second column end
+
+.third-column
+        display: flex
+        flex-direction: column
+        width: 27.8%
+
+.card-block__face
+        border-radius: 100px
+
+
+
+
+
+
+
+.cart-target__text
+
+
+.make-column
+        flex-direction: column
+
+
 
 
 .column
