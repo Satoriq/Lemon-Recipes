@@ -25,7 +25,7 @@ a {
   color: inherit;
 }
 
-.comments__sorry hr, .small-recipe hr, .target hr, .level-recipes hr, .tags hr, hr {
+.comments__sorry hr, .small-recipe hr, .target hr, .level-recipes hr, .tags hr, .calendar hr {
   width: 85%;
   border-color: #ddd;
 }
@@ -957,6 +957,7 @@ a {
 .calendar {
   margin-top: 45px;
   margin-bottom: 95px;
+  padding-bottom: 10px;
   background-color: white;
 }
 
@@ -967,97 +968,56 @@ a {
   font-weight: 400;
 }
 
-#btnPrev {
-  padding-left: 9%;
+.calendar__wrapper {
+  margin: 0 auto;
+  width: 80%;
 }
 
-#btnNext {
-  padding-right: 9%;
+.calendar__wrapper table {
+  width: 100%;
 }
 
-hr {
+.calendar__wrapper td {
+  height: 36px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.calendar__wrapper td.not-current {
+  color: #c2c2c2;
+}
+
+.calendar__wrapper td.today {
+  color: black;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.calendar hr {
   margin-top: -15px;
 }
 
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.group:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.calendar-wrapper {
-  width: 300px;
-  margin: 3em auto;
-  padding: 2em;
-  border: 1px solid #dcdcff;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  background: #fff;
-}
-
-table {
-  clear: both;
-  width: 100%;
-  border: 1px solid #dcdcff;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
-  border-collapse: collapse;
-  color: #444;
-}
-
-td {
-  height: 48px;
-  text-align: center;
-  vertical-align: middle;
-  border-right: 1px solid #dcdcff;
-  border-top: 1px solid #dcdcff;
-  width: 100% / 7;
-}
-
-td.not-current {
-  color: #c0c0c0;
-}
-
-td.today {
-  font-weight: 700;
-  color: #28283b;
-  font-size: 1.5em;
-}
-
-thead td {
+#btnPrev, #btnNext {
+  background: white;
   border: none;
-  color: #28283b;
-  text-transform: uppercase;
-  font-size: 1.5em;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  color: #555;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 #btnPrev {
-  float: left;
-  margin-bottom: 20px;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 2%;
 }
 
 #btnNext {
-  float: right;
-  margin-bottom: 20px;
-}
-
-#btnPrev, #btnNext {
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 1em;
-  color: #c0c0c0;
-  cursor: pointer;
-  font-family: "Roboto Condensed", sans-serif;
-  text-transform: uppercase;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 15.5%;
 }
 
 .third-column {

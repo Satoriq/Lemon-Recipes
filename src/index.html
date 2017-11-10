@@ -294,7 +294,7 @@
     <!-- Column 1 end-->
 
 
-    <!-- COLUMN 2  COLUMN 2 COLUMN 2 COLUMN 2 COLUMN 2 COLUMN 2 COLUMN 2-->
+    <!-- Column 2 start-->
 
     <div class="second-column">
 
@@ -367,15 +367,15 @@
       </div>
 
 
-      <div class="calendar">
-        <h4 class= "calendar__header">Calendar</h4>
-        <hr>
-        <div>
+      <div class="calendar ">
+          <h4 class= "calendar__header">Calendar</h4>
+          <hr>
           <button id="btnPrev" type="button"><i class="material-icons">keyboard_arrow_left</i></button>
           <button id="btnNext" type="button"><i class="material-icons">keyboard_arrow_right</i></button>
-          <div id="divCal"></div>
-        </div>
-
+          <div class="calendar__wrapper" >
+            <div id="divCal"></div>
+          </div>
+        <!-- This script isn't mine, i just customize it -->
         <script>
           var Cal = function (divId) {
 
@@ -384,13 +384,13 @@
 
             // Days of week, starting on Sunday
             this.DaysOfWeek = [
-              'Sun',
-              'Mon',
-              'Tue',
-              'Wed',
-              'Thu',
-              'Fri',
-              'Sat'
+              'Su',
+              'Mo',
+              'Tu',
+              'We',
+              'Th',
+              'Fr',
+              'Sa'
             ];
 
             // Months, stating on January
@@ -539,15 +539,14 @@
             return document.getElementById(id);
           }
         </script>
-
       </div>
     </div>
-    <!-- COLUMN 2 END  COLUMN 2 END COLUMN 2 END COLUMN 2 END COLUMN 2 END COLUMN 2 END COLUMN 1-->
+    <!--Column 2 end -->
 
 
 
 
-    <!-- COLUMN #3  COLUMN #3 COLUMN #3 COLUMN #3 COLUMN #3 -->
+    <!-- Column 3 start-->
     <div class="third-column">
 
       <div class="bgwhite">
@@ -585,8 +584,11 @@
       </div>
 
     </div>
-    <!-- COLUMN #3 END  COLUMN #3 END COLUMN #3 END COLUMN #3 END  COLUMN #3 END -->
+    <!-- Column 3 end-->
+    
     <!-- COLUMNS END -->
+
+    
   </section>
   <div class="row">
 

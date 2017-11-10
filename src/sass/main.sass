@@ -518,7 +518,7 @@ a
   i
     padding-right: 10px
 
-// customization for buttons start 
+// customization for level buttons start 
 %button
   padding-left: 8%
   padding-right: 8%
@@ -536,7 +536,7 @@ a
   @extend %button
   color: #000
   font-weight: 700
-// customization for buttons end
+// customization for level buttons end
 
 .tags 
   margin-top: 45px
@@ -556,7 +556,6 @@ a
     word-spacing: 10px
     text-transform: uppercase 
     font-size: 12px 
-    
   hr
     @extend %hr 
     margin-top: -15px
@@ -565,104 +564,53 @@ a
 .calendar 
   margin-top: 45px
   margin-bottom: 95px
+  padding-bottom: 10px
   background-color: white 
   &__header 
     padding-left: 8%
     line-height: 10px
     font-size: 20px 
     font-weight: 400 
-
+  &__wrapper
+    margin: 0 auto 
+    width: 80%
+    table
+      width: 100%
+    td
+      height: 36px
+      text-align: center
+      font-size: 14px
+      font-weight: 400
+      &.not-current
+        color: #c2c2c2
+      &.today
+        color: black
+        font-weight: 700
+        font-size: 17px
+  hr 
+    @extend %hr 
+    margin-top: -15px
+    
+//Calendar buttons start
+%calc-button 
+  background: white 
+  border: none
+  outline: none
+  cursor: pointer
+  font-size: 1em
+  color: #555
+  font-family: "Roboto Condensed", sans-serif
 #btnPrev
-  padding-left: 9%
+  @extend %calc-button
+  position: absolute 
+  margin-top: 10px
+  margin-left: 2%
 #btnNext
-  padding-right: 9%
-hr 
-  @extend %hr 
-  margin-top: -15px
-
-$main-bg: rgb(40,40,59)
-$calendar-border: rgb(220,220,255)
-$calendar-bg: #fff
-$calendar-standout: rgb(40,40,59)
-$calendar-color: #444
-$calendar-fade-color: #c0c0c0
-
-
-*, *:before, *:after
-        box-sizing: border-box
-
-
-.group
-    &:after
-        content: ""
-        display: table
-        clear: both
-
-
-.calendar-wrapper
-    width: 300px
-    margin: 3em auto
-    padding: 2em
-    border: 1px solid $calendar-border
-    border-radius: 5px
-    background: $calendar-bg
-
-
-table
-    clear: both
-    width: 100%
-    border: 1px solid $calendar-border
-    border-radius: 3px
-    border-collapse: collapse
-    color: $calendar-color
-
-td
-    height: 48px
-    text-align: center
-    vertical-align: middle
-    border-right: 1px solid $calendar-border
-    border-top: 1px solid $calendar-border
-    width: 100% / 7
-
-td.not-current
-    color: $calendar-fade-color
-
-td.normal
-td.today
-    font-weight: 700
-    color: $calendar-standout
-    font-size: 1.5em
-
-thead td
-    border: none
-    color: $calendar-standout
-    text-transform: uppercase
-    font-size: 1.5em
-
-#btnPrev
-        float: left
-        margin-bottom: 20px
-
-
-
-
-#btnNext
-    float: right
-    margin-bottom: 20px
-
-
-
-
-#btnPrev, #btnNext
-    background: transparent
-    border: none
-    outline: none
-    font-size: 1em
-    color: $calendar-fade-color
-    cursor: pointer
-    font-family: "Roboto Condensed", sans-serif
-    text-transform: uppercase
-    transition: all 0.3s ease
+  @extend %calc-button
+  position: absolute 
+  margin-top: 10px
+  margin-left: 15.5%
+//Calendar buttons end
 
 //Second column end
 
@@ -680,7 +628,7 @@ thead td
 
 
 
-.cart-target__text
+
 
 
 .make-column
