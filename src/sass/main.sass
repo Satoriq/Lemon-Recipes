@@ -1,3 +1,8 @@
+
+
+
+
+
 body
   background-color: #eaeaea
   font-family: 'Josefin Sans', sans-serif
@@ -370,7 +375,7 @@ a
   &__header
     text-align: center
     font-family: 'Playfair Display', serif
-    font-weight: 600
+    font-weight: 900 
     font-size: 22px
     color: #055555
   &__info
@@ -413,7 +418,7 @@ a
     padding-left: 10%
     margin: 18px 0px 30px 0px
     font-family: 'Playfair Display', serif
-    font-weight: 600
+    font-weight: 900 
     font-size: 20px
     color: #055555
   &__info
@@ -505,7 +510,6 @@ a
     margin-bottom: 15px 
     padding: 8px 12px 5px 12px  
     border: 1px solid #999
-    text-align: center
     text-transform: uppercase
     font-size: 12px 
     color: #010101
@@ -622,45 +626,96 @@ a
 
 .popular 
   margin-top: 75px  
+  padding-bottom: 130px 
   background-image: url('../img/coffee.png')
-  background-repeat: no-repeat 
   background-size: 100% 100%
-  &__info
-    padding-left: 5%
-    padding-bottom: 130px 
+  padding-right: 5%
+  padding-left: 5%
+
+    
   &__header 
-    padding-bottom: 15px 
+    margin-top: 17px
+    margin-bottom: 32px
     font-family: 'Playfair Display', serif
     color: #921026
     font-size: 32px 
-    font-weight: 600
-    margin-top: 27px
-    margin-bottom: 7px
+    font-weight: 900 
   &__sub-header 
     margin: 0px
     font-weight: bold 
     font-size: 22px 
-  &__text 
-    font-size: 16px 
+  &__text
     font-weight: 400 
     margin-top: 10px
-    width: 90%
+  &__info 
+    white-space: nowrap
   i
     padding-left: 7px
     font-size: 13px
     color: #555
+    @media (max-width: 1400px)
+      display: none 
   a
     display: inline-block
     padding: 8px 12px 5px 12px  
     border: 1px solid #999
-    text-align: center
     text-transform: uppercase
-    font-size: 12px 
-    color: #010101
-    margin-right: 8% 
+    font-size: 12px
+    @media (max-width: 1400px)
+      margin-left: 27%
 
+.time
+  margin-top: 45px 
+  background-color: white
+  width: 100% 
+  min-height: 426px
+  &__header
+    padding-left: 8%
+    margin-top: 35px 
+    margin-bottom: 0px
+    font-size: 20px 
+    font-weight: 400 
+    &-hr 
+      @extend %hr 
+    &-icons 
+      display: inline-flex
+      float: right 
+      padding-right: 8%
+      font-size: 16px
+      i
+        padding-right: 10px
+        color: #555
+  &__sub-header 
+    padding-left: 11%
+    margin-top: 10px 
+    font-family: 'Playfair Display', serif
+    font-weight: 900
+    font-size: 20px
+    color: #055555
 
-
+/* I just drew "lines" element like normal, and 
+ turned it on 270*, and when you add your value of 
+ width/height, paddings/margins to &-item keep in mind that they rotated  */
+  &__lines 
+    width: 185px
+    margin: 0 auto 
+    margin-top: -30px
+    margin-bottom: -30px
+    white-space: nowrap     
+    transform: rotate(270deg)
+    @media (max-width: 1400px)
+      margin: 0 auto 
+    &-hr  
+      width: 66.666%
+    &-item 
+      padding-top: 15%
+      padding-bottom: 15%
+      @media (max-width: 1400px)
+        padding-top: 10%
+        padding-bottom: 10%
+  &__text 
+    margin: 13px auto
+    width: 66.666%
 
 
 
@@ -696,14 +751,6 @@ a
         position: absolute
 
 
-.time__lines
-        display: flex
-        justify-content: space-between
-        flex-direction: column
-        width: 210px
-        height: 210px
-        background-color: grey
-        transform: rotate(270deg)
 
 
 
