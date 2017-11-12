@@ -26,7 +26,7 @@ a {
   text-decoration: none;
 }
 
-.comments__sorry hr, .small-recipe hr, .target hr, .level-recipes hr, .tags hr, .calendar hr, .time__header-hr {
+.comments__404 hr, .small-recipe hr, .target hr, .level-recipes hr, .tags hr, .calendar hr, .time__header-hr {
   width: 85%;
   border-color: #ddd;
 }
@@ -427,7 +427,7 @@ a {
   }
 }
 
-.comments__sorry {
+.comments__404 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -452,7 +452,7 @@ a {
 }
 
 @media (max-width: 1024px) {
-  .comments__sorry {
+  .comments__404 {
     background-position: center;
     -webkit-background-size: 100% 60%;
             background-size: 100% 60%;
@@ -462,12 +462,12 @@ a {
 }
 
 @media (max-width: 800px) {
-  .comments__sorry {
+  .comments__404 {
     display: none;
   }
 }
 
-.comments__sorry-top {
+.comments__404-top {
   -webkit-align-self: flex-start;
       -ms-flex-item-align: start;
           align-self: flex-start;
@@ -475,13 +475,13 @@ a {
   padding-top: 7px;
 }
 
-.comments__sorry-text {
+.comments__404-text {
   margin-top: 170px;
   font-size: 32px;
   font-weight: bold;
 }
 
-.comments__sorry-subtext {
+.comments__404-subtext {
   margin-top: -22px;
   text-align: center;
   text-transform: uppercase;
@@ -490,7 +490,7 @@ a {
   font-weight: 600;
 }
 
-.comments__sorry-back {
+.comments__404-back {
   padding: 5px 35px;
   margin-top: 115px;
   border: 1px solid #c2c2c2;
@@ -499,16 +499,14 @@ a {
   font-size: 12px;
 }
 
-.comments__sorry hr {
+.comments__404 hr {
   margin-top: -10px;
 }
 
 .comments__author {
   width: 46%;
-  min-height: 515px;
   margin-top: 115px;
   background-color: white;
-  min-width: 250px;
 }
 
 @media (max-width: 800px) {
@@ -709,10 +707,7 @@ a {
 }
 
 .target__header-icons {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  white-space: nowrap;
   float: right;
   padding-right: 8%;
   font-size: 16px;
@@ -832,14 +827,17 @@ a {
 }
 
 .level-recipes__header-icons {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  white-space: nowrap;
   float: right;
   padding-right: 8%;
   font-size: 16px;
   color: #555;
+}
+
+@media (max-width: 1200px) {
+  .level-recipes__header-icons .fa-print {
+    display: none;
+  }
 }
 
 .level-recipes__levels {
@@ -853,16 +851,6 @@ a {
           justify-content: center;
 }
 
-.level-recipes__text {
-  padding-left: 20px;
-  width: 70%;
-}
-
-.level-recipes__text-subtext {
-  font-size: 16px;
-  font-weight: 600;
-}
-
 .level-recipes__recipe {
   display: -webkit-box;
   display: -webkit-flex;
@@ -871,12 +859,58 @@ a {
   padding-top: 35px;
 }
 
+@media (max-width: 1200px) {
+  .level-recipes__recipe {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+
 .level-recipes__recipe--first {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   padding-top: 20px;
+}
+
+@media (max-width: 1200px) {
+  .level-recipes__recipe--first {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+
+.level-recipes__text {
+  display: inline-block;
+  padding-left: 20px;
+  width: 70%;
+}
+
+@media (max-width: 1200px) {
+  .level-recipes__text {
+    width: 93%;
+  }
+}
+
+.level-recipes__text-subtext {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .level-recipes__text-subtext {
+    margin-top: 10px;
+  }
 }
 
 .level-recipes__view {
@@ -898,12 +932,26 @@ a {
           align-self: flex-start;
 }
 
+@media (max-width: 1200px) {
+  .level-recipes img {
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+  }
+}
+
 .level-recipes hr {
   margin-top: -15px;
 }
 
 .level-recipes i {
   padding-right: 10px;
+}
+
+@media (max-width: 1200px) {
+  .level-recipes i {
+    padding-right: 3px;
+  }
 }
 
 .unpicked, .picked {
@@ -914,6 +962,7 @@ a {
   text-transform: uppercase;
   background-color: white;
   border: none;
+  background: none;
 }
 
 .unpicked {
@@ -999,7 +1048,7 @@ a {
 }
 
 #btnPrev, #btnNext {
-  background: white;
+  background: none;
   border: none;
   outline: none;
   cursor: pointer;
@@ -1097,7 +1146,9 @@ a {
   margin-top: 45px;
   background-color: white;
   width: 100%;
-  min-height: 426px;
+  /* I just drew "lines" element like normal, and turned it on 270*,
+    when you add your properties of width/height, paddings/margins to &-item
+    keep in mind that they rotated */
 }
 
 .time__header {
@@ -1109,10 +1160,7 @@ a {
 }
 
 .time__header-icons {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  white-space: nowrap;
   float: right;
   padding-right: 8%;
   font-size: 16px;
@@ -1130,6 +1178,44 @@ a {
   font-weight: 900;
   font-size: 20px;
   color: #055555;
+}
+
+.time__lines {
+  width: 185px;
+  margin: 0 auto;
+  margin-top: -30px;
+  margin-bottom: -30px;
+  white-space: nowrap;
+  -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+@media (max-width: 1400px) {
+  .time__lines {
+    margin: 0 auto;
+  }
+}
+
+.time__lines-hr {
+  width: 66.666%;
+}
+
+.time__lines-item {
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+
+@media (max-width: 1400px) {
+  .time__lines-item {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+}
+
+.time__text {
+  margin: 13px auto;
+  width: 66.666%;
 }
 
 .make-column {
