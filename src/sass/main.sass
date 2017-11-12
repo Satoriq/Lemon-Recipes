@@ -241,7 +241,7 @@ a
     flex-wrap: wrap
     justify-content: center
 
-  &__sorry
+  &__404
     display: flex
     flex-direction: column
     align-items: center
@@ -287,10 +287,8 @@ a
   
   &__author
     width: 46%
-    min-height: 515px
     margin-top: 115px
     background-color: white
-    min-width: 250px
     @media (max-width:800px)
       width: 100%
     &-top
@@ -303,7 +301,6 @@ a
     &-content
       display: flex
       max-width: 90%
-
     &-photo
       align-self: flex-start
       max-width: 30%
@@ -407,7 +404,7 @@ a
     font-size: 20px
     font-weight: 400
     &-icons
-      display: inline-flex
+      white-space: nowrap 
       float: right 
       padding-right: 8%
       font-size: 16px
@@ -432,6 +429,7 @@ a
     &-text
       font-size: 14px
       font-style: italic
+    //  TO DO remade this 
     &-inside
       position: absolute
       bottom: 30%
@@ -456,13 +454,16 @@ a
   hr
     @extend %hr 
     margin-top: -15px
-    
+
+//Mail, print hovers start 
 .fa-envelope-o:hover
         color: #4867AA
 .fa-print:hover
         color: #BD081B
+//Mail, print hovers end 
 
 //First column end
+
 
 //Second column start
 .second-column
@@ -482,27 +483,46 @@ a
       line-height: 20px 
       font-size: 12px
     &-icons 
-      display: inline-flex
+      white-space: nowrap 
       float: right 
       padding-right: 8%
       font-size: 16px
       color: #555
+      .fa-print
+        @media (max-width: 1200px)
+          display: none 
   &__levels 
     display: flex 
     justify-content: center
     
-  &__text 
-    padding-left: 20px
-    width: 70%
-    &-subtext
-      font-size: 16px 
-      font-weight: 600
+    
   &__recipe
     display: flex 
     padding-top: 35px
+    @media (max-width: 1200px)
+      flex-direction: column 
+      text-align: center 
     &--first
       display: flex 
       padding-top: 20px
+      @media (max-width: 1200px)
+        flex-direction: column 
+        text-align: center 
+  &__text 
+    display: inline-block
+    padding-left: 20px
+    width: 70%
+    @media (max-width: 1200px)
+      width: 93% 
+    &-subtext
+      display: inline-block
+      font-size: 16px 
+      font-weight: 600
+      @media (max-width: 1200px)
+        margin-top: 10px 
+  
+
+
   &__view
     float: right 
     margin-right: 8%
@@ -517,11 +537,15 @@ a
   img 
     padding-left: 20px 
     align-self: flex-start
+    @media (max-width: 1200px)
+        align-self: center 
   hr
     @extend %hr 
     margin-top: -15px
   i
     padding-right: 10px
+    @media (max-width: 1200px)
+      padding-right: 3px 
 
 // customization for level buttons start 
 %button
@@ -532,6 +556,7 @@ a
   text-transform: uppercase 
   background-color: white
   border: none
+  background: none
 
 .unpicked
   @extend %button
@@ -598,7 +623,7 @@ a
     
 //Calendar buttons start
 %calc-button 
-  background: white 
+  background: none 
   border: none
   outline: none
   cursor: pointer
@@ -619,6 +644,8 @@ a
 
 //Second column end
 
+
+//Third column start 
 .third-column
         display: flex
         flex-direction: column
@@ -668,7 +695,6 @@ a
   margin-top: 45px 
   background-color: white
   width: 100% 
-  min-height: 426px
   &__header
     padding-left: 8%
     margin-top: 35px 
@@ -678,27 +704,26 @@ a
     &-hr 
       @extend %hr 
     &-icons 
-      display: inline-flex
+      white-space: nowrap  
       float: right 
       padding-right: 8%
       font-size: 16px
       i
         padding-right: 10px
         color: #555
-  &__sub-header 
+  &__sub-header               
     padding-left: 11%
     margin-top: 10px 
     font-family: 'Playfair Display', serif
     font-weight: 900
     font-size: 20px
     color: #055555
-
-/* I just drew "lines" element like normal, and 
- turned it on 270*, and when you add your value of 
- width/height, paddings/margins to &-item keep in mind that they rotated  */
-  &__lines 
+  /* I just drew "lines" element like normal, and turned it on 270*,
+    when you add your properties of width/height, paddings/margins to &-item 
+    keep in mind that they rotated */
+  &__lines               
     width: 185px
-    margin: 0 auto 
+    margin: 0 auto
     margin-top: -30px
     margin-bottom: -30px
     white-space: nowrap     
@@ -717,7 +742,7 @@ a
     margin: 13px auto
     width: 66.666%
 
-
+//Third column end
 
 
 
