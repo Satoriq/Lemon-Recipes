@@ -67,7 +67,7 @@ a
   align-items: center
   justify-content: space-between
   margin-bottom: 160px
-  padding: 35px 0px
+  padding: 35px 0
   width: 77.777777777%
   &__logo
     margin-left: 5.3%
@@ -154,7 +154,7 @@ a
     flex-direction: column
     min-width: 28%
     height: auto
-    padding: 0px 2%
+    padding: 0 2%
     @media (max-width: 937px)
       min-width: 65%
     &--tablets
@@ -245,7 +245,6 @@ a
     display: flex
     flex-direction: column
     align-items: center
-    min-height: 515px
     width: 46%
     min-width: 250px
     margin-top: 115px
@@ -264,7 +263,8 @@ a
       padding-left: 9%
       padding-top: 7px
     &-text
-      margin-top: 170px
+      text-align: center
+      margin-top: 150px
       font-size: 32px
       font-weight: bold
     &-subtext
@@ -277,6 +277,7 @@ a
     &-back
       padding: 5px 35px
       margin-top: 115px
+      margin-bottom: 50px
       border: 1px solid #c2c2c2
       text-transform: uppercase
       color: #3e3e3e
@@ -353,9 +354,11 @@ a
 //COMMENTS END
 
 
+
 //COLUMNS START 
 .columns
   display: flex
+  flex-wrap: wrap
   justify-content: space-between
   margin: 0 auto
   width: 71.18055555%
@@ -365,6 +368,8 @@ a
   display: flex
   flex-direction: column
   width: 27.8%
+  @media( max-width: 1240px)
+    width: 40% 
 
 .small-recipe
   margin-top: 75px
@@ -467,9 +472,11 @@ a
 
 //Second column start
 .second-column
-        display: flex
-        flex-direction: column
-        width: 27.8%
+  display: flex
+  flex-direction: column
+  width: 27.8%
+  @media( max-width: 1240px)
+    width: 40% 
 
 .level-recipes 
   margin-top: 75px 
@@ -488,41 +495,24 @@ a
       padding-right: 8%
       font-size: 16px
       color: #555
-      .fa-print
-        @media (max-width: 1200px)
-          display: none 
   &__levels 
-    display: flex 
-    justify-content: center
+    text-align: center 
     
     
   &__recipe
     display: flex 
     padding-top: 35px
-    @media (max-width: 1200px)
-      flex-direction: column 
-      text-align: center 
     &--first
       display: flex 
       padding-top: 20px
-      @media (max-width: 1200px)
-        flex-direction: column 
-        text-align: center 
   &__text 
     display: inline-block
     padding-left: 20px
     width: 70%
-    @media (max-width: 1200px)
-      width: 93% 
     &-subtext
       display: inline-block
       font-size: 16px 
       font-weight: 600
-      @media (max-width: 1200px)
-        margin-top: 10px 
-  
-
-
   &__view
     float: right 
     margin-right: 8%
@@ -537,26 +527,22 @@ a
   img 
     padding-left: 20px 
     align-self: flex-start
-    @media (max-width: 1200px)
-        align-self: center 
   hr
     @extend %hr 
     margin-top: -15px
   i
     padding-right: 10px
-    @media (max-width: 1200px)
-      padding-right: 3px 
 
 // customization for level buttons start 
 %button
-  padding-left: 8%
-  padding-right: 8%
+  width: 30% 
   font-size: 12px
   line-height: 25px
   text-transform: uppercase 
   background-color: white
   border: none
   background: none
+
 
 .unpicked
   @extend %button
@@ -572,6 +558,8 @@ a
   margin-top: 45px
   margin-bottom: 45px
   background-color: white  
+  @media (max-width: 1240px)
+    margin-top: 100px
   &__header 
     padding-left: 8%
     line-height: 10px
@@ -647,9 +635,12 @@ a
 
 //Third column start 
 .third-column
-        display: flex
-        flex-direction: column
-        width: 27.8%
+  display: flex
+  flex-direction: column
+  width: 27.8%
+  @media( max-width: 1240px)
+    width: 40% 
+    margin-top: -250px 
 
 .popular 
   margin-top: 75px  
@@ -658,8 +649,9 @@ a
   background-size: 100% 100%
   padding-right: 5%
   padding-left: 5%
+  @media (max-width: 1240px)
+    margin-top: 0
 
-    
   &__header 
     margin-top: 17px
     margin-bottom: 32px
@@ -695,6 +687,8 @@ a
   margin-top: 45px 
   background-color: white
   width: 100% 
+  @media (max-width: 1240px)
+    display: none 
   &__header
     padding-left: 8%
     margin-top: 35px 

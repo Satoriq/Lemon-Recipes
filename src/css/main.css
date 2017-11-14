@@ -100,7 +100,7 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 160px;
-  padding: 35px 0px;
+  padding: 35px 0;
   width: 77.777777777%;
 }
 
@@ -255,7 +255,7 @@ a {
           flex-direction: column;
   min-width: 28%;
   height: auto;
-  padding: 0px 2%;
+  padding: 0 2%;
 }
 
 @media (max-width: 937px) {
@@ -441,7 +441,6 @@ a {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 515px;
   width: 46%;
   min-width: 250px;
   margin-top: 115px;
@@ -476,7 +475,8 @@ a {
 }
 
 .comments__404-text {
-  margin-top: 170px;
+  text-align: center;
+  margin-top: 150px;
   font-size: 32px;
   font-weight: bold;
 }
@@ -493,6 +493,7 @@ a {
 .comments__404-back {
   padding: 5px 35px;
   margin-top: 115px;
+  margin-bottom: 50px;
   border: 1px solid #c2c2c2;
   text-transform: uppercase;
   color: #3e3e3e;
@@ -622,6 +623,9 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
@@ -641,6 +645,12 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 27.8%;
+}
+
+@media (max-width: 1240px) {
+  .first-column {
+    width: 40%;
+  }
 }
 
 .small-recipe {
@@ -809,6 +819,12 @@ a {
   width: 27.8%;
 }
 
+@media (max-width: 1240px) {
+  .second-column {
+    width: 40%;
+  }
+}
+
 .level-recipes {
   margin-top: 75px;
   background-color: white;
@@ -834,21 +850,8 @@ a {
   color: #555;
 }
 
-@media (max-width: 1200px) {
-  .level-recipes__header-icons .fa-print {
-    display: none;
-  }
-}
-
 .level-recipes__levels {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  text-align: center;
 }
 
 .level-recipes__recipe {
@@ -859,17 +862,6 @@ a {
   padding-top: 35px;
 }
 
-@media (max-width: 1200px) {
-  .level-recipes__recipe {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center;
-  }
-}
-
 .level-recipes__recipe--first {
   display: -webkit-box;
   display: -webkit-flex;
@@ -878,39 +870,16 @@ a {
   padding-top: 20px;
 }
 
-@media (max-width: 1200px) {
-  .level-recipes__recipe--first {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center;
-  }
-}
-
 .level-recipes__text {
   display: inline-block;
   padding-left: 20px;
   width: 70%;
 }
 
-@media (max-width: 1200px) {
-  .level-recipes__text {
-    width: 93%;
-  }
-}
-
 .level-recipes__text-subtext {
   display: inline-block;
   font-size: 16px;
   font-weight: 600;
-}
-
-@media (max-width: 1200px) {
-  .level-recipes__text-subtext {
-    margin-top: 10px;
-  }
 }
 
 .level-recipes__view {
@@ -932,14 +901,6 @@ a {
           align-self: flex-start;
 }
 
-@media (max-width: 1200px) {
-  .level-recipes img {
-    -webkit-align-self: center;
-        -ms-flex-item-align: center;
-            align-self: center;
-  }
-}
-
 .level-recipes hr {
   margin-top: -15px;
 }
@@ -948,15 +909,8 @@ a {
   padding-right: 10px;
 }
 
-@media (max-width: 1200px) {
-  .level-recipes i {
-    padding-right: 3px;
-  }
-}
-
 .unpicked, .picked {
-  padding-left: 8%;
-  padding-right: 8%;
+  width: 30%;
   font-size: 12px;
   line-height: 25px;
   text-transform: uppercase;
@@ -979,6 +933,12 @@ a {
   margin-top: 45px;
   margin-bottom: 45px;
   background-color: white;
+}
+
+@media (max-width: 1240px) {
+  .tags {
+    margin-top: 100px;
+  }
 }
 
 .tags__header {
@@ -1082,6 +1042,13 @@ a {
   width: 27.8%;
 }
 
+@media (max-width: 1240px) {
+  .third-column {
+    width: 40%;
+    margin-top: -250px;
+  }
+}
+
 .popular {
   margin-top: 75px;
   padding-bottom: 130px;
@@ -1090,6 +1057,12 @@ a {
           background-size: 100% 100%;
   padding-right: 5%;
   padding-left: 5%;
+}
+
+@media (max-width: 1240px) {
+  .popular {
+    margin-top: 0;
+  }
 }
 
 .popular__header {
@@ -1149,6 +1122,12 @@ a {
   /* I just drew "lines" element like normal, and turned it on 270*,
     when you add your properties of width/height, paddings/margins to &-item
     keep in mind that they rotated */
+}
+
+@media (max-width: 1240px) {
+  .time {
+    display: none;
+  }
 }
 
 .time__header {
