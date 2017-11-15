@@ -102,6 +102,7 @@ a {
   margin-bottom: 160px;
   padding: 35px 0;
   width: 77.777777777%;
+  max-width: 1120px;
 }
 
 .nav__logo {
@@ -115,6 +116,7 @@ a {
 }
 
 .nav__input {
+  font-size: 13px;
   text-align: center;
   margin-left: 4%;
   margin-right: 5%;
@@ -123,6 +125,7 @@ a {
   background-repeat: no-repeat;
   -webkit-background-size: 13px 17px;
           background-size: 13px 17px;
+  background-position: 3px 0px;
   border: 1px solid #798186;
 }
 
@@ -177,6 +180,7 @@ a {
 
 .main-recipe {
   width: 77.777777777%;
+  max-width: 1120px;
   background-image: url("../img/main-recipe.png");
   background-position: center;
   -webkit-background-size: cover;
@@ -231,6 +235,7 @@ a {
   margin-top: 160px;
   padding-bottom: 30px;
   width: 77.7777777%;
+  max-width: 1120px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -304,6 +309,7 @@ a {
   background-color: white;
   width: 77.7777777%;
   margin-top: 80px;
+  max-width: 1120px;
 }
 
 @media (max-width: 1200px) {
@@ -413,6 +419,7 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 77.7777777%;
+  max-width: 1120px;
 }
 
 @media (max-width: 800px) {
@@ -544,6 +551,8 @@ a {
   margin-left: 4%;
   -webkit-border-radius: 50%;
           border-radius: 50%;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 @media (max-width: 1200px) and (min-width: 800px) {
@@ -623,15 +632,13 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 auto;
   width: 71.18055555%;
+  max-width: 1025px;
 }
 
 .first-column {
@@ -649,12 +656,12 @@ a {
 
 @media (max-width: 1240px) {
   .first-column {
-    width: 40%;
+    display: none;
   }
 }
 
 .small-recipe {
-  margin-top: 75px;
+  margin-top: 100px;
   background-color: white;
 }
 
@@ -719,7 +726,7 @@ a {
 .target__header-icons {
   white-space: nowrap;
   float: right;
-  padding-right: 8%;
+  margin-right: 8%;
   font-size: 16px;
 }
 
@@ -730,7 +737,7 @@ a {
 
 .target__sub-header {
   padding-left: 10%;
-  margin: 18px 0px 30px 0px;
+  margin: 18px 0 30px 0;
   font-family: 'Playfair Display', serif;
   font-weight: 900;
   font-size: 20px;
@@ -739,7 +746,7 @@ a {
 
 .target__info {
   position: relative;
-  margin: 0px;
+  margin: 0;
   padding-left: 9%;
   width: 66%;
   color: #9f9f9f;
@@ -826,8 +833,17 @@ a {
 }
 
 .level-recipes {
-  margin-top: 75px;
+  margin-top: 100px;
   background-color: white;
+}
+
+@media (max-width: 1240px) {
+  .level-recipes {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 .level-recipes__header {
@@ -845,9 +861,21 @@ a {
 .level-recipes__header-icons {
   white-space: nowrap;
   float: right;
-  padding-right: 8%;
+  margin-right: 8%;
   font-size: 16px;
   color: #555;
+}
+
+@media (max-width: 1024px) {
+  .level-recipes__header-icons .fa-print {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .level-recipes__header-icons .fa-envelope-o {
+    display: none;
+  }
 }
 
 .level-recipes__levels {
@@ -862,6 +890,16 @@ a {
   padding-top: 35px;
 }
 
+@media (max-width: 1024px) {
+  .level-recipes__recipe {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .level-recipes__recipe--first {
   display: -webkit-box;
   display: -webkit-flex;
@@ -870,16 +908,60 @@ a {
   padding-top: 20px;
 }
 
+@media (max-width: 1024px) {
+  .level-recipes__recipe--first {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .level-recipes__text {
   display: inline-block;
   padding-left: 20px;
   width: 70%;
 }
 
+@media (max-width: 1024px) {
+  .level-recipes__text {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+.level-recipes__text-header {
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.level-recipes__text-by {
+  font-weight: 300;
+}
+
 .level-recipes__text-subtext {
   display: inline-block;
   font-size: 16px;
   font-weight: 600;
+}
+
+.level-recipes__img {
+  padding-left: 20px;
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+}
+
+@media (max-width: 1024px) {
+  .level-recipes__img {
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .level-recipes__view {
@@ -894,19 +976,18 @@ a {
   color: #010101;
 }
 
-.level-recipes img {
-  padding-left: 20px;
-  -webkit-align-self: flex-start;
-      -ms-flex-item-align: start;
-          align-self: flex-start;
-}
-
 .level-recipes hr {
   margin-top: -15px;
 }
 
 .level-recipes i {
   padding-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .level-recipes i {
+    padding-right: 2px;
+  }
 }
 
 .unpicked, .picked {
@@ -917,6 +998,12 @@ a {
   background-color: white;
   border: none;
   background: none;
+}
+
+@media (max-width: 600px) {
+  .unpicked, .picked {
+    width: 33%;
+  }
 }
 
 .unpicked {
@@ -931,13 +1018,15 @@ a {
 
 .tags {
   margin-top: 45px;
-  margin-bottom: 45px;
   background-color: white;
 }
 
 @media (max-width: 1240px) {
   .tags {
-    margin-top: 100px;
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
   }
 }
 
@@ -968,6 +1057,12 @@ a {
   margin-bottom: 95px;
   padding-bottom: 10px;
   background-color: white;
+}
+
+@media (max-width: 1240px) {
+  .calendar {
+    display: none;
+  }
 }
 
 .calendar__header {
@@ -1045,12 +1140,11 @@ a {
 @media (max-width: 1240px) {
   .third-column {
     width: 40%;
-    margin-top: -250px;
   }
 }
 
 .popular {
-  margin-top: 75px;
+  margin-top: 100px;
   padding-bottom: 130px;
   background-image: url("../img/coffee.png");
   -webkit-background-size: 100% 100%;
@@ -1061,7 +1155,17 @@ a {
 
 @media (max-width: 1240px) {
   .popular {
-    margin-top: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .popular {
+    -webkit-background-size: 100% 60%;
+            background-size: 100% 60%;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: bottom;
   }
 }
 
@@ -1075,7 +1179,7 @@ a {
 }
 
 .popular__sub-header {
-  margin: 0px;
+  margin: 0;
   font-weight: bold;
   font-size: 22px;
 }
@@ -1090,7 +1194,7 @@ a {
 }
 
 .popular i {
-  padding-left: 7px;
+  padding-left: 2%;
   font-size: 13px;
   color: #555;
 }
@@ -1111,7 +1215,10 @@ a {
 
 @media (max-width: 1400px) {
   .popular a {
-    margin-left: 27%;
+    display: block;
+    max-width: 110px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1124,12 +1231,6 @@ a {
     keep in mind that they rotated */
 }
 
-@media (max-width: 1240px) {
-  .time {
-    display: none;
-  }
-}
-
 .time__header {
   padding-left: 8%;
   margin-top: 35px;
@@ -1140,14 +1241,26 @@ a {
 
 .time__header-icons {
   white-space: nowrap;
+  margin-right: 8%;
   float: right;
-  padding-right: 8%;
   font-size: 16px;
 }
 
 .time__header-icons i {
   padding-right: 10px;
   color: #555;
+}
+
+@media (max-width: 768px) {
+  .time__header-icons i {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .time__header-icons .fa-print {
+    display: none;
+  }
 }
 
 .time__sub-header {
@@ -1160,19 +1273,24 @@ a {
 }
 
 .time__lines {
-  width: 185px;
+  max-width: 50%;
   margin: 0 auto;
-  margin-top: -30px;
-  margin-bottom: -30px;
   white-space: nowrap;
   -webkit-transform: rotate(270deg);
       -ms-transform: rotate(270deg);
           transform: rotate(270deg);
+  margin-bottom: -20px;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 900px) {
   .time__lines {
-    margin: 0 auto;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .time__lines {
+    margin-top: 90px;
   }
 }
 
