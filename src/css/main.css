@@ -77,12 +77,12 @@ a {
 }
 
 .header__logo {
+  display: block;
   margin-top: 230px;
   margin-bottom: 95px;
   margin-left: auto;
   margin-right: auto;
   max-width: 25.5%;
-  min-width: 250px;
 }
 
 .nav {
@@ -125,7 +125,7 @@ a {
   background-repeat: no-repeat;
   -webkit-background-size: 13px 17px;
           background-size: 13px 17px;
-  background-position: 3px 0px;
+  background-position: 3px 0;
   border: 1px solid #798186;
 }
 
@@ -337,7 +337,14 @@ a {
   .scroll-recipe img {
     min-width: 339px;
     min-height: 275px;
-    padding-top: 20;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 1200px) and (max-width: 600px) {
+  .scroll-recipe img {
+    padding-top: 0;
+    min-width: 100%;
   }
 }
 
@@ -359,6 +366,12 @@ a {
 @media (max-width: 1200px) {
   .scroll-recipe__header {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .scroll-recipe__header {
+    min-width: 90%;
   }
 }
 
@@ -392,6 +405,12 @@ a {
 .scroll-recipe__scroll {
   overflow-y: scroll;
   margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .scroll-recipe__scroll {
+    margin-bottom: 0;
+  }
 }
 
 .scroll-recipe__scroll::-webkit-scrollbar-thumb {
@@ -639,6 +658,9 @@ a {
   margin: 0 auto;
   width: 71.18055555%;
   max-width: 1025px;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 .first-column {
@@ -828,7 +850,14 @@ a {
 
 @media (max-width: 1240px) {
   .second-column {
-    width: 40%;
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .second-column {
+    width: 90%;
+    margin: 0 auto;
   }
 }
 
@@ -872,12 +901,6 @@ a {
   }
 }
 
-@media (max-width: 768px) {
-  .level-recipes__header-icons .fa-envelope-o {
-    display: none;
-  }
-}
-
 .level-recipes__levels {
   text-align: center;
 }
@@ -900,6 +923,16 @@ a {
   }
 }
 
+@media (max-width: 600px) {
+  .level-recipes__recipe {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .level-recipes__recipe--first {
   display: -webkit-box;
   display: -webkit-flex;
@@ -918,6 +951,16 @@ a {
   }
 }
 
+@media (max-width: 600px) {
+  .level-recipes__recipe--first {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .level-recipes__text {
   display: inline-block;
   padding-left: 20px;
@@ -928,6 +971,14 @@ a {
   .level-recipes__text {
     width: 90%;
     text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .level-recipes__text {
+    width: 70%;
+    text-align: left;
+    padding-left: 0;
   }
 }
 
@@ -949,6 +1000,12 @@ a {
   font-weight: 600;
 }
 
+@media (max-width: 1024px) {
+  .level-recipes__text-subtext {
+    text-align: left;
+  }
+}
+
 .level-recipes__img {
   padding-left: 20px;
   -webkit-align-self: flex-start;
@@ -961,6 +1018,7 @@ a {
     padding-left: 0;
     margin-left: auto;
     margin-right: auto;
+    width: 60px;
   }
 }
 
@@ -984,12 +1042,6 @@ a {
   padding-right: 10px;
 }
 
-@media (max-width: 768px) {
-  .level-recipes i {
-    padding-right: 2px;
-  }
-}
-
 .unpicked, .picked {
   width: 30%;
   font-size: 12px;
@@ -998,12 +1050,6 @@ a {
   background-color: white;
   border: none;
   background: none;
-}
-
-@media (max-width: 600px) {
-  .unpicked, .picked {
-    width: 33%;
-  }
 }
 
 .unpicked {
@@ -1027,6 +1073,12 @@ a {
     -webkit-order: 2;
         -ms-flex-order: 2;
             order: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .tags {
+    display: none;
   }
 }
 
@@ -1057,6 +1109,7 @@ a {
   margin-bottom: 95px;
   padding-bottom: 10px;
   background-color: white;
+  position: relative;
 }
 
 @media (max-width: 1240px) {
@@ -1079,6 +1132,7 @@ a {
 
 .calendar__wrapper table {
   width: 100%;
+  margin-top: -8px;
 }
 
 .calendar__wrapper td {
@@ -1103,25 +1157,22 @@ a {
 }
 
 #btnPrev, #btnNext {
+  position: absolute;
   background: none;
   border: none;
   outline: none;
   cursor: pointer;
-  font-size: 1em;
   color: #555;
   font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
 }
 
 #btnPrev {
-  position: absolute;
-  margin-top: 10px;
-  margin-left: 2%;
+  margin-left: 11%;
 }
 
 #btnNext {
-  position: absolute;
-  margin-top: 10px;
-  margin-left: 15.5%;
+  margin-left: 83%;
 }
 
 .third-column {
@@ -1143,6 +1194,20 @@ a {
   }
 }
 
+@media (max-width: 1024px) {
+  .third-column {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .third-column {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: -30px;
+  }
+}
+
 .popular {
   margin-top: 100px;
   padding-bottom: 130px;
@@ -1153,22 +1218,6 @@ a {
   padding-left: 5%;
 }
 
-@media (max-width: 1240px) {
-  .popular {
-    text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .popular {
-    -webkit-background-size: 100% 60%;
-            background-size: 100% 60%;
-    background-color: white;
-    background-repeat: no-repeat;
-    background-position: bottom;
-  }
-}
-
 .popular__header {
   margin-top: 17px;
   margin-bottom: 32px;
@@ -1176,6 +1225,12 @@ a {
   color: #921026;
   font-size: 32px;
   font-weight: 900;
+}
+
+@media (max-width: 1400px) {
+  .popular__header {
+    text-align: center;
+  }
 }
 
 .popular__sub-header {
@@ -1216,7 +1271,7 @@ a {
 @media (max-width: 1400px) {
   .popular a {
     display: block;
-    max-width: 110px;
+    max-width: 95px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1229,6 +1284,12 @@ a {
   /* I just drew "lines" element like normal, and turned it on 270*,
     when you add your properties of width/height, paddings/margins to &-item
     keep in mind that they rotated */
+}
+
+@media (max-width: 600px) {
+  .time {
+    display: none;
+  }
 }
 
 .time__header {
@@ -1280,6 +1341,7 @@ a {
       -ms-transform: rotate(270deg);
           transform: rotate(270deg);
   margin-bottom: -20px;
+  margin-top: 30px;
 }
 
 @media (max-width: 900px) {
@@ -1313,6 +1375,38 @@ a {
 .time__text {
   margin: 13px auto;
   width: 66.666%;
+}
+
+.forms {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  width: 51.7%;
+  max-width: 1025px;
+}
+
+@media (max-width: 1240px) {
+  .forms {
+    margin-top: 100px;
+  }
+}
+
+.login {
+  background-color: white;
+  width: 43%;
+  max-width: 325px;
+}
+
+.sign {
+  background-color: white;
+  width: 43%;
+  max-width: 325px;
 }
 
 .make-column {
