@@ -657,19 +657,31 @@
     
 
     <div class="sign">
-      <p>Sing in</p>
-      <hr>
-      <p>Sing in for LEMON</p>
-      <input type="text">
-      <input type="text">
-      <input type="password">
-      <input type="password">
-      <button>Sing up</button>
-      <p>By joining LEMON, you agree to our
-        <a href="#">Terms of service</a>
-      </p>
-      <a href="#">Login</a>
-    </div>
+        <form class="columns-inside-container">
+            <p class="sign__header">Sign in</p>
+            <hr>
+            <p class="sign__sub-header">Sign in for LEMON</p>
+            <input class="sign__email-input" type="text" placeholder="email" ><br>
+            <input class="sign__name-input" type="text" placeholder="username"><br>
+            <input class="sign__password-input" type="password" placeholder="password"><br>
+            <input class="sign__password-input" type="password" placeholder="repeat password"><br>
+            <button class="sign__button">Sign up</button><br>
+          </form>
+    
+          <div class="sign__social">
+            <a href="#">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a class="sign__social-google" href="#">
+              <i class="fa fa-google-plus" aria-hidden="true"></i>
+            </a>
+          </div><br>
+          
+          <div class="sign__terms">
+            <span>By joining LEMON, you agree to our <br> <a href="#" class="sign__terms-link">Term of Service</a></span>
+          </div>
+    
+        </div>
 
   </div>
 

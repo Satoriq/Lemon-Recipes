@@ -1404,6 +1404,9 @@ a {
 .login {
   width: 43%;
   background-color: #fff;
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
 }
 
 .login__header {
@@ -1499,7 +1502,7 @@ a {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.login .login__login-input, .login .login__password-input {
+.login .login__login-input, .login .login__password-input, .login .sign__email-input, .login .sign__name-input, .login .sign__password-input {
   height: 40px;
   width: 100%;
   outline-color: #979797;
@@ -1507,7 +1510,7 @@ a {
   border: 1px solid #c2c2c2;
 }
 
-.login .login__login-input::-webkit-input-placeholder, .login .login__password-input::-webkit-input-placeholder {
+.login .login__login-input::-webkit-input-placeholder, .login .login__password-input::-webkit-input-placeholder, .login .sign__email-input::-webkit-input-placeholder, .login .sign__name-input::-webkit-input-placeholder, .login .sign__password-input::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.2);
 }
 
@@ -1518,7 +1521,79 @@ a {
 .sign {
   background-color: #fff;
   width: 43%;
-  max-width: 325px;
+}
+
+.sign__header {
+  margin-top: 15px;
+  margin-bottom: 0;
+  margin-left: 1%;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.sign__sub-header {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 1%;
+}
+
+.sign__button {
+  display: block;
+  width: 100px;
+  margin-top: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background: none;
+  cursor: pointer;
+  border: 1px solid #c2c2c2;
+  outline-color: #979797;
+  font-size: 12px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #3f3f3f;
+}
+
+.sign__social {
+  margin-right: 8px;
+  margin-top: 4px;
+  text-align: center;
+  color: #555;
+}
+
+.sign__social-google {
+  margin-left: 8px;
+}
+
+.sign__terms {
+  padding-bottom: 25px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.sign__terms-link {
+  color: #002dd6;
+  text-decoration: underline;
+}
+
+.sign .login__login-input, .sign .login__password-input, .sign .sign__email-input, .sign .sign__name-input, .sign .sign__password-input {
+  padding-left: 15px;
+  margin-bottom: 15px;
+  height: 40px;
+  width: 100%;
+  outline-color: #979797;
+  color: #555;
+  border: 1px solid #c2c2c2;
+}
+
+.sign .login__login-input::-webkit-input-placeholder, .sign .login__password-input::-webkit-input-placeholder, .sign .sign__email-input::-webkit-input-placeholder, .sign .sign__name-input::-webkit-input-placeholder, .sign .sign__password-input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.sign hr {
+  border-color: #ddd;
 }
 
 .make-column {

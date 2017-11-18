@@ -845,6 +845,7 @@ a
 .login 
   width: 43% 
   background-color: #fff
+  align-self: flex-start   //To stop increasing of height because of flexbox and sign-in
   &__header 
     margin-top: 15px 
     margin-bottom: 0
@@ -925,11 +926,74 @@ a
 //Login form end
 
 
-
+//Sign in start
+//Not DRY, but easier to support
 .sign 
   background-color: #fff 
   width: 43%
-  max-width: 325px
+  &__header 
+    margin-top: 15px 
+    margin-bottom: 0
+    margin-left: 1%
+    font-size: 20px
+    font-weight: 400
+  &__sub-header 
+    margin-top: 30px 
+    margin-bottom: 20px 
+    margin-left: 1% 
+  &__email-input
+    @extend %input 
+  &__name-input
+    @extend %input 
+  &__password-input
+    @extend %input 
+  &__button
+    display: block
+    width: 100px
+    margin-top: 15px 
+    margin-right: auto 
+    margin-left: auto 
+    background: none 
+    cursor: pointer
+    border: 1px solid #c2c2c2
+    outline-color: #979797
+    font-size: 12px
+    line-height: 25px
+    text-transform: uppercase 
+    color: #3f3f3f
+  &__social
+    margin-right: 8px 
+    margin-top: 4px 
+    text-align: center 
+    color:#555
+    &-google
+      margin-left: 8px  //for unclickable area between icons 
+  &__terms 
+    padding-bottom: 25px
+    text-align: center
+    color: rgba( 0, 0, 0, 0.5) 
+    font-size: 14px 
+    width: 85%
+    margin: 0 auto 
+    &-link
+      color: #002dd6
+      text-decoration: underline
+
+  %input 
+    padding-left: 15px
+    margin-bottom: 15px
+    height: 40px 
+    width: 100%
+    outline-color: #979797
+    color: #555 
+    border: 1px solid #c2c2c2
+    &::-webkit-input-placeholder  
+      color: rgba( 0, 0, 0, 0.2)
+
+  hr 
+    border-color: #ddd 
+//Sign in end
+
 
 .make-column
         flex-direction: column
