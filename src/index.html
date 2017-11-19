@@ -160,30 +160,30 @@
   </section>
   <!-- RECIPE WITH SCROLL END  -->
 
-  <!-- COMMENTS START -->
+  <!-- FEEDBACKS START -->
   <section class="wrapper">
-    <div class="comments">
+    <div class="feedbacks">
 
-      <div class="comments__404">
-        <p class="comments__404-top">404</p>
+      <div class="feedbacks__404">
+        <p class="feedbacks__404-top">404</p>
         <hr>
-        <p class="comments__404-text">Sorry</p>
-        <p class="comments__404-subtext">We couldn't
+        <p class="feedbacks__404-text">Sorry</p>
+        <p class="feedbacks__404-subtext">We couldn't
           <br> find the page</p>
-        <a href="#" class="comments__404-back">
+        <a href="#" class="feedbacks__404-back">
           <div>Back</div>
         </a>
       </div>
 
-      <div class="comments__author">
-        <p class="comments__author-top">Author</p>
-        <hr class="comments__author-border">
-        <div class="comments__author-content">
-          <img src="img/author.png" class="comments__author-photo" alt="Karen Gray">
-          <div class="comments__author-info">
-            <span class="comments__author-name">Karen Gray</span>
+      <div class="feedbacks__author">
+        <p class="feedbacks__author-top">Author</p>
+        <hr class="feedbacks__author-border">
+        <div class="feedbacks__author-content">
+          <img src="img/author.png" class="feedbacks__author-photo" alt="Karen Gray">
+          <div class="feedbacks__author-info">
+            <span class="feedbacks__author-name">Karen Gray</span>
             <br>
-            <span class="comments__author-location">United States</span>
+            <span class="feedbacks__author-location">United States</span>
             <br>
             <a href="#">
               <i class="fa fa-google-plus" aria-hidden="true"></i>
@@ -198,13 +198,13 @@
               <i class="fa fa-pinterest" aria-hidden="true"></i>
             </a>
             <hr>
-            <div class="comments__author-text">
-              <p class="comments__author-text-header">About Lemon</p>
+            <div class="feedbacks__author-text">
+              <p class="feedbacks__author-text-header">About Lemon</p>
               <p>Over the fifteen-year life span of Food.com, we’ve learned that – in addition to eating – sharing is what you
                 do best. And thanks to the 20 million of you who come here each month, we now have 500,000 recipes to show
                 for it, more than anywhere else in the digital universe. We also have tons crazy-tempting photos, troves
                 of recipe reviews and more than 2 million Facebook likes. That’s a heck of a lot of Food. Thank you! </p>
-              <img src="img/author-signature.png" class="comments__author-signature" alt="Signature">
+              <img src="img/author-signature.png" class="feedbacks__author-signature" alt="Signature">
             </div>
           </div>
         </div>
@@ -212,7 +212,7 @@
 
     </div>
   </section>
-  <!-- COMMENTS END -->
+  <!-- FEEDBACKS END -->
 
   <!-- COLUMNS START -->
   <section class="columns">
@@ -376,7 +376,6 @@
           <div class="calendar__wrapper" >
             <div id="divCal"></div>
           </div>
-        <!-- This script isn't mine, i just customize it -->
         <script>
           var Cal = function (divId) {
 
@@ -611,30 +610,28 @@
 
     </div>
     <!-- Column 3 end-->
-    
-    <!-- COLUMNS END -->
-
-
   </section>
+  <!-- COLUMNS END -->
 
 
 
-    <!-- TODO: CHANGE ALL HEADERS ON TITLES  -->
+  <!-- TODO: CHANGE ALL HEADERS ON TITLES  -->
 
 
   <!-- FORMS START -->
   
   <div class="forms">
 
+    <!-- Login start -->
     <div class="login">
 
-      <form class="columns-inside-container">
+      <form class="forms-container">
         <p class="login__header">Login</p>
         <hr>
         <p class="login__sub-header">Login for LEMON</p>
         <input class="login__login-input" type="text" placeholder="email or login" ><br>
         <input class="login__password-input" type="password" placeholder="password"><br>
-        <label class="login__remember"><input class="login__remember-checkbox" type="checkbox" name="checkbox" >
+        <label class="login__remember"><input class="login__remember-checkbox" type="checkbox">
          Remember me </label>
         <div class="login__forgot"><a href="#">Forgot your password?</a></div><br>
         <button class="login__button">Login</button><br>
@@ -652,12 +649,14 @@
       <div class="login__sign-in">
         <a href="#">Don't have an account? <br> Sing in</a>
       </div>
-
+      
     </div>
-    
+    <!-- Login end -->
 
+    <!-- Sign-up start -->
     <div class="sign">
-        <form class="columns-inside-container">
+
+        <form class="forms-container">
             <p class="sign__header">Sign in</p>
             <hr>
             <p class="sign__sub-header">Sign in for LEMON</p>
@@ -666,7 +665,7 @@
             <input class="sign__password-input" type="password" placeholder="password"><br>
             <input class="sign__password-input" type="password" placeholder="repeat password"><br>
             <button class="sign__button">Sign up</button><br>
-          </form>
+        </form>
     
           <div class="sign__social">
             <a href="#">
@@ -678,36 +677,35 @@
           </div><br>
           
           <div class="sign__terms">
-            <span>By joining LEMON, you agree to our <br> <a href="#" class="sign__terms-link">Term of Service</a></span>
+            <span>By joining LEMON, you agree to our <br> <a href="#" class="sign__terms-link" >Term of Service</a></span>
           </div>
     
-        </div>
+    </div>
+    <!-- Sign-up end -->
 
   </div>
-
-
 
    <!-- FORMS END -->
 
 
+ 
+  <section class="comments">
 
+      <div class="post">
 
+        <p class="post__text"> Post a Comment
+          <span class="post__text-social">Facebook / Twitter</span>
+        </p>
+      
+        <div class="post__form">
+          <img src="img/recipe-writer.png" class="post__form-face" alt="face =)">
+          <input type="text" class="post__form-input">
+          <button class="post__form-button">post</button>
+        </div>
 
-
-  <section class="container margin-bottom">
-    <div class="post">
-      <div class="d-flex justify-content-between">
-        <p class="post__comment">Post a Comment</p>
-        <p class="social">Facebook / Twitter</p>
       </div>
-      <div class="post__pic d-flex">
-        <img src="img/recipe-writer.png" class="card-block__face" alt="face =)">
-        <input type="text" class="post__input">
-        <button>post</button>
-      </div>
-    </div>
 
-    <div class="bgwhite">
+    <div class="board">
       <p>Comments</p>
       <hr>
 
@@ -786,6 +784,8 @@
       </div>
     </div>
   </section>
+
+
   <footer>
     <div class="footer">
       <div class="d-flex">

@@ -245,8 +245,8 @@ a
 //RECIPE WITH SCROLL END
 
 
-//COMMENTS START
-.comments
+//FEEDBACKS START
+.feedbacks
   display: flex
   justify-content: space-between
   width: 77.7777777%
@@ -366,7 +366,7 @@ a
         color: #bd081b
 //Hover for social end
 
-//COMMENTS END
+//FEEDBACKS END
 
 
 
@@ -378,10 +378,6 @@ a
   width: 71.18055555%
   max-width: 1025px
   flex-wrap: wrap 
-
-.columns-inside-container
-  width: 85%
-  margin: 0 auto 
 
   
 
@@ -833,12 +829,19 @@ a
 
 .forms 
   display: flex
+  flex-wrap: wrap 
   justify-content: space-between
   margin: 0 auto
   width: 51.7%
   max-width: 1025px
   @media (max-width: 1240px)
     margin-top: 100px 
+  @media (max-width: 1024px)
+    width: 70%
+
+.forms-container
+  width: 85%
+  margin: 0 auto 
 
 
 //Login form start 
@@ -846,6 +849,9 @@ a
   width: 43% 
   background-color: #fff
   align-self: flex-start   //To stop increasing of height because of flexbox and sign-in
+  @media (max-width: 600px)
+    width: 80%
+    margin: 0 auto 
   &__header 
     margin-top: 15px 
     margin-bottom: 0
@@ -901,7 +907,6 @@ a
     text-transform: uppercase 
     color: #3f3f3f
   &__social
-    margin-right: 8px 
     margin-top: 4px 
     text-align: center 
     color:#555
@@ -926,11 +931,14 @@ a
 //Login form end
 
 
-//Sign in start
+//Sign-up start
 //Not DRY, but easier to support
 .sign 
   background-color: #fff 
   width: 43%
+  @media (max-width: 600px)
+    width: 80%
+    margin: 50px auto 
   &__header 
     margin-top: 15px 
     margin-bottom: 0
@@ -962,7 +970,6 @@ a
     text-transform: uppercase 
     color: #3f3f3f
   &__social
-    margin-right: 8px 
     margin-top: 4px 
     text-align: center 
     color:#555
@@ -992,8 +999,83 @@ a
 
   hr 
     border-color: #ddd 
-//Sign in end
+//Sign-up end
 
+
+
+.comments
+  width: 58.3%
+  padding-right: 15px
+  padding-left: 15px
+  margin-top: 120px
+  margin-left: auto 
+  margin-right: auto 
+  max-width: 1025px
+
+.post
+  padding-left: 5%
+  padding-right: 5% 
+  padding-bottom: 35px
+  margin-left: auto 
+  margin-right: auto 
+  margin-bottom: 45px 
+  background: #fff
+  &__text
+    padding-top: 25px 
+    margin-bottom: 17px 
+    font-size: 24px
+    font-weight: 400 
+    &-social 
+      float: right 
+      padding-top: 5px 
+      font-size: 16px
+      @media (max-width: 680px)
+        display: inline-block
+        float: none 
+        margin-top: 10px
+  &__form 
+    display: flex 
+    background-color: #f6f6f6
+    &-face 
+      align-self: center 
+      margin-left: 2.6%
+      border-radius: 50%
+      @media (max-width: 600px)
+        display: none 
+    &-input 
+      align-self: center 
+      width: 66.6%
+      height: 40px
+      padding-left: 1%
+      margin-left: 5% 
+      margin-top: 15px   
+      margin-bottom: 15px
+      border: 1px solid #c2c2c2
+      outline-color: #979797
+      color: #555 
+    &-button 
+      align-self: center 
+      width: 80px
+      height: 40px
+      margin-left: 1%
+      margin-right: 5px 
+      border: 1px solid #c2c2c2
+      background: #383737
+      outline-color: #979797
+      color: #fff
+      text-transform: uppercase 
+      font-weight: 400 
+      cursor: pointer
+
+
+.board
+  width: 100% 
+  margin-left: auto 
+  margin-right: auto  
+  padding-left: 5%
+  padding-right: 5%
+  margin-top: 45px 
+  background: white 
 
 .make-column
         flex-direction: column
@@ -1027,11 +1109,7 @@ a
 
 
 
-.post
-        width: 100%
-        background: white
-        padding-bottom: 20px
-        margin-bottom: 50px
+
 
 
 
