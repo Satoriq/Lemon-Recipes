@@ -11,6 +11,18 @@ body
   width: device-width
 
 
+// box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+
+.fa-angle-left:hover
+  color: #629494
+.fa-angle-right:hover
+  color: #629494
+.fa-share-alt:hover
+  color: #629494
+.fa-thumbs-o-up:hover
+  color: #4867aa
+
+
 html
   box-sizing: border-box
 
@@ -22,6 +34,12 @@ html
 a
   color: inherit
   text-decoration: none
+
+hr
+  border: 2px solid #ddd
+  border-bottom: none
+  border-left: none
+  border-right: none
 
 %hr
   width: 85%
@@ -69,6 +87,8 @@ a
   padding: 35px 0
   width: 77.777777777%
   max-width: 1120px
+  box-shadow: 0 0 13px rgba(11, 12, 12, 0.15)
+  background-color: #f8f8f8
   &__logo
     margin-left: 5.3%
     @media (max-width: 1000px)
@@ -113,6 +133,7 @@ a
   background-image: url('../img/main-recipe.png')
   background-position: center
   background-size: cover
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   &__left
     display: flex
     flex-direction: column
@@ -153,6 +174,7 @@ a
   display: flex
   justify-content: space-around
   flex-wrap: wrap
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   &__item
     display: flex
     flex-direction: column
@@ -185,6 +207,7 @@ a
   width: 77.7777777%
   margin-top: 80px
   max-width: 1120px
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   @media (max-width: 1200px)
     flex-wrap: wrap
     justify-content: center
@@ -265,6 +288,7 @@ a
     background-color: white
     background-image: url('../img/sorry-404.png')
     background-size: 100% 100%
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
     @media (max-width:1024px)
       background-position: center
       background-size: 100% 60%
@@ -304,6 +328,7 @@ a
     width: 46%
     margin-top: 115px
     background-color: white
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
     @media (max-width: 800px)
       width: 100%
     &-top
@@ -392,6 +417,7 @@ a
 .small-recipe
   margin-top: 100px
   background-color: white  
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   &__header
     text-align: center
     font-family: 'Playfair Display', serif
@@ -422,6 +448,7 @@ a
 .target
   margin-top: 40px
   background-color: white
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   &__header
     padding-left: 8%
     font-size: 20px
@@ -502,6 +529,7 @@ a
 .level-recipes 
   margin-top: 100px 
   background-color: white 
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   @media (max-width: 1240px)
     order: 1 
   &__header
@@ -614,6 +642,7 @@ a
 .tags 
   margin-top: 45px
   background-color: white  
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   @media (max-width: 1240px)
     order: 2
   @media (max-width: 600px)
@@ -632,6 +661,7 @@ a
     word-spacing: 10px
     text-transform: uppercase 
     font-size: 12px 
+    
   hr
     @extend %hr 
     margin-top: -15px
@@ -643,6 +673,7 @@ a
   padding-bottom: 10px
   background-color: white 
   position: relative 
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   @media (max-width: 1240px)
     display: none 
   &__header 
@@ -716,6 +747,7 @@ a
   background-size: 100% 100%
   padding-right: 5%
   padding-left: 5%
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   
   &__header 
     margin-top: 17px
@@ -759,6 +791,7 @@ a
   margin-top: 45px 
   background-color: white
   width: 100% 
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   @media (max-width: 600px)
     display: none 
   &__header
@@ -849,6 +882,7 @@ a
   width: 43% 
   background-color: #fff
   align-self: flex-start   //To stop increasing of height because of flexbox and sign-in
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   @media (max-width: 600px)
     width: 80%
     margin: 0 auto 
@@ -915,7 +949,7 @@ a
   &__sign-in
     padding-bottom: 25px
     text-align: center
-    color: rgba( 0, 0, 0, 0.5)  
+    color: rgba(0, 0, 0, 0.54)
 
   %input 
     height: 40px 
@@ -936,6 +970,7 @@ a
 .sign 
   background-color: #fff 
   width: 43%
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   @media (max-width: 600px)
     width: 80%
     margin: 50px auto 
@@ -978,7 +1013,7 @@ a
   &__terms 
     padding-bottom: 25px
     text-align: center
-    color: rgba( 0, 0, 0, 0.5) 
+    color: rgba(0, 0, 0, 0.54)
     font-size: 14px 
     width: 85%
     margin: 0 auto 
@@ -997,12 +1032,13 @@ a
     &::-webkit-input-placeholder  
       color: rgba( 0, 0, 0, 0.2)
 
-  hr 
-    border-color: #ddd 
 //Sign-up end
 
+//FORMS END
 
 
+
+//COMMENTS START 
 .comments
   width: 58.3%
   padding-right: 15px
@@ -1011,7 +1047,11 @@ a
   margin-left: auto 
   margin-right: auto 
   max-width: 1025px
+  @media (max-width: 900px)
+    width: 75%
 
+
+//Leave a comment start 
 .post
   padding-left: 5%
   padding-right: 5% 
@@ -1020,6 +1060,7 @@ a
   margin-right: auto 
   margin-bottom: 45px 
   background: #fff
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   &__text
     padding-top: 25px 
     margin-bottom: 17px 
@@ -1066,22 +1107,29 @@ a
       text-transform: uppercase 
       font-weight: 400 
       cursor: pointer
+//Leave a comment end
 
-
+//Board with comments start 
+//Not DRY, but easier to support
 .board
   width: 100% 
-  margin-left: auto 
-  margin-right: auto  
   padding-left: 5%
   padding-right: 5%
-  margin-top: 45px 
-  background: white 
+  padding-bottom: 45px
+  margin-left: auto
+  margin-right: auto
+  margin-top: 45px
+  margin-bottom: 45px
+  background: white
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   &__title 
     padding-top: 20px
     margin-bottom: 0
     font-size: 24px 
-    font-weight: 400 
+    font-weight: 400
+    
 
+//main comment start 
 .comment 
   display: flex 
   position: relative
@@ -1091,97 +1139,277 @@ a
   &__face 
     border-radius: 50%
     align-self: flex-start 
+    margin-left: 1.5%
   &__info 
     display: flex 
     flex-direction: column
     padding-left: 2%
     &-top 
       font-weight: 400 
-    &-middle 
+    &-name 
       padding-top: 3px
       padding-bottom: 5px
       font-weight: 600 
     &-reply
       padding-left: 5px 
+      border: none
+      background: none
+      font-family: 'Josefin Sans', sans-serif
       color: #629494
       text-decoration: underline 
       font-size: 12px 
       font-weight: 600 
-    &-bottom 
+      cursor: pointer
+    &-date
+      align-self: flex-start
+      padding-left: 0 
+      font-family: 'Josefin Sans', sans-serif
       color: #629494
       font-size: 12px 
       font-weight: 600 
+      border: none
+      background: none
+      cursor: pointer
     &-text 
       padding-top: 18px 
-      padding-bottom: 20px
-      
+      padding-bottom: 3px
   &__photo 
+    margin-top: 12px 
     width: 100%
   &__likes
     position: absolute 
     top: 35px
     right: 0
-    font-size: 12px 
-    font-weight: 600 
-
+    &-share 
+      border: none
+      background: none 
+      cursor: pointer
+      font-size: 12px 
+      font-weight: 600 
+      color: #323232
+      &:hover 
+        color: #629494
+    &-like 
+      border: none
+      background: none
+      cursor: pointer
+      font-size: 12px 
+      font-weight: 600
+      color: #323232
+      &:hover 
+        color: #629494
     i 
-      padding-right: 10px 
       padding-left: 3px 
+//main comment end
   
+//sub comment start 
 .sub-comment
   display: flex 
   position: relative 
   margin-left: auto 
   width: 90%
-  border-top: 1px solid #ddd 
-  
+
+  &__face 
+    margin-top: 16px 
+    border-radius: 50%
+    align-self: flex-start 
+    margin-left: 1.5%
+  &__info 
+    margin-top: 16px 
+    display: flex 
+    flex-direction: column
+    padding-left: 2%
+    &-top 
+      font-weight: 400 
+    &-name 
+      padding-top: 3px
+      padding-bottom: 5px
+      font-weight: 600 
+      white-space: nowrap
+    &-reply
+      padding-left: 5px 
+      border: none
+      background: none
+      font-family: 'Josefin Sans', sans-serif
+      color: #629494
+      text-decoration: underline 
+      font-size: 12px 
+      font-weight: 600 
+      cursor: pointer
+    &-date
+      align-self: flex-start
+      padding-left: 0 
+      font-family: 'Josefin Sans', sans-serif
+      color: #629494
+      font-size: 12px 
+      font-weight: 600 
+      border: none
+      background: none
+      cursor: pointer
+    
+    &-text 
+      padding-top: 8px 
+      padding-bottom: 20px
+  &__more 
+    margin-left: 50%
+    background: none 
+    border: none
+    outline: none
+    cursor: pointer
+    font-weight: 300 
+    color: #757575
+    font-family: 'Josefin Sans', sans-serif
+    font-weight: 300
+    font-size: 16px   
+    &:hover 
+      color: #629494
+  &__likes
+    position: absolute 
+    top: 38px
+    right: 0
+    &-share 
+      border: none
+      background: none
+      cursor: pointer
+      font-size: 12px 
+      font-weight: 600 
+      color: #323232
+      &:hover 
+        color: #629494
+    &-like 
+      border: none
+      background: none
+      cursor: pointer
+      font-size: 12px 
+      font-weight: 600
+      color: #323232
+      &:hover 
+        color: #629494
+    i 
+      padding-left: 3px 
+  hr 
+    position: absolute
+    width: 100%
+    margin-top: 0 
+//sub comment end 
+    
+
+//next comment start 
+.next-comment
+  display: flex 
+  position: relative 
+  padding-top: 10px
   &__face 
     border-radius: 50%
     align-self: flex-start 
-
+    margin-left: 1.5%
   &__info 
     display: flex 
     flex-direction: column
     padding-left: 2%
     &-top 
       font-weight: 400 
-    &-middle 
+    &-name
       padding-top: 3px
       padding-bottom: 5px
       font-weight: 600 
+      white-space: nowrap 
     &-reply
       padding-left: 5px 
+      border: none
+      background: none
+      font-family: 'Josefin Sans', sans-serif
       color: #629494
       text-decoration: underline 
       font-size: 12px 
       font-weight: 600 
-    &-bottom 
+      cursor: pointer
+    &-date 
+      align-self: flex-start
+      padding-left: 0 
+      font-family: 'Josefin Sans', sans-serif
       color: #629494
       font-size: 12px 
       font-weight: 600 
+      border: none
+      background: none
+      cursor: pointer
     &-text 
-      padding-top: 18px 
-      padding-bottom: 20px
-
-    i 
-      padding-right: 10px 
-      padding-left: 3px 
-
+      padding-top: 8px 
+  &__hr   
+    margin-top: 12px
   &__likes
     position: absolute 
     top: 35px
     right: 0
-    font-size: 12px 
-    font-weight: 600 
+    &-share 
+      border: none
+      background: none
+      cursor: pointer
+      font-size: 12px 
+      font-weight: 600 
+      color: #323232
+      &:hover 
+        color: #629494
+    &-like 
+      border: none
+      background: none
+      cursor: pointer
+      font-size: 12px 
+      font-weight: 600
+      color: #323232
+      &:hover 
+        color: #629494
+    i 
+      padding-left: 3px 
+//next comment end 
+
+//Board with comments end
 
 
+.switch 
+  background-color: #fff 
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+  &__numbers
+    list-style: none
+    display: flex 
+    justify-content: space-between
+    width: 33.57%
+    margin-left: auto 
+    margin-right: auto 
+    padding-top: 40px
+    padding-bottom: 30px
+    padding-left: 0
+    font-size: 18px 
+    &-item 
+      color: black
+      &:hover 
+        color: #629494
+      &--current 
+        color: #629494
+        pointer-events: none
+        cursor: default
+      
+      
+    @media (max-width: 1024px)
+      width: 50%
+    
 
+// footer
+// box-shadow: 1px 3px 7px rgba(11, 12, 12, 0.14)
+    
 
+ 
 
-
-
-
-
+.Buttonssss
+  position: absolute 
+  background: none 
+  border: none
+  outline: none
+  cursor: pointer
+  color: #555
+  font-family: "Roboto Condensed", sans-serif
+  font-size: 14px 
 
 
 
