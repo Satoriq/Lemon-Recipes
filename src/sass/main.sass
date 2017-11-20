@@ -227,7 +227,7 @@ hr
     display: flex
     flex-direction: column
     max-width: 55%
-    height: 440px
+    height: 430px
     margin: 0 45px 10px 30px
     @media (max-width: 1200px)
       max-width: 100%
@@ -951,15 +951,6 @@ hr
     text-align: center
     color: rgba(0, 0, 0, 0.54)
 
-  %input 
-    height: 40px 
-    width: 100%
-    outline-color: #979797
-    color: #555 
-    border: 1px solid #c2c2c2
-    &::-webkit-input-placeholder  
-      color: rgba( 0, 0, 0, 0.2)
-
   hr 
     border-color: #ddd 
 //Login form end
@@ -975,39 +966,26 @@ hr
     width: 80%
     margin: 50px auto 
   &__header 
-    margin-top: 15px 
-    margin-bottom: 0
-    margin-left: 1%
-    font-size: 20px
-    font-weight: 400
+    @extend .login__header
   &__sub-header 
-    margin-top: 30px 
-    margin-bottom: 20px 
-    margin-left: 1% 
+    @extend .login__sub-header
   &__email-input
     @extend %input 
+    padding-left: 15px
+    margin-bottom: 15px
   &__name-input
     @extend %input 
+    padding-left: 15px
+    margin-bottom: 15px
   &__password-input
     @extend %input 
+    padding-left: 15px
+    margin-bottom: 15px
   &__button
-    display: block
-    width: 100px
+    @extend .login__button
     margin-top: 15px 
-    margin-right: auto 
-    margin-left: auto 
-    background: none 
-    cursor: pointer
-    border: 1px solid #c2c2c2
-    outline-color: #979797
-    font-size: 12px
-    line-height: 25px
-    text-transform: uppercase 
-    color: #3f3f3f
-  &__social
-    margin-top: 4px 
-    text-align: center 
-    color:#555
+  &__social 
+    @extend .login__social
     &-google
       margin-left: 8px  //for unclickable area between icons 
   &__terms 
@@ -1021,9 +999,7 @@ hr
       color: #002dd6
       text-decoration: underline
 
-  %input 
-    padding-left: 15px
-    margin-bottom: 15px
+%input 
     height: 40px 
     width: 100%
     outline-color: #979797
@@ -1031,6 +1007,7 @@ hr
     border: 1px solid #c2c2c2
     &::-webkit-input-placeholder  
       color: rgba( 0, 0, 0, 0.2)
+
 
 //Sign-up end
 
@@ -1110,7 +1087,6 @@ hr
 //Leave a comment end
 
 //Board with comments start 
-//Not DRY, but easier to support
 .board
   width: 100% 
   padding-left: 5%
@@ -1128,14 +1104,16 @@ hr
     font-size: 24px 
     font-weight: 400
     
+%btn-reset
+  border: none
+  background: none
+  cursor: pointer
 
-//main comment start 
+//top comment start 
 .comment 
   display: flex 
   position: relative
   padding-top: 15px 
-  width: 100%
-  
   &__face 
     border-radius: 50%
     align-self: flex-start 
@@ -1150,26 +1128,23 @@ hr
       padding-top: 3px
       padding-bottom: 5px
       font-weight: 600 
+      white-space: nowrap 
     &-reply
+      @extend %btn-reset
       padding-left: 5px 
-      border: none
-      background: none
       font-family: 'Josefin Sans', sans-serif
       color: #629494
       text-decoration: underline 
       font-size: 12px 
       font-weight: 600 
-      cursor: pointer
     &-date
+      @extend %btn-reset
       align-self: flex-start
       padding-left: 0 
       font-family: 'Josefin Sans', sans-serif
       color: #629494
       font-size: 12px 
       font-weight: 600 
-      border: none
-      background: none
-      cursor: pointer
     &-text 
       padding-top: 18px 
       padding-bottom: 3px
@@ -1181,18 +1156,14 @@ hr
     top: 35px
     right: 0
     &-share 
-      border: none
-      background: none 
-      cursor: pointer
+      @extend %btn-reset
       font-size: 12px 
       font-weight: 600 
       color: #323232
       &:hover 
         color: #629494
     &-like 
-      border: none
-      background: none
-      cursor: pointer
+      @extend %btn-reset
       font-size: 12px 
       font-weight: 600
       color: #323232
@@ -1200,7 +1171,7 @@ hr
         color: #629494
     i 
       padding-left: 3px 
-//main comment end
+//top comment end
   
 //sub comment start 
 .sub-comment
@@ -1210,57 +1181,30 @@ hr
   width: 90%
 
   &__face 
+    @extend .comment__face 
     margin-top: 16px 
-    border-radius: 50%
-    align-self: flex-start 
-    margin-left: 1.5%
   &__info 
+    @extend .comment__info 
     margin-top: 16px 
-    display: flex 
-    flex-direction: column
-    padding-left: 2%
     &-top 
-      font-weight: 400 
+      @extend .comment__info-top 
     &-name 
-      padding-top: 3px
-      padding-bottom: 5px
-      font-weight: 600 
-      white-space: nowrap
+      @extend .comment__info-name 
     &-reply
-      padding-left: 5px 
-      border: none
-      background: none
-      font-family: 'Josefin Sans', sans-serif
-      color: #629494
-      text-decoration: underline 
-      font-size: 12px 
-      font-weight: 600 
-      cursor: pointer
+      @extend .comment__info-reply 
     &-date
-      align-self: flex-start
-      padding-left: 0 
-      font-family: 'Josefin Sans', sans-serif
-      color: #629494
-      font-size: 12px 
-      font-weight: 600 
-      border: none
-      background: none
-      cursor: pointer
-    
+      @extend .comment__info-date 
     &-text 
       padding-top: 8px 
       padding-bottom: 20px
   &__more 
+    @extend %btn-reset 
     margin-left: 50%
-    background: none 
-    border: none
     outline: none
-    cursor: pointer
-    font-weight: 300 
     color: #757575
     font-family: 'Josefin Sans', sans-serif
     font-weight: 300
-    font-size: 16px   
+    font-size: 16px
     &:hover 
       color: #629494
   &__likes
@@ -1268,21 +1212,11 @@ hr
     top: 38px
     right: 0
     &-share 
-      border: none
-      background: none
-      cursor: pointer
-      font-size: 12px 
-      font-weight: 600 
-      color: #323232
+      @extend .comment__likes-share
       &:hover 
         color: #629494
     &-like 
-      border: none
-      background: none
-      cursor: pointer
-      font-size: 12px 
-      font-weight: 600
-      color: #323232
+      @extend .comment__likes-like
       &:hover 
         color: #629494
     i 
@@ -1300,40 +1234,17 @@ hr
   position: relative 
   padding-top: 10px
   &__face 
-    border-radius: 50%
-    align-self: flex-start 
-    margin-left: 1.5%
+    @extend .comment__face 
   &__info 
-    display: flex 
-    flex-direction: column
-    padding-left: 2%
+    @extend .comment__info 
     &-top 
-      font-weight: 400 
+      @extend .comment__info-top 
     &-name
-      padding-top: 3px
-      padding-bottom: 5px
-      font-weight: 600 
-      white-space: nowrap 
+      @extend .comment__info-name
     &-reply
-      padding-left: 5px 
-      border: none
-      background: none
-      font-family: 'Josefin Sans', sans-serif
-      color: #629494
-      text-decoration: underline 
-      font-size: 12px 
-      font-weight: 600 
-      cursor: pointer
+      @extend .comment__info-reply
     &-date 
-      align-self: flex-start
-      padding-left: 0 
-      font-family: 'Josefin Sans', sans-serif
-      color: #629494
-      font-size: 12px 
-      font-weight: 600 
-      border: none
-      background: none
-      cursor: pointer
+      @extend .comment__info-date
     &-text 
       padding-top: 8px 
   &__hr   
@@ -1343,21 +1254,11 @@ hr
     top: 35px
     right: 0
     &-share 
-      border: none
-      background: none
-      cursor: pointer
-      font-size: 12px 
-      font-weight: 600 
-      color: #323232
+      @extend .comment__likes-share
       &:hover 
         color: #629494
     &-like 
-      border: none
-      background: none
-      cursor: pointer
-      font-size: 12px 
-      font-weight: 600
-      color: #323232
+      @extend .comment__likes-like
       &:hover 
         color: #629494
     i 
