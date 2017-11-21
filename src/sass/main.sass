@@ -11,7 +11,6 @@ body
   width: device-width
 
 
-// box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
 
 .fa-angle-left:hover
   color: #629494
@@ -1281,140 +1280,72 @@ hr
 //Board with comments end
 
 
+//Switch start
 .switch 
+  margin-bottom: 155px
   background-color: #fff 
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   &__numbers
-    list-style: none
     display: flex 
     justify-content: space-between
+    align-items: center 
+    list-style: none
     width: 33.57%
-    margin-left: auto 
-    margin-right: auto 
     padding-top: 40px
     padding-bottom: 30px
     padding-left: 0
     font-size: 18px 
     &-item 
+      @extend %btn-reset
       color: black
       &:hover 
         color: #629494
       &--current 
+        @extend %btn-reset
         color: #629494
         pointer-events: none
         cursor: default
-      
-      
     @media (max-width: 1024px)
       width: 50%
+  //Switch end
     
+//COMMENTS END 
 
-// footer
-// box-shadow: 1px 3px 7px rgba(11, 12, 12, 0.14)
-    
-
- 
-
-.Buttonssss
-  position: absolute 
-  background: none 
-  border: none
-  outline: none
-  cursor: pointer
-  color: #555
-  font-family: "Roboto Condensed", sans-serif
-  font-size: 14px 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.make-column
-        flex-direction: column
-
-
-
-
-.column
-        display: flex
-        flex-direction: column
-
-.bgred
-        background-color: red
-
-.bgwhite
-        background-color: #fff
-
-.coffee
-        max-width: 25%
-
-        &__pic
-                position: relative
-
-
-
-.coffee__text
-        top: 150px
-        position: absolute
-
-
-
-
-
-
-
-
-
-.post__pic
-        background-color: grey
-        width: 75%
-        margin-left: 15%
-        padding: 10px
-
-.post__input
-        width: 66.6%
-
-.img-fluider
-        align-self: flex-start
-
-.width-max
-        border-top-color: black
-        width: 100%
-        padding-left: 5%
-
-.floatright
-        float: right
-        margin-top: -50px
-
-.margin-bottom
-        margin-bottom: 70px
-
-.changer-width
-        width: 50%
-        background-color: grey
-        height: 20px
-
-.changer
-        height: 100px
-        width: 100%
-        background: white
-
+ //FOOTER START
 .footer
-        background-color: grey
-
-        &__img
-                margin: 50px
+  display: flex 
+  background-color: #2f2f2f
+  box-shadow: 1px 3px 7px rgba(11, 12, 12, 0.14)
+  &__logo
+    display: block
+    height: 36px
+    width: 87px 
+    margin: 70px auto
+    &-container 
+      width: 23%
+  &__nav
+    align-self: center 
+    width: 47%
+    &-items
+      display: flex 
+      justify-content: space-around
+      list-style: none
+      color: #555
+      text-transform: uppercase
+      font-size: 12px
+  &__copyrighted
+    display: flex 
+    align-items: center 
+    justify-content: flex-end
+    width: 30%
+    padding-right: 5%
+    color: #555
+    p   
+      padding-top: 27px 
+  &__social
+    display: inline-block 
+    margin-top: 10px 
+    float: right 
+    i 
+      padding-left: 10px     
+ //COMMENTS END

@@ -9,7 +9,6 @@
   <title>LEMON Recipes</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/bootstrap-grid.css">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,600,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
@@ -782,12 +781,12 @@
           <li>
             <a href=""><i class="fa fa-angle-left" aria-hidden="true"></i></a>
           </li>
-          <li class= "switch__numbers-item"><a href="#">1</a></li>
-          <li class= "switch__numbers-item--current"><a href="#">2</a></li>
-          <li class= "switch__numbers-item"><a href="#">3</a></li>
-          <li class= "switch__numbers-item"><a href="#">4</a></li>
-          <li class= "switch__numbers-item"><a href="#">5</a></li>
-          <li class= "switch__numbers-item"><a href="#">6</a></li>
+          <li><button class= "switch__numbers-item" >1</button></li>
+          <li><button class= "switch__numbers-item--current">2</button></li>
+          <li><button class= "switch__numbers-item">3</button></li>
+          <li><button class= "switch__numbers-item">4</button></li>
+          <li><button class= "switch__numbers-item">5</button></li>
+          <li><button class= "switch__numbers-item">6</button></li>
           <li>
             <a href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a>
           </li>
@@ -796,23 +795,42 @@
   </section>
   <!-- COMMENTS END  -->
 
+ <!-- FOOTER START  -->
   <footer>
     <div class="footer">
-      <div class="d-flex">
-        <img src="img/logo.png" height="100px" width="200px" alt="" class="footer__img">
-        <ul>
-          <li>Home</li>
-          <li>Recipes</li>
-          <li>Photo Galleries</li>
-          <li> Videos</li>
-          <li> All categories</li>
-        </ul>
-        <p>@2016-2017 LEMON all rights reserved</p>
-      </div>
+        <div class="footer__logo-container">
+          <img class="footer__logo" src="img/footer-logo.png" alt="Logo">
+        </div>
+        <nav class="footer__nav">
+          <ul class="footer__nav-items">
+            <li><a href="">Home</a></li>       <a href=""></a>
+            <li><a href="">Recipes</a></li>
+            <li><a href="">Photo Galleries</a></li>
+            <li><a href="">Videos</a></li>
+            <li><a href="">All categories</a></li>
+          </ul>
+        </nav>
+        <div class="footer__copyrighted">
+          <p> &#169; 2016-2017 LEMON all rights reserved<br> 
+            <span class="footer__social">
+              <a href="#">
+                  <i class="fa fa-google-plus" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="#">
+                <i class="fa fa-pinterest" aria-hidden="true"></i>
+              </a>
+            </span>
+          </p>
+        </div>
     </div>
-
   </footer>
-
+  <!-- FOOTER END  -->
 
 
 
