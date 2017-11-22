@@ -24,14 +24,14 @@
     <nav class="wrapper">
       <div class="nav">
 
-        <img src="img/logo--small.png " class="nav__logo" alt="Logo">
+      <a class="nav__logo" href=""><img src="img/logo--small.png " alt="Logo"></a>
 
         <ul class="nav__menu">
-          <li class="nav__menu-item">Home</li>
-          <li class="nav__menu-item">Recipes</li>
-          <li class="nav__menu-item nav__menu-item--hide">Photo galleries</li>
-          <li class="nav__menu-item">Videos</li>
-          <li class="nav__menu-item">All categories</li>
+          <li class="nav__menu-item"><a href="">Home</a></li>
+          <li class="nav__menu-item"><a href="">Recipes</a></li>
+          <li class="nav__menu-item nav__menu-item--hide"><a href="">Photo galleries</a></li>
+          <li class="nav__menu-item"><a href="">Videos</a></li>
+          <li class="nav__menu-item"><a href="">All categories</a></li>
         </ul>
 
         <input type="search" class="nav__input"  placeholder="FIND A RECIPE" />
@@ -327,33 +327,39 @@
         </div>
 
         <div class="level-recipes__recipe--first">
-          <img class="level-recipes__img" src="img/easy-recipes-top.png" alt="recipe picture">
-          <div class="level-recipes__text">
-            <p class="level-recipes__text-header"><span class="level-recipes__text-by">by</span> Smuckersreg Toppings
-            </p>
-            <br>
-            <span class="level-recipes__text-subtext">Lorem ipsum dolor sit, amet consecte adipisicing. Bla bla bla</span>
-          </div>
+            <img class="level-recipes__img" src="img/easy-recipes-top.png" alt="recipe picture">
+          <a class="level-recipes__text" href="#">
+            <div>
+              <p class="level-recipes__text-header"><span class="level-recipes__text-by">by</span> Smuckersreg Toppings
+              </p>
+              <br>
+              <span class="level-recipes__text-subtext">Lorem ipsum dolor sit, am consecte adipisicing. Lorem ipsum dolor sit, am consecte adipisicing elit. </span>
+            </div>
+          </a>
         </div>
 
         <div class="level-recipes__recipe">
           <img class="level-recipes__img" src="img/easy-recipes-center.png" alt="recipe picture">
-          <div class="level-recipes__text">
+          <a class="level-recipes__text" href="#">
+          <div>
             <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
             </p>
             <br>
-            <span class="level-recipes__text-subtext">Lorem ipsum dolor sit amet, consecte Nirvana smells like teen spirit </span>
+            <span class="level-recipes__text-subtext">Lorem ipsum dolor sit am consecte adipisicing elit. Lorem ipsum dolor sit, am consecte adipisicing elit.   </span>
           </div>
+          </a>
         </div>
 
         <div class="level-recipes__recipe">
           <img class="level-recipes__img" src="img/easy-recipes-bottom.png" alt="recipe picture">
-          <div class="level-recipes__text">
+          <a class="level-recipes__text" href="#">
+          <div>
             <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
             </p>
             <br>
-            <span class="level-recipes__text-subtext">Lorem ipsum, dolor sit amet consecte Linkin park - numb punk punk </span>
+            <span class="level-recipes__text-subtext">Lorem ipsum dolor sit, am consecte adipisicing elit. Quaerat, voluptate atque  </span>
           </div>
+          </a>
         </div>
 
         <a class="level-recipes__view" href="#">View more</a>
@@ -443,7 +449,7 @@
           </div>
         </div>
         <hr class="time__lines-hr">
-        <p class="time__text">Lorem ipsum, dolor sit amet, conse adipisicing elit </p>
+        <p class="time__text">Lorem ipsum, dolor sit amet, conse adipisicing </p>
       </div>
 
     </div>
@@ -532,7 +538,7 @@
       <div class="post">
 
         <p class="post__text"> Post a Comment
-          <span class="post__text-social">Facebook / Twitter</span>
+          <button class="post__text-social">Facebook / Twitter</button>
         </p>
       
         <div class="post__form">
@@ -642,11 +648,11 @@
         </div>
         <nav class="footer__nav">
           <ul class="footer__nav-items">
-            <li><a href="">Home</a></li>       <a href=""></a>
-            <li><a href="">Recipes</a></li>
-            <li><a href="">Photo Galleries</a></li>
-            <li><a href="">Videos</a></li>
-            <li><a href="">All categories</a></li>
+            <li class="footer__nav-item"><a href="">Home</a></li>      
+            <li class="footer__nav-item"><a href="">Recipes</a></li>
+            <li class="footer__nav-item"><a href="">Photo Galleries</a></li>
+            <li class="footer__nav-item"><a href="">Videos</a></li>
+            <li class="footer__nav-item"><a href="">All categories</a></li>
           </ul>
         </nav>
         <div class="footer__copyrighted">
