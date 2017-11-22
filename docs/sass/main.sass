@@ -11,7 +11,7 @@ body
   width: device-width
 
 
-
+//Icons hover 
 .fa-angle-left:hover
   color: #629494
 .fa-angle-right:hover
@@ -20,6 +20,20 @@ body
   color: #629494
 .fa-thumbs-o-up:hover
   color: #4867aa
+.fa-google-plus:hover
+  color: #dc473a
+.fa-twitter:hover
+  color: #1da1f2
+.fa-facebook:hover
+  color: #4867aa
+.fa-pinterest:hover
+  color: #bd081b
+.fa-envelope-o:hover
+  color: #4867AA
+.fa-print:hover
+  color: #BD081B
+
+
 
 
 html
@@ -50,21 +64,6 @@ hr
   display: flex
   justify-content: center
 
-// DELETE THIS
-.container
-  margin-right: auto
-  margin-left: auto
-  padding-right: 15px
-  padding-left: 15px
-  width: 100%
-  @media (min-width: 576px)
-    max-width: 540px
-  @media (min-width: 768px)
-    max-width: 720px
-  @media (min-width: 992px)
-    max-width: 960px
-  @media (min-width: 1200px)
-    max-width: 1120px
 
 
 // HEADER START
@@ -146,14 +145,14 @@ hr
       max-width: 30%
       min-width: 220px
     a
+      padding: 4px
+      margin-top: 10px
       text-align: center
       color: black
       text-transform: uppercase
       font-size: 12px
       width: 100px
       border: 1px solid #798186
-      padding: 4px
-      margin-top: 10px
     h2
       color: #911026
       font-family: 'Playfair Display', serif
@@ -165,15 +164,15 @@ hr
 
 //SUB-RECIPES START
 .sub-recipes
-  background-color: white
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
   margin-top: 160px
   padding-bottom: 30px
   width: 77.7777777%
   max-width: 1120px
-  display: flex
-  justify-content: space-around
-  flex-wrap: wrap
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+  background-color: #fff
   &__item
     display: flex
     flex-direction: column
@@ -184,7 +183,7 @@ hr
       min-width: 65%
     &--tablets
       display: none
-      @media (max-width: 1434px) and (min-width: 937px)
+      @media (max-width: 1418px) and (min-width: 937px)
         display: flex
     &-img
       padding-top: 40px
@@ -379,16 +378,6 @@ hr
       padding-bottom: 8px
       color: #aaa
         
-//Hover for social start
-.fa-google-plus:hover
-        color: #dc473a
-.fa-twitter:hover
-        color: #1da1f2
-.fa-facebook:hover
-        color: #4867aa
-.fa-pinterest:hover
-        color: #bd081b
-//Hover for social end
 
 //FEEDBACKS END
 
@@ -504,12 +493,6 @@ hr
     @extend %hr
     margin-top: -15px
 
-//Mail, print hovers start 
-.fa-envelope-o:hover
-        color: #4867AA
-.fa-print:hover
-        color: #BD081B
-//Mail, print hovers end 
 
 //First column end
 
@@ -1288,12 +1271,12 @@ hr
   &__numbers
     display: flex 
     justify-content: space-between
-    align-items: center 
     list-style: none
     width: 33.57%
     padding-top: 40px
     padding-bottom: 30px
-    padding-left: 0
+    margin-left: auto 
+    margin-right: auto 
     font-size: 18px 
     &-item 
       @extend %btn-reset
@@ -1347,5 +1330,4 @@ hr
     margin-top: 10px 
     float: right 
     i 
-      padding-left: 10px     
- //COMMENTS END
+      padding-left: 10px

@@ -25,6 +25,30 @@ body {
   color: #4867aa;
 }
 
+.fa-google-plus:hover {
+  color: #dc473a;
+}
+
+.fa-twitter:hover {
+  color: #1da1f2;
+}
+
+.fa-facebook:hover {
+  color: #4867aa;
+}
+
+.fa-pinterest:hover {
+  color: #bd081b;
+}
+
+.fa-envelope-o:hover {
+  color: #4867AA;
+}
+
+.fa-print:hover {
+  color: #BD081B;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -65,38 +89,6 @@ hr {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-  width: 100%;
-}
-
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1120px;
-  }
 }
 
 .header__logo {
@@ -241,14 +233,14 @@ hr {
 }
 
 .main-recipe__left a {
+  padding: 4px;
+  margin-top: 10px;
   text-align: center;
   color: black;
   text-transform: uppercase;
   font-size: 12px;
   width: 100px;
   border: 1px solid #798186;
-  padding: 4px;
-  margin-top: 10px;
 }
 
 .main-recipe__left h2 {
@@ -259,11 +251,6 @@ hr {
 }
 
 .sub-recipes {
-  background-color: white;
-  margin-top: 160px;
-  padding-bottom: 30px;
-  width: 77.7777777%;
-  max-width: 1120px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -274,8 +261,13 @@ hr {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  margin-top: 160px;
+  padding-bottom: 30px;
+  width: 77.7777777%;
+  max-width: 1120px;
   -webkit-box-shadow: 0 0 13px rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 13px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
 }
 
 .sub-recipes__item {
@@ -303,7 +295,7 @@ hr {
   display: none;
 }
 
-@media (max-width: 1434px) and (min-width: 937px) {
+@media (max-width: 1418px) and (min-width: 937px) {
   .sub-recipes__item--tablets {
     display: -webkit-box;
     display: -webkit-flex;
@@ -665,22 +657,6 @@ hr {
   color: #aaa;
 }
 
-.fa-google-plus:hover {
-  color: #dc473a;
-}
-
-.fa-twitter:hover {
-  color: #1da1f2;
-}
-
-.fa-facebook:hover {
-  color: #4867aa;
-}
-
-.fa-pinterest:hover {
-  color: #bd081b;
-}
-
 .columns {
   display: -webkit-box;
   display: -webkit-flex;
@@ -864,14 +840,6 @@ hr {
 
 .target hr {
   margin-top: -15px;
-}
-
-.fa-envelope-o:hover {
-  color: #4867AA;
-}
-
-.fa-print:hover {
-  color: #BD081B;
 }
 
 .second-column {
@@ -1999,14 +1967,13 @@ hr {
 }
 
 .switch {
+  margin-bottom: 155px;
   background-color: #fff;
   -webkit-box-shadow: 0 0 13px rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 13px rgba(0, 0, 0, 0.15);
-  margin-bottom: 155px;
 }
 
 .switch__numbers {
-  list-style: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2015,12 +1982,12 @@ hr {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  list-style: none;
   width: 33.57%;
-  margin-left: auto;
-  margin-right: auto;
   padding-top: 40px;
   padding-bottom: 30px;
-  padding-left: 0;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 18px;
 }
 
@@ -2116,89 +2083,4 @@ hr {
 
 .footer__social i {
   padding-left: 10px;
-}
-
-.make-column {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.column {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.bgred {
-  background-color: red;
-}
-
-.bgwhite {
-  background-color: #fff;
-}
-
-.coffee {
-  max-width: 25%;
-}
-
-.coffee__pic {
-  position: relative;
-}
-
-.coffee__text {
-  top: 150px;
-  position: absolute;
-}
-
-.post__pic {
-  background-color: grey;
-  width: 75%;
-  margin-left: 15%;
-  padding: 10px;
-}
-
-.post__input {
-  width: 66.6%;
-}
-
-.img-fluider {
-  -webkit-align-self: flex-start;
-      -ms-flex-item-align: start;
-          align-self: flex-start;
-}
-
-.width-max {
-  border-top-color: black;
-  width: 100%;
-  padding-left: 5%;
-}
-
-.floatright {
-  float: right;
-  margin-top: -50px;
-}
-
-.margin-bottom {
-  margin-bottom: 70px;
-}
-
-.changer-width {
-  width: 50%;
-  background-color: grey;
-  height: 20px;
-}
-
-.changer {
-  height: 100px;
-  width: 100%;
-  background: white;
 }
