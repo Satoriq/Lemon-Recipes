@@ -58,11 +58,7 @@ hr
   width: 85%
   border-color: #ddd
 
-.wrapper
-  padding-right: 15px
-  padding-left: 15px
-  display: flex
-  justify-content: center
+    
 
 
 
@@ -74,19 +70,28 @@ hr
   margin-left: auto
   margin-right: auto
   max-width: 25.5%
+  @media (max-width: 425px)
+    display: none 
 
 
 .nav
-  background-color: white
   display: flex
   align-items: center
   justify-content: space-between
   margin-bottom: 160px
+  margin-left: auto
+  margin-right: auto
   padding: 35px 0
   width: 77.777777777%
   max-width: 1120px
   box-shadow: 0 0 13px rgba(11, 12, 12, 0.15)
   background-color: #f8f8f8
+  @media (max-width: 425px)
+    background: none
+    box-shadow: none 
+    width: 100%
+    padding: 0
+    margin: 0
   &__logo
     margin-left: 5.3%
     @media (max-width: 1000px)
@@ -106,6 +111,8 @@ hr
       max-width: 18%
     @media (max-width: 1300px)
       background: none
+    @media (max-width: 425px)
+      order: 2
   &__menu
     text-transform: uppercase
     list-style-type: none
@@ -113,25 +120,72 @@ hr
     justify-content: center
     min-width: 65%
     margin-left: -5%
+    overflow: hidden
     @media (max-width: 1000px)
       min-width: 80%
+    @media (max-width: 425px)
+      
+    
     &-item
-        margin-left: 6%
-        @media (max-width: 1625px)
-          margin-left: 4%
-        &--hide
-          @media (max-width: 1280px)
-            display: none
+      margin-left: 6%
+      display: block
+      text-align: center
+      @media (max-width: 1625px)
+        margin-left: 4%
+      @media (max-width: 425px)
+        display: none 
+      &--hide
+        @media (max-width: 1280px)
+          display: none
+
+.icon 
+  display: none
+  @media (max-width: 425px)
+    display: block 
+
+.responsive 
+  @media (max-width: 425px)
+    position: relative
+    display: flex 
+    flex-direction: column
+  @media (max-width: 425px)
+    order: 1
+    .icon 
+      position: absolute
+      right: 0
+      top: 0
+    li 
+      float: left
+      display: block
+      padding-bottom: 15px 
+      background-color: white 
+      
+
+
+
+
+
 // HEADER END
 
 //MAIN RECIPE START
 .main-recipe
   width: 77.777777777%
   max-width: 1120px
-  background-image: url('../img/main-recipe.png')
+  margin-left: auto
+  margin-right: auto
+  background-image: url('../img/main-recipe.jpg')
   background-position: center
   background-size: cover
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+  @media (max-width: 425px)
+    display: none 
+  &__mobile
+    border: none 
+    @media (max-width: 425px)
+      width: 100% 
+      height: auto 
+
+
   &__left
     display: flex
     flex-direction: column
@@ -140,10 +194,15 @@ hr
     padding-bottom: 4%
     &-logo
       max-width: 250px
+      width: 100%
+      @media (max-width: 425px)
+        display: none
     p
       margin-top: -10px
       max-width: 30%
       min-width: 220px
+      @media (max-width: 425px)
+        display: none 
     a
       padding-top: 8px
       padding-bottom: 5px
@@ -154,12 +213,22 @@ hr
       font-size: 12px
       width: 100px
       border: 1px solid #798186
+      @media (max-width: 425px)
+        display: none 
     h2
       color: #911026
       font-family: 'Playfair Display', serif
       font-weight: 400
       font-size: 24px
-
+      @media (max-width: 425px)
+        display: none 
+.mobile-top
+  @media (min-width: 426px)
+    display: none 
+  @media (max-width: 425px)
+    display: block
+    width: 100%
+    height: auto 
 
 //MAIN RECIPE END
 
@@ -169,11 +238,18 @@ hr
   justify-content: space-around
   flex-wrap: wrap
   margin-top: 160px
+  margin-left: auto
+  margin-right: auto
   padding-bottom: 30px
   width: 77.7777777%
   max-width: 1120px
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   background-color: #fff
+  @media (max-width: 425px)
+    box-shadow: none 
+    width: 100%
+    margin: 0
+    
   &__item
     display: flex
     flex-direction: column
@@ -182,12 +258,19 @@ hr
     padding: 0 2%
     @media (max-width: 937px)
       min-width: 65%
+    @media (max-width: 425px) 
+        width: 100%
+        padding: 0
     &--tablets
       display: none
       @media (max-width: 1418px) and (min-width: 937px)
         display: flex
     &-img
       padding-top: 40px
+      @media (max-width: 425px) 
+        width: 100%
+        padding: 0
+
     &-name
       font-size: 18px
       max-width: 300px
@@ -205,12 +288,16 @@ hr
   background-color: white
   width: 77.7777777%
   margin-top: 80px
+  margin-left: auto
+  margin-right: auto
   max-width: 1120px
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   @media (max-width: 1200px)
     flex-wrap: wrap
     justify-content: center
     align-items: center
+  @media (max-width: 425px)
+    display: none
   img
     max-width: 50%
     min-width: 420px
@@ -274,6 +361,8 @@ hr
   justify-content: space-between
   width: 77.7777777%
   max-width: 1120px
+  margin-left: auto
+  margin-right: auto
   @media (max-width: 800px)
     flex-wrap: wrap
     justify-content: center
@@ -331,6 +420,8 @@ hr
     box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
     @media (max-width: 800px)
       width: 100%
+    @media (max-width: 425px)
+      display: none
     &-top
       padding-left: 9%
       padding-top: 7px
@@ -393,6 +484,9 @@ hr
   width: 71.18055555%
   max-width: 1025px
   flex-wrap: wrap 
+  @media (max-width: 425px)
+    width: 100%
+    
 
   
 
@@ -403,6 +497,7 @@ hr
   width: 27.8%  
   @media( max-width: 1240px)
     display: none 
+
 
 .small-recipe
   margin-top: 100px
@@ -509,13 +604,19 @@ hr
   @media( max-width: 600px)
     width: 90%
     margin: 0 auto 
+  @media (max-width: 425px)
+    width: 100%
+    
 
 .level-recipes 
   margin-top: 100px 
-  background-color: white 
+  background-color: #fff 
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   @media (max-width: 1240px)
-    order: 1 
+    order: 1
+  @media (max-width: 425px)
+    margin: 0
+    box-shadow: none 
   &__header
     padding-left: 8%
     font-size: 20px 
@@ -535,7 +636,8 @@ hr
           display: none 
       
   &__levels 
-    text-align: center 
+    text-align: center
+
     
   &__recipe
     display: flex 
@@ -723,6 +825,9 @@ hr
     width: 90%
     margin: 0 auto 
     margin-top: -30px
+  @media (max-width: 425px)
+    width: 100%
+    margin: 0
     
 
 .popular 
@@ -733,6 +838,9 @@ hr
   padding-right: 5%
   padding-left: 5%
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+  @media (max-width: 425px)
+    box-shadow: none 
+    margin: 0
   
   &__header 
     margin-top: 17px
@@ -857,6 +965,8 @@ hr
     margin-top: 100px 
   @media (max-width: 1024px)
     width: 70%
+  @media (max-width: 425px)
+    display: none 
 
 .forms-container
   width: 85%
@@ -1317,6 +1427,8 @@ hr
       width: 23%
       @media (max-width: 1024px)
         width: 10%
+      @media (max-width: 425px)
+        display: none 
   &__nav
     align-self: center 
     width: 60%
@@ -1330,6 +1442,9 @@ hr
       @media (max-width: 768px)
         flex-direction: column 
         align-items: center 
+      @media (max-width: 425px)
+        align-items: flex-start 
+        color: #999
 
     &-item 
       @media (max-width: 768px)
