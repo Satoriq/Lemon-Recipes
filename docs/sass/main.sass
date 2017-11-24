@@ -1,5 +1,5 @@
 // I used BEM naming methodology
-//It looks like .block__element--modifier
+//It's look like .block__element--modifier and block-name__element-name--modifier, but never block__elem1__elem2
 
 body
   background-color: #eaeaea
@@ -86,79 +86,104 @@ hr
   max-width: 1120px
   box-shadow: 0 0 13px rgba(11, 12, 12, 0.15)
   background-color: #f8f8f8
+  @media (max-width: 600px) and (min-width: 425px)
+    flex-wrap: wrap 
   @media (max-width: 425px)
-    background: none
+    background-color: #fbfcfd
     box-shadow: none 
     width: 100%
     padding: 0
     margin: 0
   &__logo
     margin-left: 5.3%
-    @media (max-width: 1000px)
+    &--open
+      display: none 
+    @media (max-width: 1000px) and (min-width: 425px)
       display: none
   &__input
     font-size: 13px
     text-align: center
     margin-left: 4%
     margin-right: 5%
-    max-width: 14%
+    min-width: 14%
     background-image: url("../img/find-icon.png")
     background-repeat: no-repeat
     background-size: 13px 17px
     background-position: 3px 0
     border: 1px solid #798186
-    @media (max-width: 1000px)
+    @media (max-width: 600px) and (min-width: 425px)
+      display: block
+      margin-left: auto
+      margin-right: auto
+      width: 70%
+      line-height: 20px
+      background-size: 15px 20px
+      background-position: 5px 1px
+    @media (max-width: 1000px) and (min-width: 600px)
       max-width: 18%
-    @media (max-width: 1300px)
+    @media (max-width: 1300px) and (min-width: 600px)
       background: none
     @media (max-width: 425px)
-      order: 2
+      order: 1
+      max-width: none 
+      width: 40%
+    &--open 
+      display: none 
+
+
   &__menu
     text-transform: uppercase
     list-style-type: none
     display: flex
     justify-content: center
-    min-width: 65%
+    width: 65%
     margin-left: -5%
     overflow: hidden
     @media (max-width: 1000px)
-      min-width: 80%
+      width: 80%
+    @media (max-width: 600px)
+      width: 100% 
+      padding-left: 0
+      margin-left: auto 
+      margin-right: auto 
     @media (max-width: 425px)
-      
-    
+      order: 2
+      width: 20% 
+    &--open
+        position: relative
+        display: flex 
+        flex-direction: column
+        text-align: center 
+        width: 100%
+        li 
+          display: block
+          padding-bottom: 15px 
+          background-color: #fbfcfd
     &-item
       margin-left: 6%
       display: block
       text-align: center
+      &:nth-child(3)
+        @media (max-width: 1280px) and (min-width: 425px)
+          display: none
+      &:nth-child(4)
+        @media (max-width: 750px) and (min-width: 425px)
+          display: none
       @media (max-width: 1625px)
         margin-left: 4%
       @media (max-width: 425px)
         display: none 
-      &--hide
-        @media (max-width: 1280px)
-          display: none
-
-.icon 
-  display: none
-  @media (max-width: 425px)
-    display: block 
-
-.responsive 
-  @media (max-width: 425px)
-    position: relative
-    display: flex 
-    flex-direction: column
-  @media (max-width: 425px)
-    order: 1
-    .icon 
-      position: absolute
-      right: 0
-      top: 0
-    li 
-      float: left
-      display: block
-      padding-bottom: 15px 
-      background-color: white 
+    &-icon
+      font-size: 20px
+      display: none
+      &--open 
+        position: absolute
+        right: 0
+        top: 0
+      @media (max-width: 425px)
+        display: block 
+        width: 20%
+    
       
 
 

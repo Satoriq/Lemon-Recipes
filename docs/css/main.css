@@ -117,9 +117,17 @@ hr {
   background-color: #f8f8f8;
 }
 
+@media (max-width: 600px) and (min-width: 425px) {
+  .nav {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 425px) {
   .nav {
-    background: none;
+    background-color: #fbfcfd;
     -webkit-box-shadow: none;
             box-shadow: none;
     width: 100%;
@@ -132,7 +140,11 @@ hr {
   margin-left: 5.3%;
 }
 
-@media (max-width: 1000px) {
+.nav__logo--open {
+  display: none;
+}
+
+@media (max-width: 1000px) and (min-width: 425px) {
   .nav__logo {
     display: none;
   }
@@ -143,7 +155,7 @@ hr {
   text-align: center;
   margin-left: 4%;
   margin-right: 5%;
-  max-width: 14%;
+  min-width: 14%;
   background-image: url("../img/find-icon.png");
   background-repeat: no-repeat;
   -webkit-background-size: 13px 17px;
@@ -152,16 +164,44 @@ hr {
   border: 1px solid #798186;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 600px) and (min-width: 425px) {
+  .nav__input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    line-height: 20px;
+    -webkit-background-size: 15px 20px;
+            background-size: 15px 20px;
+    background-position: 5px 1px;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 600px) {
   .nav__input {
     max-width: 18%;
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1300px) and (min-width: 600px) {
   .nav__input {
     background: none;
   }
+}
+
+@media (max-width: 425px) {
+  .nav__input {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    max-width: none;
+    width: 40%;
+  }
+}
+
+.nav__input--open {
+  display: none;
 }
 
 .nav__menu {
@@ -175,21 +215,73 @@ hr {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-width: 65%;
+  width: 65%;
   margin-left: -5%;
   overflow: hidden;
 }
 
 @media (max-width: 1000px) {
   .nav__menu {
-    min-width: 80%;
+    width: 80%;
   }
+}
+
+@media (max-width: 600px) {
+  .nav__menu {
+    width: 100%;
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 425px) {
+  .nav__menu {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 20%;
+  }
+}
+
+.nav__menu--open {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+
+.nav__menu--open li {
+  display: block;
+  padding-bottom: 15px;
+  background-color: #fbfcfd;
 }
 
 .nav__menu-item {
   margin-left: 6%;
   display: block;
   text-align: center;
+}
+
+@media (max-width: 1280px) and (min-width: 425px) {
+  .nav__menu-item:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) and (min-width: 425px) {
+  .nav__menu-item:nth-child(4) {
+    display: none;
+  }
 }
 
 @media (max-width: 1625px) {
@@ -204,48 +296,21 @@ hr {
   }
 }
 
-@media (max-width: 1280px) {
-  .nav__menu-item--hide {
-    display: none;
-  }
-}
-
-.icon {
+.nav__menu-icon {
+  font-size: 20px;
   display: none;
 }
 
-@media (max-width: 425px) {
-  .icon {
-    display: block;
-  }
+.nav__menu-icon--open {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 @media (max-width: 425px) {
-  .responsive {
-    position: relative;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media (max-width: 425px) {
-  .responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .responsive li {
-    float: left;
+  .nav__menu-icon {
     display: block;
-    padding-bottom: 15px;
-    background-color: white;
+    width: 20%;
   }
 }
 
