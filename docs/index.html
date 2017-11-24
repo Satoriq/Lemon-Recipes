@@ -83,6 +83,7 @@
           srcset="img/main-recipe-mobile.jpg">
         <img class="main-recipe__mobile" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt=" ">  <!-- scr for validation, alt="hold alt + 255", this all for download picture only for mobile -->
     </picture>
+    <button class="main-recipe__mobile-get">Get it recipe</button>
     <div class="main-recipe">
       <div class="main-recipe__left">
         <img src="img/logo.png" class="main-recipe__left-logo" alt="">
@@ -365,7 +366,7 @@
           <button class="unpicked">Long</button>
         </div>
 
-        <div class="level-recipes__recipe--first">
+        <div class="level-recipes__recipe level-recipes__recipe--first">
             <img class="level-recipes__img" src="img/easy-recipes-top.png" alt="recipe picture">
           <a class="level-recipes__text" href="#">
             <div>
@@ -662,16 +663,16 @@
     <div class="switch">
         <ul class="switch__numbers">
           <li>
-            <a href=""><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+            <button class= "switch__numbers-item"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
           </li>
           <li><button class= "switch__numbers-item" >1</button></li>
-          <li><button class= "switch__numbers-item--current">2</button></li>
+          <li><button class= "switch__numbers-item switch__numbers-item--current">2</button></li>
           <li><button class= "switch__numbers-item">3</button></li>
           <li><button class= "switch__numbers-item">4</button></li>
           <li><button class= "switch__numbers-item">5</button></li>
           <li><button class= "switch__numbers-item">6</button></li>
           <li>
-            <a href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <button class= "switch__numbers-item"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
           </li>
         </ul>
     </div>
@@ -681,9 +682,9 @@
  <!-- FOOTER START  -->
   <footer>
     <div class="footer">
-        <div class="footer__logo-container">
+        
           <img class="footer__logo" src="img/footer-logo.png" alt="Logo">
-        </div>
+        
         <nav class="footer__nav">
           <ul class="footer__nav-items">
             <li class="footer__nav-item"><a href="">Home</a></li>      
