@@ -5,6 +5,12 @@ body {
   font-size: 16px;
 }
 
+@media (max-width: 425px) {
+  body {
+    background-color: #fbfcfd;
+  }
+}
+
 @-ms-viewport {
   width: device-width;
 }
@@ -52,12 +58,6 @@ body {
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-@media (max-width: 425px) {
-  html {
-    background-color: #fbfcfd;
-  }
 }
 
 *,
@@ -1220,6 +1220,15 @@ hr {
   }
 }
 
+.level-recipes__button {
+  color: #999;
+  cursor: pointer;
+}
+
+.level-recipes__content {
+  display: none;
+}
+
 .level-recipes__levels {
   text-align: center;
 }
@@ -1370,21 +1379,28 @@ hr {
   padding-right: 10px;
 }
 
-.unpicked, .picked {
+.level-recipes__button {
   width: 30%;
   font-size: 12px;
   line-height: 25px;
   text-transform: uppercase;
   border: none;
   background: none;
-}
-
-.unpicked {
   color: #999;
+  font-weight: 300;
   cursor: pointer;
 }
 
 .picked {
+  width: 30%;
+  font-size: 12px;
+  line-height: 25px;
+  text-transform: uppercase;
+  border: none;
+  background: none;
+  color: #999;
+  font-weight: 300;
+  cursor: pointer;
   color: #000;
   font-weight: 700;
 }
@@ -1639,6 +1655,8 @@ hr {
 @media (max-width: 1400px) and (min-width: 425px) {
   .popular a {
     display: block;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 95px;
   }
 }

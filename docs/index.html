@@ -360,52 +360,158 @@
           </span>
         </p>
         <hr>
+
+
+
         <div class="level-recipes__levels">
-          <button class="picked">Easy</button>
-          <button class="unpicked">Middle</button>
-          <button class="unpicked">Long</button>
+          <button class="level-button" onclick="openRecipe(event, 'Easy')" id="defaultOpen">Easy</button>
+          <button class="level-button" onclick="openRecipe(event, 'Middle')">Middle</button>
+          <button class="level-button" onclick="openRecipe(event, 'Long')">Long</button>
         </div>
 
-        <div class="level-recipes__recipe level-recipes__recipe--first">
-            <img class="level-recipes__img" src="img/easy-recipes-top.png" alt="recipe picture">
-          <a class="level-recipes__text" href="#">
+
+
+
+
+        
+
+
+        <div id="Easy" class="level-recipes__content active">
+          <div class="level-recipes__recipe ">
+              <img class="level-recipes__img" src="img/easy-recipes-top.png" alt="recipe picture">
+            <a class="level-recipes__text" href="#">
+              <div>
+                <p class="level-recipes__text-header"><span class="level-recipes__text-by">by</span> Smuckersreg Toppings
+                </p>
+                <br>
+                <span class="level-recipes__text-subtext">Lorem ipsum dolor sit, am consecte adipisicing. Lorem ipsum dolor sit, am consecte adipisicing elit. </span>
+              </div>
+            </a>
+          </div>
+          
+          <div class="level-recipes__recipe">
+            <img class="level-recipes__img" src="img/easy-recipes-center.png" alt="recipe picture">
+            <a class="level-recipes__text" href="#">
             <div>
-              <p class="level-recipes__text-header"><span class="level-recipes__text-by">by</span> Smuckersreg Toppings
+              <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
               </p>
               <br>
-              <span class="level-recipes__text-subtext">Lorem ipsum dolor sit, am consecte adipisicing. Lorem ipsum dolor sit, am consecte adipisicing elit. </span>
+              <span class="level-recipes__text-subtext">Lorem ipsum dolor sit am consecte adipisicing elit. Lorem ipsum dolor sit, am consecte adipisicing elit.   </span>
             </div>
-          </a>
-        </div>
-
-        <div class="level-recipes__recipe">
-          <img class="level-recipes__img" src="img/easy-recipes-center.png" alt="recipe picture">
-          <a class="level-recipes__text" href="#">
-          <div>
-            <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
-            </p>
-            <br>
-            <span class="level-recipes__text-subtext">Lorem ipsum dolor sit am consecte adipisicing elit. Lorem ipsum dolor sit, am consecte adipisicing elit.   </span>
+            </a>
           </div>
-          </a>
-        </div>
-
-        <div class="level-recipes__recipe">
-          <img class="level-recipes__img" src="img/easy-recipes-bottom.png" alt="recipe picture">
-          <a class="level-recipes__text" href="#">
-          <div>
-            <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
-            </p>
-            <br>
-            <span class="level-recipes__text-subtext">Lorem ipsum dolor sit, am consecte adipisicing elit. Quaerat, voluptate atque  </span>
+          
+          <div class="level-recipes__recipe">
+            <img class="level-recipes__img" src="img/easy-recipes-bottom.png" alt="recipe picture">
+            <a class="level-recipes__text" href="#">
+            <div>
+              <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
+              </p>
+              <br>
+              <span class="level-recipes__text-subtext">Lorem ipsum dolor sit, am consecte adipisicing elit. Quaerat, voluptate atque  </span>
+            </div>
+            </a>
           </div>
-          </a>
         </div>
 
+        <div id="Middle" class="level-recipes__content">
+
+            <div class="level-recipes__recipe level-recipes__recipe--first">
+                <img class="level-recipes__img" src="img/easy-recipes-center.png" alt="recipe picture">
+                <a class="level-recipes__text" href="#">
+                <div>
+                  <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
+                  </p>
+                  <br>
+                  <span class="level-recipes__text-subtext">Lorem ipsum dolor sit am consecte adipisicing elit. Lorem ipsum dolor sit, am consecte adipisicing elit.   </span>
+                </div>
+                </a>
+            </div>
+
+            <div class="level-recipes__recipe level-recipes__recipe--first">
+                <img class="level-recipes__img" src="img/easy-recipes-top.png" alt="recipe picture">
+              <a class="level-recipes__text" href="#">
+                <div>
+                  <p class="level-recipes__text-header"><span class="level-recipes__text-by">by</span> Smuckersreg Toppings
+                  </p>
+                  <br>
+                  <span class="level-recipes__text-subtext">Lorem ipsum dolor sit, am consecte adipisicing. Lorem ipsum dolor sit, am consecte adipisicing elit. </span>
+                </div>
+              </a>
+            </div>
+            
+            <div class="level-recipes__recipe">
+              <img class="level-recipes__img" src="img/easy-recipes-bottom.png" alt="recipe picture">
+              <a class="level-recipes__text" href="#">
+              <div>
+                <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
+                </p>
+                <br>
+                <span class="level-recipes__text-subtext">Lorem ipsum dolor sit, am consecte adipisicing elit. Quaerat, voluptate atque  </span>
+              </div>
+              </a>
+            </div>
+        </div>
+
+        <div id="Long" class="level-recipes__content">
+            <div class="level-recipes__recipe level-recipes__recipe--first">
+                <img class="level-recipes__img" src="img/easy-recipes-bottom.png" alt="recipe picture">
+                <a class="level-recipes__text" href="#">
+                <div>
+                  <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
+                  </p>
+                  <br>
+                  <span class="level-recipes__text-subtext">Lorem ipsum dolor sit, am consecte adipisicing elit. Quaerat, voluptate atque  </span>
+                </div>
+                </a>
+            </div>
+            
+            <div class="level-recipes__recipe">
+                <img class="level-recipes__img" src="img/easy-recipes-center.png" alt="recipe picture">
+                <a class="level-recipes__text" href="#">
+                <div>
+                  <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
+                  </p>
+                  <br>
+                  <span class="level-recipes__text-subtext">Lorem ipsum dolor sit am consecte adipisicing elit. Lorem ipsum dolor sit, am consecte adipisicing elit.   </span>
+                </div>
+                </a>
+            </div>
+
+            <div class="level-recipes__recipe level-recipes__recipe--first">
+                <img class="level-recipes__img" src="img/easy-recipes-top.png" alt="recipe picture">
+              <a class="level-recipes__text" href="#">
+                <div>
+                  <p class="level-recipes__text-header"><span class="level-recipes__text-by">by</span> Smuckersreg Toppings
+                  </p>
+                  <br>
+                  <span class="level-recipes__text-subtext">Lorem ipsum dolor sit, am consecte adipisicing. Lorem ipsum dolor sit, am consecte adipisicing elit. </span>
+                </div>
+              </a>
+            </div>
+            
+        </div>
         <a class="level-recipes__view" href="#">View more</a>
 
-      </div>
+        <script>
+            function openRecipe(evt, difficulty) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("level-recipes__content");
+              for (i = 0; i < tabcontent.length; i++) {
+                  tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("level-recipes__button");
+              for (i = 0; i < tablinks.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" picked", "");
+              }
+              document.getElementById(difficulty).style.display = "block";
+              evt.currentTarget.className = " picked";
+  
+            }
+            document.getElementById("defaultOpen").click();
+        </script>
 
+      </div>
 
       <div class="tags">
         <h4 class="tags__header">Tags</h4>
@@ -718,8 +824,8 @@
 
 
 
-  <script src="js/calendar.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/calendar.js"></script>  <!-- not mine, just copied and customize  -->
+
 </body>
 
 </html>
