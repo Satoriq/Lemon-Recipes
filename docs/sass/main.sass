@@ -118,6 +118,7 @@ hr
     background-position: 3px 0
     border: 1px solid #798186
     color: #798186
+
     @media (max-width: 600px) and (min-width: 425px)
       display: block
       margin-left: auto
@@ -147,8 +148,7 @@ hr
       
     &--open 
       display: none 
-
-
+  
   &__menu
     text-transform: uppercase
     list-style-type: none
@@ -705,9 +705,26 @@ hr
         @media (max-width: 1024px)
           display: none 
   &__button 
-    @extend %button
+    width: 30% 
+    font-size: 12px
+    line-height: 25px
+    text-transform: uppercase 
+    border: none
+    background: none
     color: #999
+    font-weight: 300
     cursor: pointer
+    &--picked
+      width: 30% 
+      font-size: 12px
+      line-height: 25px
+      text-transform: uppercase 
+      border: none
+      background: none
+      outline: none 
+      color: #000
+      font-weight: 700
+      cursor: default
   &__content
     display: none  
   &__levels 
@@ -783,29 +800,7 @@ hr
     padding-right: 10px
     
 
-// customization for level buttons start 
-.level-button
-  width: 30% 
-  font-size: 12px
-  line-height: 25px
-  text-transform: uppercase 
-  border: none
-  background: none
-  color: #999
-  font-weight: 300
-  cursor: pointer
-    
 
-.picked
-  width: 30% 
-  font-size: 12px
-  line-height: 25px
-  text-transform: uppercase 
-  border: none
-  background: none
-  color: #000
-  font-weight: 700
-// customization for level buttons end
 
 .tags 
   margin-top: 45px
@@ -1507,6 +1502,7 @@ hr
   display: flex 
   background-color: #2f2f2f
   box-shadow: 1px 3px 7px rgba(11, 12, 12, 0.14)
+  
   &__logo
     display: block
     height: 36px
@@ -1524,6 +1520,9 @@ hr
   &__nav
     align-self: center 
     width: 60%
+    padding-left: 15%
+    @media (max-width: 1240px)
+      padding-left: 0
     &-items
       display: flex 
       justify-content: space-around

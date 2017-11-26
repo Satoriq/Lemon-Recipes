@@ -1221,8 +1221,28 @@ hr {
 }
 
 .level-recipes__button {
+  width: 30%;
+  font-size: 12px;
+  line-height: 25px;
+  text-transform: uppercase;
+  border: none;
+  background: none;
   color: #999;
+  font-weight: 300;
   cursor: pointer;
+}
+
+.level-recipes__button--picked {
+  width: 30%;
+  font-size: 12px;
+  line-height: 25px;
+  text-transform: uppercase;
+  border: none;
+  background: none;
+  outline: none;
+  color: #000;
+  font-weight: 700;
+  cursor: default;
 }
 
 .level-recipes__content {
@@ -1377,32 +1397,6 @@ hr {
 
 .level-recipes i {
   padding-right: 10px;
-}
-
-.level-recipes__button {
-  width: 30%;
-  font-size: 12px;
-  line-height: 25px;
-  text-transform: uppercase;
-  border: none;
-  background: none;
-  color: #999;
-  font-weight: 300;
-  cursor: pointer;
-}
-
-.picked {
-  width: 30%;
-  font-size: 12px;
-  line-height: 25px;
-  text-transform: uppercase;
-  border: none;
-  background: none;
-  color: #999;
-  font-weight: 300;
-  cursor: pointer;
-  color: #000;
-  font-weight: 700;
 }
 
 .tags {
@@ -2425,6 +2419,13 @@ hr {
       -ms-flex-item-align: center;
           align-self: center;
   width: 60%;
+  padding-left: 15%;
+}
+
+@media (max-width: 1240px) {
+  .footer__nav {
+    padding-left: 0;
+  }
 }
 
 .footer__nav-items {

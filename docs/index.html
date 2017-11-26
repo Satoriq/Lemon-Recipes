@@ -68,8 +68,7 @@
               }
           }
           </script>
-        <input type="search" class="nav__input" id="input__js"  placeholder="FIND A RECIPE" />
-
+            <input type="search" class="nav__input" id="input__js"  placeholder="FIND A RECIPE" />
       </div>
     </nav>
 
@@ -364,9 +363,9 @@
 
 
         <div class="level-recipes__levels">
-          <button class="level-button" onclick="openRecipe(event, 'Easy')" id="defaultOpen">Easy</button>
-          <button class="level-button" onclick="openRecipe(event, 'Middle')">Middle</button>
-          <button class="level-button" onclick="openRecipe(event, 'Long')">Long</button>
+          <button class="level-recipes__button" onclick="openRecipe(event, 'Easy')" id="defaultOpen">Easy</button>
+          <button class="level-recipes__button" onclick="openRecipe(event, 'Middle')">Middle</button>
+          <button class="level-recipes__button" onclick="openRecipe(event, 'Long')">Long</button>
         </div>
 
 
@@ -376,8 +375,9 @@
         
 
 
-        <div id="Easy" class="level-recipes__content active">
-          <div class="level-recipes__recipe ">
+        <div id="Easy" class="level-recipes__content">
+
+          <div class="level-recipes__recipe level-recipes__recipe--first">
               <img class="level-recipes__img" src="img/easy-recipes-top.png" alt="recipe picture">
             <a class="level-recipes__text" href="#">
               <div>
@@ -428,7 +428,7 @@
                 </a>
             </div>
 
-            <div class="level-recipes__recipe level-recipes__recipe--first">
+            <div class="level-recipes__recipe">
                 <img class="level-recipes__img" src="img/easy-recipes-top.png" alt="recipe picture">
               <a class="level-recipes__text" href="#">
                 <div>
@@ -494,22 +494,21 @@
         <a class="level-recipes__view" href="#">View more</a>
 
         <script>
-            function openRecipe(evt, difficulty) {
-              var i, tabcontent, tablinks;
-              tabcontent = document.getElementsByClassName("level-recipes__content");
-              for (i = 0; i < tabcontent.length; i++) {
-                  tabcontent[i].style.display = "none";
-              }
-              tablinks = document.getElementsByClassName("level-recipes__button");
-              for (i = 0; i < tablinks.length; i++) {
-                  tablinks[i].className = tablinks[i].className.replace(" picked", "");
-              }
-              document.getElementById(difficulty).style.display = "block";
-              evt.currentTarget.className = " picked";
-  
-            }
-            document.getElementById("defaultOpen").click();
-        </script>
+        function openRecipe(evt, difficulty) {
+         var i, tabcontent, tablinks;
+         tabcontent = document.getElementsByClassName("level-recipes__content");
+         for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+         }
+         tablinks = document.getElementsByClassName("level-recipes__button");
+         for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" level-recipes__button--picked", "");
+         }
+         document.getElementById(difficulty).style.display = "block";
+         evt.currentTarget.className += " level-recipes__button--picked";  
+        }
+        document.getElementById("defaultOpen").click();
+      </script>
 
       </div>
 
