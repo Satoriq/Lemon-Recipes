@@ -34,41 +34,8 @@
           <li class="nav__menu-item"><a href="">All categories</a></li>
           <a href="javascript:void(0);"  class="nav__menu-icon" id="icon__js" onclick="openBurger()">&#9776;</a>
         </ul>
-        <script>
-          function openBurger() {
-              var x = document.getElementById("nav__js");
-              if (x.className === "nav__menu") {
-                  x.className += " nav__menu--open";
-              } 
-              else {
-                  x.className = "nav__menu";
-              }
-
-              var y = document.getElementById("logo__js");
-              if (y.className === "nav__logo") {
-                  y.className += " nav__logo--open";
-              } 
-              else {
-                  y.className = "nav__logo";
-              }
-
-              var z = document.getElementById("input__js");
-              if (z.className === "nav__input") {
-                  z.className += " nav__input--open";
-              } 
-              else {
-                  z.className = "nav__input"; //First bug in my life was here, it's so cute^^
-              }
-              var a = document.getElementById("icon__js");
-              if (a.className === "nav__menu-icon") {
-                  a.className += " nav__menu-icon--open";
-              } 
-              else {
-                  a.className = "nav__menu-icon";
-              }
-          }
-          </script>
-            <input type="search" class="nav__input" id="input__js"  placeholder="FIND A RECIPE" />
+        
+        <input type="search" class="nav__input" id="input__js"  placeholder="FIND A RECIPE" /><label for="input__js" data-fon="☎">&nbsp;</label>
       </div>
     </nav>
 
@@ -368,13 +335,6 @@
           <button class="level-recipes__button" onclick="openRecipe(event, 'Long')">Long</button>
         </div>
 
-
-
-
-
-        
-
-
         <div id="Easy" class="level-recipes__content">
 
           <div class="level-recipes__recipe level-recipes__recipe--first">
@@ -493,22 +453,6 @@
         </div>
         <a class="level-recipes__view" href="#">View more</a>
 
-        <script>
-        function openRecipe(evt, difficulty) {
-         var i, tabcontent, tablinks;
-         tabcontent = document.getElementsByClassName("level-recipes__content");
-         for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-         }
-         tablinks = document.getElementsByClassName("level-recipes__button");
-         for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" level-recipes__button--picked", "");
-         }
-         document.getElementById(difficulty).style.display = "block";
-         evt.currentTarget.className += " level-recipes__button--picked";  
-        }
-        document.getElementById("defaultOpen").click();
-      </script>
 
       </div>
 
@@ -821,8 +765,8 @@
   </footer>
   <!-- FOOTER END  -->
 
-
-
+  <script src="js/levels-tab.js"></script>
+  <script src="js/burger.js"></script>
   <script src="js/calendar.js"></script>  <!-- not mine, just copied and customize  -->
 
 </body>
