@@ -222,12 +222,11 @@ hr
   max-width: 1120px
   margin-left: auto
   margin-right: auto
-  background-image: url('../img/main-recipe.jpg')
-  background-position: center
-  background-size: cover
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+  position: relative
+  height: 453px 
   @media (max-width: 425px)
-    display: none 
+    display: none
   &__mobile
     border: none 
     @media (max-width: 425px)
@@ -245,26 +244,49 @@ hr
       outline-color: #798186
       @media (min-width: 426px)
         display: none 
-      
-
+  &__img
+    width: 100%
+    min-height: 453px 
+  &__switcher 
+    position: absolute 
+    right: 17px
+    bottom: 15px 
+    cursor: pointer
+    &-circle
+      color: red
+      display: inline-block
+      padding: 5px 
+      margin-left: 5px
+      text-align: center
+      border-radius: 50%
+      background-color: #fff
+      &:hover 
+        background-color: #555
+      &--checked
+        background-color: #555
+  &--hide
+  display: none 
+  &--show
+    display: block
+    @media (max-width: 425px)
+      display: none 
 
   &__left
+    position: absolute 
+    top: 0 
+    left: 0 
     display: flex
     flex-direction: column
     padding-left: 7%
-    padding-top: 3.5%
+    padding-top: 50px
     padding-bottom: 4%
     &-logo
       max-width: 250px
       width: 100%
-      @media (max-width: 425px)
-        display: none
     p
       margin-top: -10px
       max-width: 30%
       min-width: 220px
-      @media (max-width: 425px)
-        display: none 
     a
       padding-top: 8px
       padding-bottom: 5px
@@ -275,15 +297,17 @@ hr
       font-size: 12px
       width: 100px
       border: 1px solid #798186
-      @media (max-width: 425px)
-        display: none 
     h2
       color: #911026
       font-family: 'Playfair Display', serif
       font-weight: 400
       font-size: 24px
-      @media (max-width: 425px)
-        display: none 
+      margin-top: 35px 
+      margin-bottom: 36px
+
+
+
+
 .mobile-top
   @media (min-width: 426px)
     display: none 
@@ -591,13 +615,37 @@ hr
   &__recipe
     width: 100%
     display: block
+  &__images 
+    position: relative 
+  &__circle
+    color: red
+    display: inline-block
+    padding: 5px 
+    margin-left: 8px
+    margin-right: 8px
+    text-align: center
+    border-radius: 50%
+    border: 1px solid #999
+    background-color: #fff
+    &--checked
+      background-color: #888
+    &:hover 
+      background-color: #888
+  &__switcher
+    position: absolute
+    left: 0
+    right: 0
+    text-align: center 
+    bottom: 5px
+    cursor: pointer
   hr
     @extend %hr 
     margin-top: -15px
   i
     padding-top: 5px
     padding-right: 7px
-  
+
+
 .target
   margin-top: 40px
   background-color: white
