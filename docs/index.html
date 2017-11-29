@@ -27,15 +27,45 @@
       <a class="nav__logo" id="logo__js" href=""><img src="img/logo--small.png " alt="Logo"></a>
 
         <ul class="nav__menu" id="nav__js">
-          <li class="nav__menu-item"><a href="">Home</a></li>
-          <li class="nav__menu-item"><a href="">Recipes</a></li>
-          <li class="nav__menu-item"><a href="">Photo galleries</a></li>
-          <li class="nav__menu-item"><a href="">Videos</a></li>
-          <li class="nav__menu-item"><a href="">All categories</a></li>
+          <li class="nav__menu-item"><a href="#">Home</a></li>
+          <li class="nav__menu-item"><a href="#">Recipes</a>
+            <div class="nav__dropdown">
+                <a href=""><p>Recommended</p></a>
+                <a href=""><p>Popular</p></a>
+                <a href=""><p>Quick & easy</p></a>
+                <a href=""><p>Healthy</p></a>
+                <a href=""><p>Newest</p></a>
+            </div>
+          </li>
+          <li class="nav__menu-item"><a href="#">Photo galleries</a>
+            <div class="nav__dropdown">
+                <a href=""><p>Recommended</p></a>
+                <a href=""><p>Popular</p></a>
+                <a href=""><p>Quick & easy</p></a>
+                <a href=""><p>Healthy</p></a>
+                <a href=""><p>Newest</p></a>
+            </div>
+          </li>
+          <li class="nav__menu-item"><a href="#">Videos</a>
+            <div class="nav__dropdown">
+                <a href=""><p>Recommended</p></a>
+                <a href=""><p>Popular</p></a>
+                <a href=""><p>Quick & easy</p></a>
+                <a href=""><p>Healthy</p></a>
+                <a href=""><p>Newest</p></a>
+            </div>
+          </li>
+          <li class="nav__menu-item"><a href="#">All categories</a>
+            <div class="nav__dropdown">
+                <a href=""><p>Recipes</p></a>
+                <a href=""><p>Photo Galleries</p></a>
+                <a href=""><p>Videos</p></a>
+            </div>
+          </li>
           <a href="javascript:void(0);"  class="nav__menu-icon" id="icon__js" onclick="openBurger()">&#9776;</a>
         </ul>
         
-        <input type="search" class="nav__input" id="input__js"  placeholder="FIND A RECIPE" /><label for="input__js" data-fon="☎">&nbsp;</label>
+        <input type="search" class="nav__input" id="input__js"  placeholder="FIND A RECIPE" />
       </div>
     </nav>
 
