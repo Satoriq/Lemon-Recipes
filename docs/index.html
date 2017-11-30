@@ -10,8 +10,8 @@
   <link rel="icon" type="image/png" href="img/site-icon.gif">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,600,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900" rel="stylesheet">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -24,9 +24,9 @@
     <nav>
       <div class="nav">
 
-      <a class="nav__logo" id="logo__js" href=""><img src="img/logo--small.png " alt="Logo"></a>
+      <a class="nav__logo" id="js-nav__logo" href="#"><img src="img/logo--small.png" alt="Logo"></a>
 
-        <ul class="nav__menu" id="nav__js">
+        <ul class="nav__menu" id="js-nav__menu">
           <li class="nav__menu-item"><a href="#">Home</a></li>
           <li class="nav__menu-item"><a href="#">Recipes</a>
             <div class="nav__dropdown">
@@ -62,10 +62,10 @@
                 <a href=""><p>Videos</p></a>
             </div>
           </li>
-          <a href="javascript:void(0);"  class="nav__menu-icon" id="icon__js" onclick="openBurger()">&#9776;</a>
+          <button class="nav__menu-icon" id="js-nav__menu-icon" onclick="openBurger()"><i class="fa fa-bars" aria-hidden="true"></i></button>
         </ul>
         
-        <input type="search" class="nav__input" id="input__js"  placeholder="FIND A RECIPE" />
+        <input type="search" class="nav__input" id="js-nav__input"  placeholder="FIND A RECIPE" />
       </div>
     </nav>
 
@@ -77,13 +77,14 @@
     <picture>
         <source media="(max-width: 425px)"
           srcset="img/main-recipe-mobile.jpg">
-        <img class="main-recipe__mobile" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt=" ">  <!-- scr for validation, alt="hold alt + 255", this all for download picture only for mobile -->
+        <img class="main-recipe__mobile" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt=" ">  
+        <!-- scr for validation, alt="hold alt + 255", this all for download picture only for mobile -->
     </picture>
     <button class="main-recipe__mobile-get">Get it recipe</button>
 
 
       <div class="main-recipe">
-          <img class="main-recipe__img" src="img/main-recipe.jpg">
+          <img class="main-recipe__img" src="img/main-recipe.jpg" alt="Main banana recipe">
           <div class="main-recipe__left">
             <img  src="img/logo.png" class="main-recipe__left-logo" alt="">
             <h2>Bananas Foster Ice Cream Cake</h2>
@@ -102,7 +103,7 @@
       </div>
 
       <div class="main-recipe">
-          <img class="main-recipe__img" src="img/main-recipe__2.jpg">
+          <img class="main-recipe__img" src="img/main-recipe__2.jpg" alt="Photo of recipe">
           <div class="main-recipe__left">
             <img src="img/logo.png" class="main-recipe__left-logo" alt="">
             <h2>Next recipes</h2>
@@ -120,9 +121,9 @@
       </div>
 
       <div class="main-recipe">
-          <img class="main-recipe__img" src="img/main-recipe__2.jpg">
+          <img class="main-recipe__img" src="img/main-recipe__2.jpg" alt="Photo of recipe">
           <div class="main-recipe__left">
-            <img  src="img/logo.png" class="main-recipe__left-logo" alt="">
+            <img  src="img/logo.png" class="main-recipe__left-logo" alt="Main recipe logo">
             <h2>Next recipes</h2>
             <p>Next info next info  next info next info next info next info next info next info next info next info next info next info next info next info next info  next info next info next info next info next info next info next info</p>
             <a href="#">Get Recipe</a>
@@ -138,9 +139,9 @@
       </div>
 
       <div class="main-recipe">
-          <img class="main-recipe__img" src="img/main-recipe__2.jpg">
+          <img class="main-recipe__img" src="img/main-recipe__2.jpg" alt="Photo of recipe">
           <div class="main-recipe__left">
-            <img  src="img/logo.png" class="main-recipe__left-logo" alt="">
+            <img  src="img/logo.png" class="main-recipe__left-logo"  alt="Main recipe logo">
             <h2>Next recipes</h2>
             <p>Next info next info  next info next info next info next info next info next info next info next info next info next info next info next info next info  next info next info next info next info next info next info next info</p>
             <a href="#">Get Recipe</a>
@@ -156,9 +157,9 @@
       </div>
 
       <div class="main-recipe">
-          <img class="main-recipe__img" src="img/main-recipe__2.jpg">
+          <img class="main-recipe__img" src="img/main-recipe__2.jpg" alt="Photo of recipe">
           <div class="main-recipe__left">
-            <img  src="img/logo.png" class="main-recipe__left-logo" alt="">
+            <img  src="img/logo.png" class="main-recipe__left-logo"  alt="Main recipe logo">
             <h2>Next recipes</h2>
             <p>Next info next info  next info next info next info next info next info next info next info next info next info next info next info next info next info  next info next info next info next info next info next info next info</p>
             <a href="#">Get Recipe</a>
@@ -174,9 +175,9 @@
       </div>
 
       <div class="main-recipe">
-          <img class="main-recipe__img" src="img/main-recipe__2.jpg">
+          <img class="main-recipe__img" src="img/main-recipe__2.jpg" alt="Photo of recipe">
           <div class="main-recipe__left">
-            <img  src="img/logo.png" class="main-recipe__left-logo" alt="">
+            <img  src="img/logo.png" class="main-recipe__left-logo"  alt="Main recipe logo">
             <h2>Next recipes</h2>
             <p>Next info next info  next info next info next info next info next info next info next info next info next info next info next info next info next info  next info next info next info next info next info next info next info</p>
             <a href="#">Get Recipe</a>
@@ -197,9 +198,9 @@
   <section>
     <div class="sub-recipes">
       <div class="sub-recipes__item">
-        <img class="sub-recipes__item-img " src="img/sub-rec1.png" alt="">
+        <img class="sub-recipes__item-img " src="img/sub-recipe__1.jpg" alt="">
         <br>
-        <span class="sub-recipes__item-name">Raspberry & Cream Frozen Yogurt Pie</span>
+        <h2 class="sub-recipes__item-name">Raspberry & Cream Frozen Yogurt Pie</h2>
         <span class="sub-recipes__item-info">
           <i class="fa fa-clock-o" aria-hidden="true">35 mins </i>
           <i class="fa fa-comment-o" aria-hidden="true">7</i>
@@ -207,9 +208,9 @@
         </span>
       </div>
       <div class="sub-recipes__item">
-        <img class="sub-recipes__item-img" src="img/sub-rec2.png" alt="">
+        <img class="sub-recipes__item-img" src="img/sub-recipe__2.jpg" alt="">
         <br>
-        <span class="sub-recipes__item-name">Giant Ice Cream Sandwich</span>
+        <h2 class="sub-recipes__item-name">Giant Ice Cream Sandwich</h2>
         <span class="sub-recipes__item-info">
           <i class="fa fa-clock-o" aria-hidden="true">10 mins </i>
           <i class="fa fa-comment-o" aria-hidden="true">15</i>
@@ -217,9 +218,9 @@
         </span>
       </div>
       <div class="sub-recipes__item">
-        <img class="sub-recipes__item-img" src="img/sub-rec3.png" alt="">
+        <img class="sub-recipes__item-img" src="img/sub-recipe__3.jpg" alt="">
         <br>
-        <div class="sub-recipes__item-name">Dark Chocolate Crunch Ice Cream Sandwich Cake</div>
+        <h2 class="sub-recipes__item-name">Dark Chocolate Crunch Ice Cream Sandwich Cake</h2>
         <span class="sub-recipes__item-info">
           <i class="fa fa-clock-o" aria-hidden="true">25 mins </i>
           <i class="fa fa-comment-o" aria-hidden="true">25</i>
@@ -227,9 +228,9 @@
         </span>
       </div>
       <div class=" sub-recipes__item sub-recipes__item--tablets">
-        <img class="sub-recipes__item-img " src="img/sub-rec1.png" alt="">
+        <img class="sub-recipes__item-img " src="img/sub-recipe__1.jpg" alt="">
         <br>
-        <span class="sub-recipes__item-name">Next recipe & Something new Yogurt </span>
+        <h2 class="sub-recipes__item-name">Next recipe & Something new Yogurt </h2>
         <span class="sub-recipes__item-info">
           <i class="fa fa-clock-o" aria-hidden="true">35 mins </i>
           <i class="fa fa-comment-o" aria-hidden="true">7</i>
@@ -243,9 +244,9 @@
   <!-- RECIPE WITH SCROLL START  -->
   <section>
     <div class="scroll-recipe">
-      <img src="img/scroll-rec.jpg" alt="Banana">
+      <img src="img/scroll-recipe.jpg" alt="Banana">
       <div class="scroll-recipe__header">
-        <h1 class="scroll-recipe__header-name">Bananas Foster Ice Cream Cake</h1>
+        <h2 class="scroll-recipe__header-name">Bananas Foster Ice Cream Cake</h2>
         <p class="scroll-recipe__header-info">
           <i class="fa fa-clock-o" aria-hidden="true"></i> 15 mins
           <i class="fa fa-signal" aria-hidden="true"></i> Easy
@@ -316,9 +317,9 @@
         <p class="feedbacks__author-top">Author</p>
         <hr class="feedbacks__author-border">
         <div class="feedbacks__author-content">
-          <img src="img/author.png" class="feedbacks__author-photo" alt="Karen Gray">
+          <img src="img/author.jpg" class="feedbacks__author-photo" alt="Karen Gray">
           <div class="feedbacks__author-info">
-            <span class="feedbacks__author-name">Karen Gray</span>
+            <h2 class="feedbacks__author-name">Karen Gray</h2>
             <br>
             <span class="feedbacks__author-location">United States</span>
             <br>
@@ -362,7 +363,7 @@
         <hr>
         <div class="small-recipe__info">
 
-          <img src="img/recipe-writer.png" class="small-recipe__author" alt="Recipe writer">
+          <img src="img/recipe-writer.jpg" class="small-recipe__author" alt="Recipe writer">
           <p class="small-recipe__text">
             <span>Recipe by
               <br>
@@ -379,8 +380,8 @@
 
         <div class="small-recipe__images">
           <img class="small-recipe__recipe" src="img/small-recipe.jpg" alt="Picture of the recipe">
-          <img class="small-recipe__recipe" src="img/sub-rec2.png" alt="Picture of the recipe">
-          <img class="small-recipe__recipe" src="img/sub-rec3.png" alt="Picture of the recipe">
+          <img class="small-recipe__recipe" src="img/sub-recipe__2.jpg" alt="Picture of the recipe">
+          <img class="small-recipe__recipe" src="img/sub-recipe__3.jpg" alt="Picture of the recipe">
           <div class="small-recipe__switcher">
               <span class="small-recipe__circle" onclick="currentDiv2(1)"></span>
               <span class="small-recipe__circle" onclick="currentDiv2(2)"></span>
@@ -472,15 +473,15 @@
 
 
         <div class="level-recipes__levels">
-          <button class="level-recipes__button" onclick="openRecipe(event, 'Easy')" id="defaultOpen">Easy</button>
-          <button class="level-recipes__button" onclick="openRecipe(event, 'Middle')">Middle</button>
-          <button class="level-recipes__button" onclick="openRecipe(event, 'Long')">Long</button>
+          <button class="level-recipes__button" onclick="openRecipe(event, 'js-easy')" id="js-default-open">Easy</button>
+          <button class="level-recipes__button" onclick="openRecipe(event, 'js-middle')">Middle</button>
+          <button class="level-recipes__button" onclick="openRecipe(event, 'js-long')">Long</button>
         </div>
 
-        <div id="Easy" class="level-recipes__content">
+        <div id="js-easy" class="level-recipes__content">
 
           <div class="level-recipes__recipe level-recipes__recipe--first">
-              <img class="level-recipes__img" src="img/easy-recipes-top.png" alt="recipe picture">
+              <img class="level-recipes__img" src="img/easy-recipes-top.jpg" alt="recipe picture">
             <a class="level-recipes__text" href="#">
               <div>
                 <p class="level-recipes__text-header"><span class="level-recipes__text-by">by</span> Smuckersreg Toppings
@@ -492,7 +493,7 @@
           </div>
           
           <div class="level-recipes__recipe">
-            <img class="level-recipes__img" src="img/easy-recipes-center.png" alt="recipe picture">
+            <img class="level-recipes__img" src="img/easy-recipes-center.jpg" alt="recipe picture">
             <a class="level-recipes__text" href="#">
             <div>
               <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
@@ -504,7 +505,7 @@
           </div>
           
           <div class="level-recipes__recipe">
-            <img class="level-recipes__img" src="img/easy-recipes-bottom.png" alt="recipe picture">
+            <img class="level-recipes__img" src="img/easy-recipes-bottom.jpg" alt="recipe picture">
             <a class="level-recipes__text" href="#">
             <div>
               <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
@@ -516,10 +517,10 @@
           </div>
         </div>
 
-        <div id="Middle" class="level-recipes__content">
+        <div id="js-middle" class="level-recipes__content">
 
             <div class="level-recipes__recipe level-recipes__recipe--first">
-                <img class="level-recipes__img" src="img/easy-recipes-center.png" alt="recipe picture">
+                <img class="level-recipes__img" src="img/easy-recipes-center.jpg" alt="recipe picture">
                 <a class="level-recipes__text" href="#">
                 <div>
                   <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
@@ -531,7 +532,7 @@
             </div>
 
             <div class="level-recipes__recipe">
-                <img class="level-recipes__img" src="img/easy-recipes-top.png" alt="recipe picture">
+                <img class="level-recipes__img" src="img/easy-recipes-top.jpg" alt="recipe picture">
               <a class="level-recipes__text" href="#">
                 <div>
                   <p class="level-recipes__text-header"><span class="level-recipes__text-by">by</span> Smuckersreg Toppings
@@ -543,7 +544,7 @@
             </div>
             
             <div class="level-recipes__recipe">
-              <img class="level-recipes__img" src="img/easy-recipes-bottom.png" alt="recipe picture">
+              <img class="level-recipes__img" src="img/easy-recipes-bottom.jpg" alt="recipe picture">
               <a class="level-recipes__text" href="#">
               <div>
                 <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
@@ -555,9 +556,9 @@
             </div>
         </div>
 
-        <div id="Long" class="level-recipes__content">
+        <div id="js-long" class="level-recipes__content">
             <div class="level-recipes__recipe level-recipes__recipe--first">
-                <img class="level-recipes__img" src="img/easy-recipes-bottom.png" alt="recipe picture">
+                <img class="level-recipes__img" src="img/easy-recipes-bottom.jpg" alt="recipe picture">
                 <a class="level-recipes__text" href="#">
                 <div>
                   <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
@@ -569,7 +570,7 @@
             </div>
             
             <div class="level-recipes__recipe">
-                <img class="level-recipes__img" src="img/easy-recipes-center.png" alt="recipe picture">
+                <img class="level-recipes__img" src="img/easy-recipes-center.jpg" alt="recipe picture">
                 <a class="level-recipes__text" href="#">
                 <div>
                   <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
@@ -581,7 +582,7 @@
             </div>
 
             <div class="level-recipes__recipe level-recipes__recipe--first">
-                <img class="level-recipes__img" src="img/easy-recipes-top.png" alt="recipe picture">
+                <img class="level-recipes__img" src="img/easy-recipes-top.jpg" alt="recipe picture">
               <a class="level-recipes__text" href="#">
                 <div>
                   <p class="level-recipes__text-header"><span class="level-recipes__text-by">by</span> Smuckersreg Toppings
@@ -767,12 +768,12 @@
       <!-- Leave a comment start -->
       <div class="post">
 
-        <p class="post__text"> Post a Comment
+        <h2 class="post__text"> Post a Comment
           <button class="post__text-social">Facebook / Twitter</button>
-        </p>
+        </h2>
       
         <div class="post__form">
-          <img src="img/recipe-writer.png" class="post__form-face" alt="Photo">
+          <img src="img/recipe-writer.jpg" class="post__form-face" alt="Photo">
           <input type="text" class="post__form-input">
           <button class="post__form-button">post</button>
         </div>
@@ -788,7 +789,7 @@
       <!-- top comment start  -->
       <div class="comment"> 
 
-        <img class="comment__face" src="img/recipe-writer.png"  alt="Photo">
+        <img class="comment__face" src="img/recipe-writer.jpg"  alt="Photo">
 
         <div class="comment__info">
           <span class="comment__info-top">post by</span>
@@ -796,7 +797,7 @@
             <button class="comment__info-reply">reply</button>
           </span>
           <button class="comment__info-date">6/10/2014</button>
-          <img class="comment__photo" src="img/coments-image.png" alt="recipe picture">
+          <img class="comment__photo" src="img/sub-recipe__1.jpg" alt="recipe picture">
           <span class="comment__info-text">Thanks for the recipe</span>
 
         </div>
@@ -810,7 +811,7 @@
       <!-- sub comment start -->
       <div class="sub-comment">
         <hr>
-        <img class="sub-comment__face" src="img/recipe-writer.png" alt="Photo">
+        <img class="sub-comment__face" src="img/recipe-writer.jpg" alt="Photo">
         <div class="sub-comment__info">
             <span class="sub-comment__info-top" >post by</span>
             <span class="sub-comment__info-name">Smuckersreg Toppings

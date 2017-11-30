@@ -9,8 +9,6 @@ body
   @media (max-width: 425px)
     background-color: #fbfcfd
 
-@-ms-viewport
-  width: device-width
 
 
 //Icons hover 
@@ -99,8 +97,12 @@ hr
     margin: 0
     padding-top: 14px
     padding-bottom: 35px 
+  ul 
+    padding-left: 0 
+    
   &__logo
     margin-left: 5.3%
+  
     
     &--open
       display: none 
@@ -156,7 +158,6 @@ hr
     text-transform: uppercase
     list-style-type: none
     width: 65%
-    margin-left: -5%
     overflow: hidden
     z-index: 2
     @media (max-width: 1000px)
@@ -183,17 +184,23 @@ hr
           display: block
           padding-bottom: 15px 
           background-color: #fbfcfd
+          &:hover
+            color: #000
+            text-decoration: underline
           &:nth-child(5)
             padding-bottom: 0
     &-item
       margin-left: 6%
       text-align: center
+      
       &:hover
         .nav__dropdown
           display: block
           background-color: #f9f9f9
           position: absolute
           box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.15)
+          @media (max-width: 425px)
+            display: none 
           a
             margin-top: 22px
             padding: 0px 16px
@@ -206,10 +213,10 @@ hr
               color: #000
               text-decoration: underline
       &:nth-child(3)
-        @media (max-width: 1280px) and (min-width: 425px)
+        @media (max-width: 1280px) and (min-width: 426px)
           display: none
       &:nth-child(4)
-        @media (max-width: 750px) and (min-width: 425px)
+        @media (max-width: 750px) and (min-width: 426px)
           display: none
       @media (max-width: 1625px)
         margin-left: 4%
@@ -219,6 +226,8 @@ hr
     &-icon
       font-size: 20px
       display: none
+      outline: none
+      @extend %btn-reset
       &--open 
         position: absolute
         right: 15px
@@ -265,7 +274,7 @@ hr
         display: none 
   &__img
     width: 100%
-    min-height: 453px 
+    height: 453px 
   &__switcher 
     position: absolute 
     right: 17px
@@ -379,6 +388,8 @@ hr
     &-name
       font-size: 18px
       max-width: 300px
+      font-weight: 300
+      margin: 0
       @media (max-width: 426px)
         padding-left: 5%
         max-width: 100%
@@ -431,23 +442,30 @@ hr
     @media( max-width: 600px )
       min-width: 90%
     &-name
+      margin-top: 28px
+      
       font-family: 'Playfair Display', serif
       color: #055555
+      font-size: 32
+
       @media (max-width: 1200px)
         text-align: center
     &-info
       color: #555
-      margin-top: -10px
       margin-bottom: 25px
+      margin-top: 5px
     &-save
-      background-color: white
       float: right
       padding: 3px
+      margin-top: -4px
       text-transform: uppercase
       color: #555
       border: 1px solid #555
+      background-color: #fff
       font-size: 12px
       cursor: pointer
+
+
 
   &__scroll
     overflow-y: scroll
@@ -569,6 +587,7 @@ hr
       font-size: 1.5rem
       font-weight: bold
       padding-top: 25px
+      margin: 0
     &-location
       display: inline-block
       color: black
@@ -647,9 +666,9 @@ hr
     border: 1px solid #999
     background-color: #fff
     &--checked
-      background-color: #888
+      background-color: #555
     &:hover 
-      background-color: #888
+      background-color: #555
   &__switcher
     position: absolute
     left: 0
@@ -708,7 +727,6 @@ hr
   &__top
     display: flex
     padding-left: 10%
-    padding-top: -10px
   &__center
     display: flex
     padding-left: 10%
@@ -1147,7 +1165,7 @@ hr
     @extend %input 
     padding-left: 15px
     margin-bottom: 23px
-    @media (max-width: 768-px)      
+    @media (max-width: 768px)      
       margin-bottom: 5px
   &__password-input 
     @extend %input 
@@ -1555,7 +1573,6 @@ hr
         color: #629494
       &--current 
         color: #629494
-        pointer-events: none
         cursor: default
     @media (max-width: 1024px)
       width: 50%
