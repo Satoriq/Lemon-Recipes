@@ -1,6 +1,9 @@
 // I used BEM naming methodology
 //It's look like .block__element--modifier and block-name__element-name--modifier, but never block__elem1__elem2
 
+html
+  box-sizing: border-box
+
 body
   background-color: #eaeaea
   font-family: 'Josefin Sans', sans-serif
@@ -8,6 +11,22 @@ body
   font-size: 16px
   @media (max-width: 425px)
     background-color: #fbfcfd
+
+*,
+*::before,
+*::after
+  box-sizing: inherit
+
+a
+  color: inherit
+  text-decoration: none
+
+hr
+  border: 2px solid #ddd
+  width: 85%
+  border-bottom: none
+  border-left: none
+  border-right: none
 
 
 
@@ -29,63 +48,43 @@ body
 .fa-pinterest:hover
   color: #bd081b
 .fa-envelope-o:hover
-  color: #4867AA
+  color: #4867aa
 .fa-print:hover
-  color: #BD081B
+  color: #bd081b
 
+//Colors
+$blocks-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+$blocks-bg: #fff
+$text-color: #555
+$buttons-border: 1px solid #999
+$main-font: 'Josefin Sans', sans-serif
+$second-font: 'Playfair Display', serif
 
-
-
-html
-  box-sizing: border-box
-  
-
-*,
-*::before,
-*::after
-  box-sizing: inherit
-
-a
-  color: inherit
-  text-decoration: none
-
-hr
-  border: 2px solid #ddd
-  border-bottom: none
-  border-left: none
-  border-right: none
-
-%hr
-  width: 85%
-  border-color: #ddd
-
-    
 
 
 
 // HEADER START
 .header__logo
   display: block
-  margin-top: 230px
-  margin-bottom: 95px
+  margin-top: 249px
+  margin-bottom: 122px
   margin-left: auto
   margin-right: auto
   max-width: 25.5%
+  min-width: 250px
   @media (max-width: 425px)
     display: none 
-
 
 .nav
   display: flex
   align-items: center
-  justify-content: space-between
-  margin-bottom: 160px
+  padding: 35px 0
+  margin-bottom: 70px
   margin-left: auto
   margin-right: auto
-  padding: 35px 0
   width: 77.777777777%
   max-width: 1120px
-  box-shadow: 0 0 13px rgba(11, 12, 12, 0.15)
+  box-shadow: $blocks-shadow
   background-color: #f8f8f8
   @media (max-width: 600px) and (min-width: 425px)
     flex-wrap: wrap 
@@ -93,71 +92,60 @@ hr
     background-color: #fbfcfd
     box-shadow: none 
     width: 100%
-    padding: 0
     margin: 0
     padding-top: 14px
     padding-bottom: 35px 
-  ul 
-    padding-left: 0 
-    
   &__logo
     margin-left: 5.3%
-  
-    
-    &--open
+    &--hide
       display: none 
     @media (max-width: 1000px) and (min-width: 426px)
       display: none
   &__input
-    font-size: 13px
-    text-align: center
+    min-width: 14%
     margin-left: 4%
     margin-right: 5%
-    min-width: 14%
-    background-image: url("../img/find-icon.png")
+    font-size: 13px
+    text-align: center
+    color: #798186
+    border: 1px solid #798186
+    background-image: url('../img/find-icon.png')
     background-repeat: no-repeat
     background-size: 13px 17px
     background-position: 3px 0
-    border: 1px solid #798186
-    color: #798186
-
+    &--hide
+      display: none 
+    @media (max-width: 1000px) and (min-width: 601px)
+      max-width: 18%
+      background: none
     @media (max-width: 600px) and (min-width: 425px)
       display: block
+      width: 70%
       margin-left: auto
       margin-right: auto
-      width: 70%
       line-height: 20px
       background-size: 15px 20px
       background-position: 5px 1px
-    @media (max-width: 1000px) and (min-width: 601px)
-      max-width: 18%
-    @media (max-width: 1300px) and (min-width: 601px)
-      background: none
     @media (max-width: 425px)
-      order: 1
-      max-width: none 
       width: 35%
-      line-height: 19px
-      background-size: 15px 15px
-      background-position: 0px 3px
-      border: none 
-      outline-color: #798186
       margin-left: auto 
       margin-right: 0 
       padding-left: 5%
+      background-size: 15px 15px
+      border: none 
+      outline-color: #798186
     @media (max-width: 355px)
       width: 45%
-      
-    &--open 
-      display: none 
+    @media (max-width: 275px)
+      background-image: none
   &__dropdown
     display: none
   &__menu
     display: flex
+    width: 65%
     justify-content: center
     text-transform: uppercase
     list-style-type: none
-    width: 65%
     overflow: hidden
     z-index: 2
     @media (max-width: 1000px)
@@ -168,17 +156,14 @@ hr
       margin-left: auto 
     @media (max-width: 425px)
       order: 2
-      padding: 0
       margin: 0
       padding-right: 4%
       width: 10%
-      justify-content: flex-end 
-    
+    // Hamburger menu start 
     &--open
         position: relative
         display: flex 
         flex-direction: column
-        text-align: center 
         width: 100%
         li 
           display: block
@@ -189,29 +174,12 @@ hr
             text-decoration: underline
           &:nth-child(5)
             padding-bottom: 0
+    // Hamburger menu end
+
+    //Menu item start 
     &-item
       margin-left: 6%
       text-align: center
-      
-      &:hover
-        .nav__dropdown
-          display: block
-          background-color: #f9f9f9
-          position: absolute
-          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.15)
-          @media (max-width: 425px)
-            display: none 
-          a
-            margin-top: 22px
-            padding: 0px 16px
-            text-decoration: none
-            display: block
-            text-align: left
-            font-size: 13px 
-            color:#555
-            &:hover
-              color: #000
-              text-decoration: underline
       &:nth-child(3)
         @media (max-width: 1280px) and (min-width: 426px)
           display: none
@@ -222,11 +190,31 @@ hr
         margin-left: 4%
       @media (max-width: 425px)
         display: none 
-      
+      //when we hover on menu item, dropdown is activated
+      &:hover
+        .nav__dropdown
+          display: block
+          background-color: #f9f9f9
+          position: absolute
+          box-shadow: 0px 8px 16px 0px $blocks-shadow
+          @media (max-width: 425px)
+            display: none 
+          a
+            margin-top: 22px
+            padding: 0 16px
+            display: block
+            text-align: left
+            font-size: 13px 
+            color: $text-color
+            &:hover
+              color: #000
+              text-decoration: underline
+    //Menu item end
     &-icon
       font-size: 20px
       display: none
       outline: none
+      width: 20px
       @extend %btn-reset
       &--open 
         position: absolute
@@ -235,24 +223,18 @@ hr
       @media (max-width: 425px)
         display: block 
         width: 15px
-    
-      
-
-
-
-
-
 // HEADER END
+
 
 //MAIN RECIPE START
 .main-recipe
+  position: relative
+  height: 453px 
   width: 77.777777777%
   max-width: 1120px
   margin-left: auto
   margin-right: auto
-  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
-  position: relative
-  height: 453px 
+  box-shadow: $blocks-shadow
   @media (max-width: 425px)
     display: none
   &__mobile
@@ -262,13 +244,13 @@ hr
       height: auto
     &-get 
       @extend %btn-reset 
-      font-family: 'Josefin Sans', sans-serif
-      font-weight: 300 
-      font-size: 18px 
       display: block 
-      text-transform: uppercase
       margin: 13px auto 25px auto 
       padding-top: 7px 
+      font-size: 18px 
+      font-family: $main-font
+      font-weight: 300
+      text-transform: uppercase
       outline-color: #798186
       @media (min-width: 426px)
         display: none 
@@ -308,6 +290,8 @@ hr
     padding-left: 7%
     padding-top: 50px
     padding-bottom: 4%
+    @media (max-width: 490px)
+      padding-top: 35px
     &-logo
       max-width: 250px
       width: 100%
@@ -351,7 +335,7 @@ hr
   display: flex
   justify-content: space-around
   flex-wrap: wrap
-  margin-top: 160px
+  margin-top: 90px
   margin-left: auto
   margin-right: auto
   padding-bottom: 30px
@@ -377,7 +361,7 @@ hr
         padding: 0
     &--tablets
       display: none
-      @media (max-width: 1418px) and (min-width: 937px)
+      @media (max-width: 1388px) and (min-width: 937px)
         display: flex
     &-img
       padding-top: 40px
@@ -396,6 +380,7 @@ hr
     &-info
       font-size: 12px
       color: #555
+      padding-bottom: 10px 
       @media (max-width: 426px)
         padding-left: 5%
         padding-bottom: 30px 
@@ -404,12 +389,13 @@ hr
       padding-right: 7px
 //SUB-RECIPES END
 
+
 //RECIPE WITH SCROLL START
 .scroll-recipe
   display: flex
   background-color: white
   width: 77.7777777%
-  margin-top: 80px
+  margin-top: 90px
   margin-left: auto
   margin-right: auto
   max-width: 1120px
@@ -420,16 +406,15 @@ hr
     align-items: center
   @media (max-width: 425px)
     display: none
-  img
-    max-width: 50%
-    min-width: 420px
+  &__img
+    min-width: 523px
     @media (max-width: 1200px)
       min-width: 339px
       min-height: 275px
       padding-top: 20px
-      @media( max-width: 600px )
-        padding-top: 0
-        min-width: 100%
+    @media (max-width: 600px)
+      padding-top: 0
+      min-width: 100%
 
   &__header
     display: flex
@@ -443,11 +428,10 @@ hr
       min-width: 90%
     &-name
       margin-top: 28px
-      
       font-family: 'Playfair Display', serif
       color: #055555
-      font-size: 32
-
+      font-size: 32px
+      font-weight: 900
       @media (max-width: 1200px)
         text-align: center
     &-info
@@ -502,13 +486,13 @@ hr
     align-items: center
     width: 46%
     min-width: 250px
-    margin-top: 115px
+    margin-top: 135px
     background-color: white
     background-image: url('../img/sorry-404.png')
     background-size: 100% 100%
     box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
     @media (max-width:1024px)
-      background-position: center
+      background-position-y: 90px
       background-size: 100% 60%
       background-repeat: no-repeat
       background-color: #FBFCFD
@@ -518,6 +502,9 @@ hr
       align-self: flex-start
       padding-left: 9%
       padding-top: 7px
+      font-weight: 400
+      font-size: 20px
+      font-style: italic
     &-text
       text-align: center
       margin-top: 150px
@@ -529,7 +516,7 @@ hr
       text-transform: uppercase
       color: rgba(169, 169, 169, 1)
       font-family: 'Playfair Display', serif
-      font-weight: 600
+      font-weight: 900
     &-back
       padding: 8px 35px 5px 35px
       margin-top: 115px
@@ -539,12 +526,11 @@ hr
       color: #3e3e3e
       font-size: 12px
     hr
-      @extend %hr
       margin-top: -10px
   
   &__author
     width: 46%
-    margin-top: 115px
+    margin-top: 135px
     background-color: white
     box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
     @media (max-width: 800px)
@@ -554,10 +540,11 @@ hr
     &-top
       padding-left: 9%
       padding-top: 7px
+      font-weight: 400
+      font-size: 20px
+      font-style: italic
     &-border
-      border-color: #ddd
       margin-top: -10px
-      width: 85%
     &-content
       display: flex
       max-width: 90%
@@ -568,20 +555,26 @@ hr
       margin: 2%
       margin-left: 4%
       @media (max-width: 1200px) and (min-width: 800px)
-        padding-top: 20px
+        margin-top: 20px
     &-info
       padding-left: 2%
       width: 100%
     &-text
       font-style: italic
       @media (max-width: 1280px)
-        margin-left: -40%
-      @media (max-width: 800px) and (min-width: 650px)
+        margin-left: -37%
+      @media (max-width: 800px) and (min-width: 600px)
         padding-top: 30px
-    &-header
-      font-style: normal
-      font-size: 20px
-      font-weight: 400
+      @media (max-width: 600px)
+        margin-left: -45%
+      &-header
+        font-style: normal
+        font-size: 20px
+        font-weight: 400
+        font-style: italic
+    
+    &-hr 
+      width: 100%
     &-name
       display: inline-block
       font-size: 1.5rem
@@ -630,7 +623,7 @@ hr
 
 
 .small-recipe
-  margin-top: 100px
+  margin-top: 80px
   background-color: white  
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   &__header
@@ -639,6 +632,7 @@ hr
     font-weight: 900 
     font-size: 22px
     color: #055555
+    
   &__info
     display: flex
     padding-left: 8%
@@ -677,7 +671,6 @@ hr
     bottom: 5px
     cursor: pointer
   hr
-    @extend %hr 
     margin-top: -15px
   i
     padding-top: 5px
@@ -685,13 +678,15 @@ hr
 
 
 .target
-  margin-top: 40px
+  margin-top: 50px
   background-color: white
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   &__header
+    padding-top: 10px
     padding-left: 8%
     font-size: 20px
     font-weight: 400
+    font-style: italic
     &-icons
       white-space: nowrap 
       float: right 
@@ -740,7 +735,6 @@ hr
     padding-bottom: 55px
     padding-left: 10%
   hr
-    @extend %hr
     margin-top: -15px
 
 
@@ -762,7 +756,7 @@ hr
     
 
 .level-recipes 
-  margin-top: 100px 
+  margin-top: 80px 
   background-color: #fff 
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   @media (max-width: 1240px)
@@ -775,6 +769,7 @@ hr
     font-size: 20px 
     font-weight: 400
     line-height: 30px 
+    font-style: italic
     @media (max-width: 425px)
       display: none 
     &-text 
@@ -843,6 +838,7 @@ hr
       width: 70%
       text-align: left 
       padding-left: 0
+      padding-right: 15px
     &-header 
       font-size: 12px 
       font-weight: 600
@@ -877,7 +873,6 @@ hr
     color: #010101
 
   hr
-    @extend %hr 
     margin-top: -15px
     @media (max-width: 425px)
       display: none 
@@ -888,7 +883,7 @@ hr
 
 
 .tags 
-  margin-top: 45px
+  margin-top: 50px
   background-color: white  
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   @media (max-width: 1240px)
@@ -900,6 +895,7 @@ hr
     line-height: 10px
     font-size: 20px 
     font-weight: 400 
+    font-style: italic
   &__text
     margin: 0
     padding-left: 8%
@@ -911,17 +907,17 @@ hr
     font-size: 12px 
     
   hr
-    @extend %hr 
     margin-top: -15px
     
 
 .calendar 
-  margin-top: 45px
+  margin-top: 50px
   margin-bottom: 95px
   padding-bottom: 10px
   background-color: white 
   position: relative 
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+  font-style: italic
   @media (max-width: 1240px)
     display: none 
   &__header 
@@ -947,7 +943,6 @@ hr
         font-weight: 700
         font-size: 17px
   hr 
-    @extend %hr 
     margin-top: -15px
     
 //Calendar buttons start
@@ -992,7 +987,7 @@ hr
     
 
 .popular 
-  margin-top: 100px  
+  margin-top: 80px  
   padding-bottom: 130px 
   background-image: url('../img/coffee.jpg')
   background-size: 100% 100%
@@ -1050,7 +1045,7 @@ hr
       
 
 .time
-  margin-top: 45px 
+  margin-top: 50px 
   background-color: white
   width: 100% 
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
@@ -1062,8 +1057,7 @@ hr
     margin-bottom: 0px
     font-size: 20px 
     font-weight: 400 
-    &-hr 
-      @extend %hr 
+    font-style: italic
     &-icons 
       white-space: nowrap  
       margin-right: 8%
@@ -1097,6 +1091,7 @@ hr
     transform: rotate(270deg)
     margin-bottom: -20px
     margin-top: 30px
+    
     @media (max-width: 900px)
       margin-top: 50px
     @media (max-width: 768px)
@@ -1113,6 +1108,7 @@ hr
     margin: 13px auto
     width: 66.666%
     padding-bottom: 40px
+    
 
 //Third column end
 
@@ -1128,12 +1124,17 @@ hr
   flex-wrap: wrap 
   justify-content: space-between
   margin: 0 auto
-  width: 51.7%
+  width: 45%
   max-width: 1025px
+  @media (max-width: 1480px)
+    width: 60%
   @media (max-width: 1240px)
     margin-top: 100px 
+    width: 65%
   @media (max-width: 1024px)
     width: 70%
+  @media (max-width: 800px)
+    width: 80%
   @media (max-width: 425px)
     display: none 
 
@@ -1141,6 +1142,15 @@ hr
   width: 85%
   margin: 0 auto 
 
+%input 
+  height: 40px 
+  width: 100%
+  outline-color: #979797
+  color: #555 
+  border: 1px solid #c2c2c2
+  font-style: italic
+  &::-webkit-input-placeholder  
+    color: #ccc
 
 //Login form start 
 .login 
@@ -1148,15 +1158,17 @@ hr
   background-color: #fff
   align-self: flex-start   //To stop increasing of height because of flexbox and sign-in
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+  max-width: 330px
   @media (max-width: 600px)
     width: 80%
     margin: 0 auto 
   &__header 
-    margin-top: 15px 
+    margin-top: 20px 
     margin-bottom: 0
     margin-left: 1%
     font-size: 20px
     font-weight: 400
+    font-style: italic
   &__sub-header 
     margin-top: 30px 
     margin-bottom: 20px 
@@ -1166,7 +1178,7 @@ hr
     padding-left: 15px
     margin-bottom: 23px
     @media (max-width: 768px)      
-      margin-bottom: 5px
+      margin-bottom: 15px
   &__password-input 
     @extend %input 
     padding-left: 15px
@@ -1174,11 +1186,12 @@ hr
   &__remember
     font-size: .75rem /* 12/16 */
     font-weight: 400 
-    color: rgba( 0, 0, 0, 0.5)  
+    color: rgba(0, 0, 0, 0.5)  
     cursor: pointer 
+    font-style: italic
     &-checkbox
       outline: none 
-    @media (max-width: 1283px)
+    @media (max-width: 1451px)
       display: block 
       text-align: center
   &__forgot 
@@ -1187,8 +1200,9 @@ hr
     padding-left: 20px 
     font-size: .75rem /* 12/16 */
     font-weight: 400 
-    color: rgba( 0, 0, 0, 0.5) 
-    @media (max-width: 1283px)
+    color: rgba(0, 0, 0, 0.5) 
+    font-style: italic
+    @media (max-width: 1451px)
       float: none 
       text-align: center
       padding-left: 0 
@@ -1212,12 +1226,18 @@ hr
     margin-top: 4px 
     text-align: center 
     color:#555
+    font-size: 22px
     &-google
       margin-left: 8px  //for unclickable area between icons 
   &__sign-up
     padding-bottom: 25px
     text-align: center
     color: #757575
+    padding-right: 20px
+    padding-left: 20px
+    font-style: italic
+  hr 
+    width: 100%
 
 //Login form end
 
@@ -1227,33 +1247,43 @@ hr
   background-color: #fff 
   width: 43%
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+  max-width: 330px
   @media (max-width: 600px)
     width: 80%
     margin: 50px auto 
   &__header 
-    @extend .login__header
+    margin-top: 20px 
+    margin-bottom: 0
+    margin-left: 1%
+    font-size: 20px
+    font-weight: 400
+    font-style: italic
   &__sub-header 
-    @extend .login__sub-header
+    margin-top: 30px 
+    margin-bottom: 20px 
+    margin-left: 1% 
   &__email-input
     @extend %input 
     padding-left: 15px
     margin-bottom: 15px
-    
-      
   &__name-input
     @extend %input 
     padding-left: 15px
     margin-bottom: 15px
-    
   &__password-input
     @extend %input 
+    padding-top: 0
+    margin-top: 0 
     padding-left: 15px
     margin-bottom: 15px
   &__button
     @extend .login__button
     margin-top: 15px 
   &__social 
-    @extend .login__social
+    margin-top: 4px 
+    text-align: center 
+    color:#555
+    font-size: 22px
     &-google
       margin-left: 8px  //for unclickable area between icons 
   &__terms 
@@ -1263,19 +1293,12 @@ hr
     font-size: 14px 
     width: 85%
     margin: 0 auto 
+    font-style: italic
     &-link
       color: #002dd6
       text-decoration: underline
-
-%input 
-    height: 40px 
+  hr 
     width: 100%
-    outline-color: #979797
-    color: #555 
-    border: 1px solid #c2c2c2
-    &::-webkit-input-placeholder  
-      color: #ccc
-
 
 //Sign-up end
 
@@ -1313,11 +1336,13 @@ hr
     margin-bottom: 17px 
     font-size: 24px
     font-weight: 400 
+    font-style: italic
     &-social 
       @extend %btn-reset 
       float: right 
       padding-top: 6px 
       font-size: 16px
+      font-style: italic
       @media (max-width: 680px)
         display: inline-block
         float: none 
@@ -1346,6 +1371,7 @@ hr
       align-self: center 
       width: 80px
       height: 40px
+      padding-top: 4px
       margin-left: 1%
       margin-right: 5px 
       border: 1px solid #c2c2c2
@@ -1353,7 +1379,8 @@ hr
       outline-color: #979797
       color: #fff
       text-transform: uppercase 
-      font-weight: 400 
+      font-weight: 300 
+      font-family: 'Josefin Sans', sans-serif
       cursor: pointer
 //Leave a comment end
 
@@ -1374,6 +1401,9 @@ hr
     margin-bottom: 0
     font-size: 24px 
     font-weight: 400
+    font-style: italic
+  hr 
+    width: 100%
     
 %btn-reset
   border: none
@@ -1393,8 +1423,10 @@ hr
     display: flex 
     flex-direction: column
     padding-left: 2.5%
+    
     &-top 
       font-weight: 400 
+      
     &-name 
       padding-top: 3px
       padding-bottom: 5px
@@ -1560,7 +1592,8 @@ hr
     display: flex 
     justify-content: space-between
     list-style: none
-    width: 33.57%
+    width: 35%
+    min-width: 300px
     padding-top: 40px
     padding-bottom: 30px
     margin-left: auto 
@@ -1574,8 +1607,10 @@ hr
       &--current 
         color: #629494
         cursor: default
-    @media (max-width: 1024px)
+    @media (max-width: 1480px)
       width: 50%
+    @media (max-width: 1024px)
+      width: 70%
   //Switch end
     
 //COMMENTS END 
@@ -1592,21 +1627,18 @@ hr
     height: 36px
     width: 87px 
     margin: 70px auto
+    margin-left: 10%
     @media (max-width: 425px)
       position: absolute 
       right: 15%
       top: -55px
-    // &-container 
-    //   width: 23%
-    //   @media (max-width: 1024px)
-    //     position: absolute 
-    //     width: 10%
+
   &__nav
     align-self: center 
     width: 60%
-    padding-left: 15%
+    margin-left: 5%
     @media (max-width: 1240px)
-      padding-left: 0
+      margin-left: 0
     &-items
       display: flex 
       justify-content: space-around

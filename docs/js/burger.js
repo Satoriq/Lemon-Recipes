@@ -9,7 +9,7 @@ function openBurger() {
 
               var y = document.getElementById("js-nav__logo");
               if (y.className === "nav__logo") {
-                  y.className += " nav__logo--open";
+                  y.className += " nav__logo--hide";
               } 
               else {
                   y.className = "nav__logo";
@@ -17,7 +17,7 @@ function openBurger() {
 
               var z = document.getElementById("js-nav__input");
               if (z.className === "nav__input") {
-                  z.className += " nav__input--open";
+                  z.className += " nav__input--hide";
               } 
               else {
                   z.className = "nav__input"; //First bug in my life was here, it's so cute^^
