@@ -16,13 +16,15 @@
 </head>
 
 <body>
-
   <!-- HEADER START -->
   <header>
+    <h1><img class="title__logo" src="img/logo.png" alt="Logo"></h1>
+  </header>
+  <!-- HEADER END -->
 
-    <h1><img class="header__logo" src="img/logo.png" alt="Logo"></h1>
 
-    <nav class="nav">
+  <!-- NAV START -->
+  <nav class="nav">
       <a class="nav__logo" id="js-nav__logo" href="#"><img src="img/logo--small.png" alt="Logo"></a>
         <ul class="nav__menu" id="js-nav__menu">
           <li class="nav__menu-item"><a href="#">Home</a></li>
@@ -67,10 +69,8 @@
           </li>
         </ul>
       <input type="search" class="nav__input" id="js-nav__input"  placeholder="FIND A RECIPE" />
-    </nav>
-  </header>
-  <!-- HEADER END -->
-
+  </nav>
+  <!-- NAV END -->
 
   <!-- MAIN RECIPE START -->
   <section>
@@ -248,6 +248,7 @@
   <!-- SUB-RECIPES START -->
   <section>
     <div class="sub-recipes">
+
       <div class="sub-recipes__item">
         <img class="sub-recipes__item-img " src="img/sub-recipe__1.jpg" alt="Sub recipe">
         <br>
@@ -291,6 +292,7 @@
           <i class="fa fa-eye" aria-hidden="true">14</i>
         </span>
       </div>
+
     </div>
   </section>
   <!-- SUB-RECIPES END -->
@@ -300,61 +302,64 @@
   <section>
     <div class="scroll-recipe">
       <img class="scroll-recipe__img" src="img/scroll-recipe.jpg" alt="Banana">
-      <div class="scroll-recipe__header">
-        <h2 class="scroll-recipe__header-name">Bananas Foster Ice Cream Cake</h2>
-        <p class="scroll-recipe__header-info">
+      <div class="scroll-recipe__title">
+        <h2 class="scroll-recipe__title-name">Bananas Foster Ice Cream Cake</h2>
+        <p class="scroll-recipe__title-info">
           <i class="fa fa-clock-o" aria-hidden="true"></i> 15 mins
           <i class="fa fa-signal" aria-hidden="true"></i> Easy
-          <button class="scroll-recipe__header-save">Save recipe</button>
+          <button class="scroll-recipe__title-save">Save recipe</button>
         </p>
 
         <div class="scroll-recipe__scroll">
-          1 (8 ounce) container frozen whipped topping, thawed
-          <br> 20 chocolate round wafers, divided
-          <br> 1 (7 1/4 ounce) bottle of Hot Dark Chocolate Microwaveable Topping, divided
-
-          <p>Directions</p>
-
-          ARRANGE 8 to 9 ice cream sandwiches in 9-inch square pan, cutting to form an even layer. Spread with half of whipped topping.
-          Break or crush chocolate wafers and sprinkle over the whipped cream. Microwave 1 cup of chocolate topping into
-          small microwave-safe bowl on HIGH for 30 seconds. Drizzle evenly over wafers.
-          <br> TOP with remaining 8 to 9 ice cream sandwiches to form an even layer. Spread with remaining whipped topping. Freeze
-          3 hours or overnight. Remove from freezer 10 minutes before serving. Cut into squares. HEAT remaining topping.
-          Drizzle each serving with topping. Sprinkle with decorator sprinkles. Nutritional information (amount per servings):
-          Total Calories: 640. Sodium 440mg. Fat: 32g. Carbohydrates: 82g. Cholesterol: 40mg. Protein: 11g. Fiber: 1g. 1
-          (8 ounce) container frozen whipped topping, thawed 20 chocolate round wafers, divided 1 (7 1/4 ounce) bottle Hot
-          Dark Chocolate Microwaveable Topping, divided Directions ARRANGE 8 to 9 ice cream sandwiches in 9-inch square pan,
-          cutting to form an even layer. Spread with half of whipped topping. Break or crush chocolate wafers and sprinkle
-          over the whipped cream. Microwave 1 cup of chocolate topping into small microwave-safe bowl on HIGH for 30 seconds.
-          Drizzle evenly over wafers.
-          <br> TOP with remaining 8 to 9 ice cream sandwiches to form an even layer. Spread with remaining whipped topping. Freeze
-          3 hours or overnight. Remove from freezer 10 minutes before serving. Cut into squares. HEAT remaining topping.
-          Drizzle each serving with topping. Sprinkle with decorator sprinkles. Nutritional information (amount per servings):
-          Total Calories: 640. Sodium 440mg. Fat: 32g. Carbohydrates: 82g. Cholesterol: 40mg. Protein: 11g. Fiber: 1g. ARRANGE
-          8 to 9 ice cream sandwiches in 9-inch square pan, cutting to form an even layer. Spread with half of whipped topping.
-          Break or crush chocolate wafers and sprinkle over the whipped cream. Microwave 1 cup of chocolate topping into
-          small microwave-safe bowl on HIGH for 30 seconds. Drizzle evenly over wafers.
-          <br> TOP with remaining 8 to 9 ice cream sandwiches to form an even layer. Spread with remaining whipped topping. Freeze
-          3 hours or overnight. Remove from freezer 10 minutes before serving. Cut into squares. HEAT remaining topping.
-          Drizzle each serving with topping. Sprinkle with decorator sprinkles. Nutritional information (amount per servings):
-          Total Calories: 640. Sodium 440mg. Fat: 32g. Carbohydrates: 82g. Cholesterol: 40mg. Protein: 11g. Fiber: 1g. 1
-          (8 ounce) container frozen whipped topping, thawed 20 chocolate round wafers, divided 1 (7 1/4 ounce) bottle Hot
-          Dark Chocolate Microwaveable Topping, divided Directions ARRANGE 8 to 9 ice cream sandwiches in 9-inch square pan,
-          cutting to form an even layer. Spread with half of whipped topping. Break or crush chocolate wafers and sprinkle
-          over the whipped cream. Microwave 1 cup of chocolate topping into small microwave-safe bowl on HIGH for 30 seconds.
-          Drizzle evenly over wafers.
-          <br> TOP with remaining 8 to 9 ice cream sandwiches to form an even layer. Spread with remaining whipped topping. Freeze
-          3 hours or overnight. Remove from freezer 10 minutes before serving. Cut into squares. HEAT remaining topping.
-          Drizzle each serving with topping. Sprinkle with decorator sprinkles. Nutritional information (amount per servings):
-          Total Calories: 640. Sodium 440mg. Fat: 32g. Carbohydrates: 82g. Cholesterol: 40mg. Protein: 11g. Fiber: 1g.
+          <p class="scroll-recipe__scroll-text">
+            1 (8 ounce) container frozen whipped topping, thawed
+            <br> 20 chocolate round wafers, divided
+            <br> 1 (7 1/4 ounce) bottle of Hot Dark Chocolate Microwaveable Topping, divided
+            
+            <p class="scroll-recipe__scroll-title">Directions</p>
+            
+            ARRANGE 8 to 9 ice cream sandwiches in 9-inch square pan, cutting to form an even layer. Spread with half of whipped topping.
+            Break or crush chocolate wafers and sprinkle over the whipped cream. Microwave 1 cup of chocolate topping into
+            small microwave-safe bowl on HIGH for 30 seconds. Drizzle evenly over wafers.
+            <br> TOP with remaining 8 to 9 ice cream sandwiches to form an even layer. Spread with remaining whipped topping. Freeze
+            3 hours or overnight. Remove from freezer 10 minutes before serving. Cut into squares. HEAT remaining topping.
+            Drizzle each serving with topping. Sprinkle with decorator sprinkles. Nutritional information (amount per servings):
+            Total Calories: 640. Sodium 440mg. Fat: 32g. Carbohydrates: 82g. Cholesterol: 40mg. Protein: 11g. Fiber: 1g. 1
+            (8 ounce) container frozen whipped topping, thawed 20 chocolate round wafers, divided 1 (7 1/4 ounce) bottle Hot
+            Dark Chocolate Microwaveable Topping, divided Directions ARRANGE 8 to 9 ice cream sandwiches in 9-inch square pan,
+            cutting to form an even layer. Spread with half of whipped topping. Break or crush chocolate wafers and sprinkle
+            over the whipped cream. Microwave 1 cup of chocolate topping into small microwave-safe bowl on HIGH for 30 seconds.
+            Drizzle evenly over wafers.
+            <br> TOP with remaining 8 to 9 ice cream sandwiches to form an even layer. Spread with remaining whipped topping. Freeze
+            3 hours or overnight. Remove from freezer 10 minutes before serving. Cut into squares. HEAT remaining topping.
+            Drizzle each serving with topping. Sprinkle with decorator sprinkles. Nutritional information (amount per servings):
+            Total Calories: 640. Sodium 440mg. Fat: 32g. Carbohydrates: 82g. Cholesterol: 40mg. Protein: 11g. Fiber: 1g. ARRANGE
+            8 to 9 ice cream sandwiches in 9-inch square pan, cutting to form an even layer. Spread with half of whipped topping.
+            Break or crush chocolate wafers and sprinkle over the whipped cream. Microwave 1 cup of chocolate topping into
+            small microwave-safe bowl on HIGH for 30 seconds. Drizzle evenly over wafers.
+            <br> TOP with remaining 8 to 9 ice cream sandwiches to form an even layer. Spread with remaining whipped topping. Freeze
+            3 hours or overnight. Remove from freezer 10 minutes before serving. Cut into squares. HEAT remaining topping.
+            Drizzle each serving with topping. Sprinkle with decorator sprinkles. Nutritional information (amount per servings):
+            Total Calories: 640. Sodium 440mg. Fat: 32g. Carbohydrates: 82g. Cholesterol: 40mg. Protein: 11g. Fiber: 1g. 1
+            (8 ounce) container frozen whipped topping, thawed 20 chocolate round wafers, divided 1 (7 1/4 ounce) bottle Hot
+            Dark Chocolate Microwaveable Topping, divided Directions ARRANGE 8 to 9 ice cream sandwiches in 9-inch square pan,
+            cutting to form an even layer. Spread with half of whipped topping. Break or crush chocolate wafers and sprinkle
+            over the whipped cream. Microwave 1 cup of chocolate topping into small microwave-safe bowl on HIGH for 30 seconds.
+            Drizzle evenly over wafers.
+            <br> TOP with remaining 8 to 9 ice cream sandwiches to form an even layer. Spread with remaining whipped topping. Freeze
+            3 hours or overnight. Remove from freezer 10 minutes before serving. Cut into squares. HEAT remaining topping.
+            Drizzle each serving with topping. Sprinkle with decorator sprinkles. Nutritional information (amount per servings):
+            Total Calories: 640. Sodium 440mg. Fat: 32g. Carbohydrates: 82g. Cholesterol: 40mg. Protein: 11g. Fiber: 1g.
+          </p>
         </div>
       </div>
     </div>
   </section>
   <!-- RECIPE WITH SCROLL END  -->
 
+
   <!-- FEEDBACKS START -->
-  <section class="wrapper">
+  <section>
     <div class="feedbacks">
 
       <div class="feedbacks__404">
@@ -392,7 +397,7 @@
             </a>
             <hr class="feedbacks__author-hr">
             <div class="feedbacks__author-text">
-              <p class="feedbacks__author-text-header">About Lemon</p>
+              <p class="feedbacks__author-text-title">About Lemon</p>
               <p>Over the fifteen-year life span of Food.com, we’ve learned that – in addition to eating – sharing is what you
                 do best. And thanks to the 20 million of you who come here each month, we now have 500,000 recipes to show
                 for it, more than anywhere else in the digital universe. We also have tons crazy-tempting photos, troves
@@ -407,17 +412,16 @@
   </section>
   <!-- FEEDBACKS END -->
 
+
   <!-- COLUMNS START -->
   <section class="columns">
 
     <!-- Column 1 start -->
     <div class="first-column">
-
       <div class="small-recipe">
-        <p class="small-recipe__header">Chi-Chi or Chichi</p>
+        <p class="small-recipe__title">Chi-Chi or Chichi</p>
         <hr>
         <div class="small-recipe__info">
-
           <img src="img/recipe-writer.jpg" class="small-recipe__author" alt="Recipe writer">
           <p class="small-recipe__text">
             <span>Recipe by
@@ -446,9 +450,8 @@
       </div>
 
       <div class="target">
-        
-        <p class="target__header">Target
-          <span class="target__header-icons">
+        <p class="target__title">Target
+          <span class="target__title-icons">
             <a href="#">
               <i class="fa fa-print" aria-hidden="true"></i>
             </a>
@@ -464,7 +467,8 @@
           </span>
         </p>
         <hr>
-        <p class="target__sub-header"> Presentation line </p>
+
+        <p class="target__sub-title"> Presentation line </p>
 
         <div class="target__top">
           <img src="img/target-circle-top.png" alt="graph circle">
@@ -497,18 +501,14 @@
         </div>
 
       </div>
-
     </div>
     <!-- Column 1 end-->
 
-
     <!-- Column 2 start-->
-
     <div class="second-column">
-
       <div class="level-recipes">
-        <p class="level-recipes__header"> Recipe
-          <span class="level-recipes__header-icons">
+        <p class="level-recipes__title"> Recipe
+          <span class="level-recipes__title-icons">
             <a href="#">
               <i class="fa fa-print" aria-hidden="true"></i>
             </a>
@@ -524,22 +524,19 @@
           </span>
         </p>
         <hr>
-
-
-
         <div class="level-recipes__levels">
           <button class="level-recipes__button" onclick="openRecipe(event, 'js-easy')" id="js-default-open">Easy</button>
           <button class="level-recipes__button" onclick="openRecipe(event, 'js-middle')">Middle</button>
           <button class="level-recipes__button" onclick="openRecipe(event, 'js-long')">Long</button>
         </div>
+        <!-- Easy recipes start  -->
+        <div id="js-easy" class="level-recipes__content">  
 
-        <div id="js-easy" class="level-recipes__content">
-
-          <div class="level-recipes__recipe level-recipes__recipe--first">
+          <div class="level-recipes__recipe">
               <img class="level-recipes__img" src="img/easy-recipes-top.jpg" alt="recipe picture">
             <a class="level-recipes__text" href="#">
               <div>
-                <p class="level-recipes__text-header"><span class="level-recipes__text-by">by</span> Smuckersreg Toppings
+                <p class="level-recipes__text-title"><span class="level-recipes__text-by">by</span> Smuckersreg Toppings
                 </p>
                 <br>
                 <span class="level-recipes__text-subtext">Lorem ipsum dolor sit, am consecte adipisicing. Lorem ipsum dolor sit, am consecte adipisicing elit. </span>
@@ -551,7 +548,7 @@
             <img class="level-recipes__img" src="img/easy-recipes-center.jpg" alt="recipe picture">
             <a class="level-recipes__text" href="#">
             <div>
-              <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
+              <p class="level-recipes__text-title"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
               </p>
               <br>
               <span class="level-recipes__text-subtext">Lorem ipsum dolor sit am consecte adipisicing elit. Lorem ipsum dolor sit, am consecte adipisicing elit.   </span>
@@ -563,7 +560,7 @@
             <img class="level-recipes__img" src="img/easy-recipes-bottom.jpg" alt="recipe picture">
             <a class="level-recipes__text" href="#">
             <div>
-              <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
+              <p class="level-recipes__text-title"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
               </p>
               <br>
               <span class="level-recipes__text-subtext">Lorem ipsum dolor sit, am consecte adipisicing elit. Quaerat, voluptate atque  </span>
@@ -571,14 +568,15 @@
             </a>
           </div>
         </div>
-
+        <!-- Easy recipes end -->
+        <!-- Middle recipes start -->
         <div id="js-middle" class="level-recipes__content">
 
             <div class="level-recipes__recipe level-recipes__recipe--first">
                 <img class="level-recipes__img" src="img/easy-recipes-center.jpg" alt="recipe picture">
                 <a class="level-recipes__text" href="#">
                 <div>
-                  <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
+                  <p class="level-recipes__text-title"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
                   </p>
                   <br>
                   <span class="level-recipes__text-subtext">Lorem ipsum dolor sit am consecte adipisicing elit. Lorem ipsum dolor sit, am consecte adipisicing elit.   </span>
@@ -590,7 +588,7 @@
                 <img class="level-recipes__img" src="img/easy-recipes-top.jpg" alt="recipe picture">
               <a class="level-recipes__text" href="#">
                 <div>
-                  <p class="level-recipes__text-header"><span class="level-recipes__text-by">by</span> Smuckersreg Toppings
+                  <p class="level-recipes__text-title"><span class="level-recipes__text-by">by</span> Smuckersreg Toppings
                   </p>
                   <br>
                   <span class="level-recipes__text-subtext">Lorem ipsum dolor sit, am consecte adipisicing. Lorem ipsum dolor sit, am consecte adipisicing elit. </span>
@@ -602,7 +600,7 @@
               <img class="level-recipes__img" src="img/easy-recipes-bottom.jpg" alt="recipe picture">
               <a class="level-recipes__text" href="#">
               <div>
-                <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
+                <p class="level-recipes__text-title"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
                 </p>
                 <br>
                 <span class="level-recipes__text-subtext">Lorem ipsum dolor sit, am consecte adipisicing elit. Quaerat, voluptate atque  </span>
@@ -610,13 +608,14 @@
               </a>
             </div>
         </div>
-
+        <!-- Middle recipes end-->
+        <!-- Long recipes start -->
         <div id="js-long" class="level-recipes__content">
             <div class="level-recipes__recipe level-recipes__recipe--first">
                 <img class="level-recipes__img" src="img/easy-recipes-bottom.jpg" alt="recipe picture">
                 <a class="level-recipes__text" href="#">
                 <div>
-                  <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
+                  <p class="level-recipes__text-title"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
                   </p>
                   <br>
                   <span class="level-recipes__text-subtext">Lorem ipsum dolor sit, am consecte adipisicing elit. Quaerat, voluptate atque  </span>
@@ -628,7 +627,7 @@
                 <img class="level-recipes__img" src="img/easy-recipes-center.jpg" alt="recipe picture">
                 <a class="level-recipes__text" href="#">
                 <div>
-                  <p class="level-recipes__text-header"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
+                  <p class="level-recipes__text-title"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
                   </p>
                   <br>
                   <span class="level-recipes__text-subtext">Lorem ipsum dolor sit am consecte adipisicing elit. Lorem ipsum dolor sit, am consecte adipisicing elit.   </span>
@@ -640,29 +639,26 @@
                 <img class="level-recipes__img" src="img/easy-recipes-top.jpg" alt="recipe picture">
               <a class="level-recipes__text" href="#">
                 <div>
-                  <p class="level-recipes__text-header"><span class="level-recipes__text-by">by</span> Smuckersreg Toppings
+                  <p class="level-recipes__text-title"><span class="level-recipes__text-by">by</span> Smuckersreg Toppings
                   </p>
                   <br>
                   <span class="level-recipes__text-subtext">Lorem ipsum dolor sit, am consecte adipisicing. Lorem ipsum dolor sit, am consecte adipisicing elit. </span>
                 </div>
               </a>
             </div>
-            
         </div>
+        <!-- Long recipes end -->
         <a class="level-recipes__view" href="#">View more</a>
-
-
       </div>
 
       <div class="tags">
-        <h4 class="tags__header">Tags</h4>
+        <h4 class="tags__title">Tags</h4>
         <hr>
         <p class="tags__text">#Yummy #sweet #dinner #lunch #fresh  #breakfast #fresh #tasty #delish #satoriq #eating #food</p>
       </div>
 
-
       <div class="calendar">
-          <h4 class= "calendar__header">Calendar</h4>
+          <h4 class= "calendar__title">Calendar</h4>
           <hr>
           <button id="btnPrev" type="button"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
           <button id="btnNext" type="button"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
@@ -673,15 +669,12 @@
     </div>
     <!--Column 2 end -->
 
-
-
-    <!-- TO DO: something with popular__info -->
     <!-- Column 3 start-->
     <div class="third-column">
 
       <div class="popular">
-          <p class="popular__header">Popular now</p>
-          <p class="popular__sub-header">Vanilla Frozen Coffee</p>
+          <p class="popular__title">Popular now</p>
+          <p class="popular__sub-title">Vanilla Frozen Coffee</p>
           <p class="popular__text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia 
             fuga corporis non delectus animi sapiente, exercitat </p>
           <div class="popular__info">
@@ -694,10 +687,9 @@
           </div>
       </div>
 
-
       <div class="time">
-        <p class="time__header">Timeline 
-          <span class="time__header-icons">
+        <p class="time__title">Timeline 
+          <span class="time__title-icons">
             <a href="#">
               <i class="fa fa-print" aria-hidden="true"></i>
             </a>
@@ -712,8 +704,8 @@
             </a>
           </span>
         </p>
-        <hr class="time__header-hr">
-        <p class="time__sub-header">Timeline</p>
+        <hr class="time__title-hr">
+        <p class="time__sub-title">Timeline</p>
         <div class="time__lines">
           <div class="time__lines-item">
             <span>EASY</span>
@@ -743,22 +735,14 @@
   </section>
   <!-- COLUMNS END -->
 
-
-
-  <!-- TODO: CHANGE ALL HEADERS ON TITLES  -->
-
-
   <!-- FORMS START -->
-  
   <div class="forms">
-
     <!-- Login start -->
     <div class="login">
-
       <form class="forms-container">
-        <p class="login__header">Login</p>
+        <p class="login__title">Login</p>
         <hr>
-        <p class="login__sub-header">Login for LEMON</p>
+        <p class="login__sub-title">Login for LEMON</p>
         <input class="login__login-input" type="email" placeholder="email or login" >
         <input class="login__password-input" type="password" placeholder="password">
         <label class="login__remember"><input class="login__remember-checkbox" type="checkbox">
@@ -775,21 +759,18 @@
           <i class="fa fa-google-plus" aria-hidden="true"></i>
         </a>
       </div><br>
-      
       <div class="login__sign-up">
         <a href="#">Don't have an account? Sing up</a>
       </div>
-      
     </div>
     <!-- Login end -->
 
     <!-- Sign-up start -->
     <div class="sign">
-
         <form class="forms-container">
-            <p class="sign__header">Sign in</p>
+            <p class="sign__title">Sign in</p>
             <hr>
-            <p class="sign__sub-header">Sign in for LEMON</p>
+            <p class="sign__sub-title">Sign in for LEMON</p>
             <input class="sign__email-input" type="email" placeholder="email" >
             <input class="sign__name-input" type="text" placeholder="username">
             <input class="sign__password-input" type="password" placeholder="password">
@@ -805,16 +786,12 @@
               <i class="fa fa-google-plus" aria-hidden="true"></i>
             </a>
           </div><br>
-          
           <div class="sign__terms">
             <span>By joining LEMON, you agree to our <br> <a href="#" class="sign__terms-link" >Term of Service</a></span>
           </div>
-    
     </div>
     <!-- Sign-up end -->
-
   </div>
-
    <!-- FORMS END -->
 
 
@@ -822,17 +799,14 @@
   <section class="comments">
       <!-- Leave a comment start -->
       <div class="post">
-
         <h2 class="post__text"> Post a Comment
           <button class="post__text-social">Facebook / Twitter</button>
         </h2>
-      
         <div class="post__form">
           <img src="img/recipe-writer.jpg" class="post__form-face" alt="Photo">
           <input type="text" class="post__form-input">
           <button class="post__form-button">post</button>
         </div>
-
       </div>
       <!-- Leave a comment end-->
 
@@ -840,12 +814,9 @@
     <div class="board">
       <p class="board__title">Comments</p>
       <hr>
-
       <!-- top comment start  -->
       <div class="comment"> 
-
         <img class="comment__face" src="img/recipe-writer.jpg"  alt="Photo">
-
         <div class="comment__info">
           <span class="comment__info-top">post by</span>
           <span class="comment__info-name">Smuckersreg Toppings
@@ -854,7 +825,6 @@
           <button class="comment__info-date">6/10/2014</button>
           <img class="comment__photo" src="img/sub-recipe__1.jpg" alt="recipe picture">
           <span class="comment__info-text">Thanks for the recipe</span>
-
         </div>
         <span class="comment__likes">
           <button class="comment__likes-share">752<i class="fa fa-share-alt" aria-hidden="true"></i></button> 
@@ -874,11 +844,11 @@
             </span>
             <button class="sub-comment__info-date">6/10/2014</button>
             <span class="sub-comment__info-text">Thank for the recipe. Lorem ipsum dolor sit amet consectetur.    </span>
-      </div>
-      <span class="sub-comment__likes">
-          <button class="sub-comment__likes-share">456<i class="fa fa-share-alt" aria-hidden="true"></i></button> 
-          <button class="sub-comment__likes-like">79<i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
-      </span>
+        </div>
+        <span class="sub-comment__likes">
+            <button class="sub-comment__likes-share">456<i class="fa fa-share-alt" aria-hidden="true"></i></button> 
+            <button class="sub-comment__likes-like">79<i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
+        </span>
       </div>
       <!-- sub comment end -->
       <button class="sub-comment__more" >24 more comments</button> 
@@ -900,13 +870,12 @@
             <button class="next-comment__likes-like"> 27<i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
         </span>
       </div>
-      <!-- next comment end  -->
       <hr class="next-comment__hr">
-
+      <!-- next comment end  -->
     </div>
     <!-- Board with comments end  -->
 
-
+    <!-- Switch start  -->
     <div class="switch">
         <ul class="switch__numbers">
           <li>
@@ -923,17 +892,18 @@
           </li>
         </ul>
     </div>
+    <!-- Switch end  -->
   </section>
-  <!-- COMMENTS END  -->
+  <!-- COMMENTS END -->
+
 
  <!-- FOOTER START  -->
   <footer>
     <div class="footer">
-        
-          <img class="footer__logo" src="img/footer-logo.png" alt="Logo">
+        <img class="footer__logo" src="img/footer-logo.png" alt="Logo">
         
         <nav class="footer__nav">
-          <ul class="footer__nav-items">
+          <ul class="footer__nav-menu">
             <li class="footer__nav-item"><a href="">Home</a></li>      
             <li class="footer__nav-item"><a href="">Recipes</a></li>
             <li class="footer__nav-item"><a href="">Photo Galleries</a></li>
@@ -941,6 +911,7 @@
             <li class="footer__nav-item"><a href="">All categories</a></li>
           </ul>
         </nav>
+
         <div class="footer__copyrighted">
           <p> &#169; 2016-2017 LEMON all rights reserved<br> 
             <span class="footer__social">
@@ -962,12 +933,11 @@
     </div>
   </footer>
   <!-- FOOTER END  -->
+  
   <script src="js/small-recipe-slider.js"></script>
   <script src="js/main-recipe-slider.js"></script>
   <script src="js/levels-tab.js"></script>
   <script src="js/burger.js"></script>
   <script src="js/calendar.js"></script>  <!-- not mine, just copied and customize  -->
-
 </body>
-
 </html>

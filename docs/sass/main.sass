@@ -28,6 +28,11 @@ hr
   border-left: none
   border-right: none
 
+%btn-reset
+  border: none
+  background: none
+  cursor: pointer
+
 
 
 //Icons hover 
@@ -52,19 +57,19 @@ hr
 .fa-print:hover
   color: #bd081b
 
-//Colors
+//Variables
 $blocks-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
 $blocks-bg: #fff
-$text-color: #555
-$buttons-border: 1px solid #999
+$second-color: #555
 $main-font: 'Josefin Sans', sans-serif
 $second-font: 'Playfair Display', serif
+$max-width: 1120px
 
 
 
 
-// HEADER START
-.header__logo
+// title START
+.title__logo
   display: block
   margin-top: 249px
   margin-bottom: 122px
@@ -205,7 +210,7 @@ $second-font: 'Playfair Display', serif
             display: block
             text-align: left
             font-size: 13px 
-            color: $text-color
+            color: $second-color
             &:hover
               color: #000
               text-decoration: underline
@@ -223,7 +228,7 @@ $second-font: 'Playfair Display', serif
       @media (max-width: 425px)
         display: block 
         width: 15px
-// HEADER END
+// title END
 
 
 //MAIN RECIPE START
@@ -271,11 +276,11 @@ $second-font: 'Playfair Display', serif
       border-radius: 50%
       background-color: #fff
       &:hover 
-        background-color: #555
+        background-color: $second-color
       &--checked
-        background-color: #555
+        background-color: $second-color
   &--hide
-  display: none 
+    display: none 
   &--show
     display: block
     @media (max-width: 425px)
@@ -294,7 +299,6 @@ $second-font: 'Playfair Display', serif
       padding-top: 35px
     &-logo
       max-width: 250px
-      width: 100%
     p
       margin-top: -10px
       max-width: 30%
@@ -304,61 +308,47 @@ $second-font: 'Playfair Display', serif
       padding-bottom: 5px
       margin-top: 10px
       text-align: center
-      color: black
       text-transform: uppercase
       font-size: 12px
       width: 100px
       border: 1px solid #798186
     h2
       color: #911026
-      font-family: 'Playfair Display', serif
+      font-family: $second-font
       font-weight: 400
       font-size: 24px
       margin-top: 35px 
-      margin-bottom: 36px
-
-
-
-
-.mobile-top
-  @media (min-width: 426px)
-    display: none 
-  @media (max-width: 425px)
-    display: block
-    width: 100%
-    height: auto 
-
+      margin-bottom: 35px
 //MAIN RECIPE END
+
 
 //SUB-RECIPES START
 .sub-recipes
   display: flex
   justify-content: space-around
   flex-wrap: wrap
+  width: 77.7777777%
+  max-width: $max-width
   margin-top: 90px
   margin-left: auto
   margin-right: auto
-  padding-bottom: 30px
-  width: 77.7777777%
-  max-width: 1120px
-  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
-  background-color: #fff
+  padding-bottom: 25px
+  box-shadow: $blocks-shadow
+  background-color: $blocks-bg
   @media (max-width: 425px)
-    box-shadow: none 
     width: 100%
-    margin: 0
-    
+    margin: 0 
+    box-shadow: none 
   &__item
     display: flex
     flex-direction: column
     min-width: 28%
-    height: auto
     padding: 0 2%
     @media (max-width: 937px)
       min-width: 65%
     @media (max-width: 425px) 
-        width: 100%
-        padding: 0
+      width: 100%
+      padding: 0
     &--tablets
       display: none
       @media (max-width: 1388px) and (min-width: 937px)
@@ -368,10 +358,9 @@ $second-font: 'Playfair Display', serif
       @media (max-width: 425px) 
         width: 100%
         padding: 0
-
     &-name
-      font-size: 18px
       max-width: 300px
+      font-size: 18px
       font-weight: 300
       margin: 0
       @media (max-width: 426px)
@@ -384,87 +373,84 @@ $second-font: 'Playfair Display', serif
       @media (max-width: 426px)
         padding-left: 5%
         padding-bottom: 30px 
-    i
-      padding-top: 5px
-      padding-right: 7px
+      i
+        padding-top: 5px
+        padding-right: 7px
 //SUB-RECIPES END
 
 
 //RECIPE WITH SCROLL START
 .scroll-recipe
   display: flex
-  background-color: white
   width: 77.7777777%
+  max-width: $max-width
   margin-top: 90px
   margin-left: auto
   margin-right: auto
-  max-width: 1120px
-  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+  box-shadow: $blocks-shadow
+  background-color: $blocks-bg
   @media (max-width: 1200px)
     flex-wrap: wrap
     justify-content: center
-    align-items: center
   @media (max-width: 425px)
     display: none
   &__img
     min-width: 523px
     @media (max-width: 1200px)
-      min-width: 339px
-      min-height: 275px
+      min-width: 339px   
+      min-height: 300px   
       padding-top: 20px
     @media (max-width: 600px)
       padding-top: 0
-      min-width: 100%
-
-  &__header
+      width: 100%
+  &__title
     display: flex
     flex-direction: column
-    max-width: 55%
+    width: 55%
     height: 430px
-    margin: 0 45px 10px 30px
+    margin-right: 40px 
+    margin-bottom: 10px 
+    margin-left: 30px
     @media (max-width: 1200px)
-      max-width: 100%
-    @media( max-width: 600px )
       min-width: 90%
     &-name
       margin-top: 28px
-      font-family: 'Playfair Display', serif
+      font-family: $second-font
       color: #055555
       font-size: 32px
       font-weight: 900
       @media (max-width: 1200px)
         text-align: center
     &-info
-      color: #555
       margin-bottom: 25px
       margin-top: 5px
+      color: #555
     &-save
       float: right
       padding: 3px
       margin-top: -4px
+      font-size: 12px
       text-transform: uppercase
-      color: #555
+      cursor: pointer
+      color: $second-color
       border: 1px solid #555
       background-color: #fff
-      font-size: 12px
-      cursor: pointer
-
-
-
   &__scroll
     overflow-y: scroll
-    margin-bottom: 20px
+    margin-bottom: 10px
     @media (max-width: 600px)
       margin-bottom: 0
+    &-title
+      font-family: $second-font
+      font-weight: bold
+    &-text 
+      margin: 0
     &::-webkit-scrollbar-thumb
-      background: #555
+      background: $second-color
     &::-webkit-scrollbar
       width: 2px
       height: 7px
       background-color: #ddd
-    p
-      font-family: 'Playfair Display', serif
-      font-weight: bold
 //RECIPE WITH SCROLL END
 
 
@@ -473,7 +459,7 @@ $second-font: 'Playfair Display', serif
   display: flex
   justify-content: space-between
   width: 77.7777777%
-  max-width: 1120px
+  max-width: $max-width
   margin-left: auto
   margin-right: auto
   @media (max-width: 800px)
@@ -487,10 +473,10 @@ $second-font: 'Playfair Display', serif
     width: 46%
     min-width: 250px
     margin-top: 135px
-    background-color: white
+    background-color: $blocks-bg
     background-image: url('../img/sorry-404.png')
     background-size: 100% 100%
-    box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+    box-shadow: $blocks-shadow
     @media (max-width:1024px)
       background-position-y: 90px
       background-size: 100% 60%
@@ -502,8 +488,8 @@ $second-font: 'Playfair Display', serif
       align-self: flex-start
       padding-left: 9%
       padding-top: 7px
-      font-weight: 400
       font-size: 20px
+      font-weight: 400
       font-style: italic
     &-text
       text-align: center
@@ -515,7 +501,7 @@ $second-font: 'Playfair Display', serif
       text-align: center
       text-transform: uppercase
       color: rgba(169, 169, 169, 1)
-      font-family: 'Playfair Display', serif
+      font-family: $second-font
       font-weight: 900
     &-back
       padding: 8px 35px 5px 35px
@@ -527,12 +513,11 @@ $second-font: 'Playfair Display', serif
       font-size: 12px
     hr
       margin-top: -10px
-  
   &__author
     width: 46%
     margin-top: 135px
-    background-color: white
-    box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+    background-color: $blocks-bg
+    box-shadow: $blocks-shadow
     @media (max-width: 800px)
       width: 100%
     @media (max-width: 425px)
@@ -540,8 +525,8 @@ $second-font: 'Playfair Display', serif
     &-top
       padding-left: 9%
       padding-top: 7px
-      font-weight: 400
       font-size: 20px
+      font-weight: 400
       font-style: italic
     &-border
       margin-top: -10px
@@ -567,36 +552,31 @@ $second-font: 'Playfair Display', serif
         padding-top: 30px
       @media (max-width: 600px)
         margin-left: -45%
-      &-header
+      &-title
         font-style: normal
         font-size: 20px
         font-weight: 400
         font-style: italic
-    
     &-hr 
       width: 100%
     &-name
       display: inline-block
-      font-size: 1.5rem
-      font-weight: bold
       padding-top: 25px
       margin: 0
+      font-size: 24px
+      font-weight: bold
     &-location
       display: inline-block
-      color: black
-      padding: 8px 0px
+      color: #000
+      padding: 8px 0
     &-signature
       float: right
       max-width: 50%
-
     i
       padding-right: 7px
       padding-bottom: 8px
       color: #aaa
-        
-
 //FEEDBACKS END
-
 
 
 //COLUMNS START 
@@ -609,9 +589,6 @@ $second-font: 'Playfair Display', serif
   flex-wrap: wrap 
   @media (max-width: 425px)
     width: 100%
-    
-
-  
 
 //First column start
 .first-column
@@ -621,18 +598,16 @@ $second-font: 'Playfair Display', serif
   @media( max-width: 1240px)
     display: none 
 
-
 .small-recipe
   margin-top: 80px
-  background-color: white  
-  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
-  &__header
+  background-color: $blocks-bg
+  box-shadow: $blocks-shadow
+  &__title
     text-align: center
-    font-family: 'Playfair Display', serif
-    font-weight: 900 
+    font-family: $second-font
     font-size: 22px
-    color: #055555
-    
+    font-weight: 900 
+    color: #055555  
   &__info
     display: flex
     padding-left: 8%
@@ -640,34 +615,31 @@ $second-font: 'Playfair Display', serif
     margin-left: 6%
   &__icons
     font-size: 12px
-    color: #555
+    color: $second-color
   &__author
     align-self: center
     border-radius: 50%
   &__recipe
     width: 100%
-    display: block
   &__images 
     position: relative 
   &__circle
-    color: red
     display: inline-block
     padding: 5px 
     margin-left: 8px
     margin-right: 8px
-    text-align: center
     border-radius: 50%
     border: 1px solid #999
     background-color: #fff
     &--checked
-      background-color: #555
+      background-color: $second-color
     &:hover 
-      background-color: #555
+      background-color: $second-color
   &__switcher
     position: absolute
+    text-align: center
     left: 0
     right: 0
-    text-align: center 
     bottom: 5px
     cursor: pointer
   hr
@@ -676,35 +648,33 @@ $second-font: 'Playfair Display', serif
     padding-top: 5px
     padding-right: 7px
 
-
 .target
   margin-top: 50px
-  background-color: white
-  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
-  &__header
+  background-color: $blocks-bg
+  box-shadow: $blocks-shadow
+  &__title
     padding-top: 10px
     padding-left: 8%
     font-size: 20px
     font-weight: 400
     font-style: italic
     &-icons
-      white-space: nowrap 
+      white-space: nowrap
       float: right 
       margin-right: 8%
       font-size: 16px
       i
         padding-right: 10px
-        color: #555
-  &__sub-header
+        color: $second-color
+  &__sub-title
     padding-left: 10%
     margin: 18px 0 30px 0
-    font-family: 'Playfair Display', serif
+    font-family: $second-font
     font-weight: 900 
     font-size: 20px
     color: #055555
   &__info
     position: relative
-    margin: 0
     padding-left: 9%
     width: 66%
     color: #9f9f9f
@@ -713,11 +683,10 @@ $second-font: 'Playfair Display', serif
     &-text
       font-size: 14px
       font-style: italic
-    //  TO DO remade this 
     &-inside
       position: absolute
       bottom: 30%
-      right: 105%
+      left: -28%
       font-size: 21px
   &__top
     display: flex
@@ -726,14 +695,14 @@ $second-font: 'Playfair Display', serif
     display: flex
     padding-left: 10%
     padding-top: 45px
-  &-info
-    margin: 0
-    padding-left: 7%
   &__bottom
     display: flex
     padding-top: 45px
     padding-bottom: 55px
     padding-left: 10%
+  &__info
+    margin: 0
+    padding-left: 7%
   hr
     margin-top: -15px
 
@@ -757,22 +726,22 @@ $second-font: 'Playfair Display', serif
 
 .level-recipes 
   margin-top: 80px 
-  background-color: #fff 
-  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+  background-color: $blocks-bg
+  box-shadow: $blocks-shadow
   @media (max-width: 1240px)
     order: 1
   @media (max-width: 425px)
     margin-top: 2px 
     box-shadow: none 
-  &__header
+  &__title
     padding-left: 8%
     font-size: 20px 
+    line-height: 30px
     font-weight: 400
-    line-height: 30px 
     font-style: italic
     @media (max-width: 425px)
       display: none 
-    &-text 
+    &-text
       line-height: 20px 
       font-size: 12px
     &-icons 
@@ -780,7 +749,7 @@ $second-font: 'Playfair Display', serif
       float: right 
       margin-right: 8%
       font-size: 16px
-      color: #555
+      color: $second-color
       .fa-print
         @media (max-width: 1024px)
           display: none 
@@ -788,20 +757,14 @@ $second-font: 'Playfair Display', serif
     width: 30% 
     font-size: 12px
     line-height: 25px
+    font-weight: 300
+    color: #999
     text-transform: uppercase 
     border: none
     background: none
     outline: none 
-    color: #999
-    font-weight: 300
     cursor: pointer
     &--picked
-      width: 30% 
-      font-size: 12px
-      line-height: 25px
-      text-transform: uppercase 
-      border: none
-      background: none
       color: #000
       font-weight: 700
       cursor: default
@@ -811,21 +774,15 @@ $second-font: 'Playfair Display', serif
     text-align: center
     @media (max-width: 425px)
       padding-top: 20px
-
   &__recipe
-    display: flex 
+    display: flex
     padding-top: 35px
     @media (max-width: 1024px)
       flex-direction: column
     @media (max-width: 600px)
       flex-direction: row
-      
-    &--first
+    &:nth-child(1)
       padding-top: 20px
-      @media (max-width: 1024px)
-        flex-direction: column
-      @media (max-width: 600px)
-        flex-direction: row
   &__text 
     display: inline-block
     padding-left: 20px
@@ -839,17 +796,16 @@ $second-font: 'Playfair Display', serif
       text-align: left 
       padding-left: 0
       padding-right: 15px
-    &-header 
-      font-size: 12px 
-      font-weight: 600
+    &-title 
       display: inline-block
       margin: 0
       margin-bottom: 5px
+      font-size: 12px 
+      font-weight: 600
     &-by 
       font-weight: 300
     &-subtext
-      display: inline-block
-      font-size: 16px 
+      display: inline-block 
       font-weight: 600
       @media (max-width: 1024px)
         text-align: left 
@@ -871,28 +827,25 @@ $second-font: 'Playfair Display', serif
     text-transform: uppercase
     font-size: 12px 
     color: #010101
-
   hr
     margin-top: -15px
     @media (max-width: 425px)
       display: none 
   i
-    padding-right: 10px
-    
-
-
+    margin-right: 10px
 
 .tags 
   margin-top: 50px
-  background-color: white  
-  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+  background-color: $blocks-bg
+  box-shadow: $blocks-shadow
   @media (max-width: 1240px)
     order: 2
   @media (max-width: 600px)
     display: none 
-  &__header 
+  &__title 
     padding-left: 8%
-    line-height: 10px
+    margin-top: 20px
+    margin-bottom: 20px
     font-size: 20px 
     font-weight: 400 
     font-style: italic
@@ -905,24 +858,23 @@ $second-font: 'Playfair Display', serif
     word-spacing: 10px
     text-transform: uppercase 
     font-size: 12px 
-    
   hr
     margin-top: -15px
-    
 
 .calendar 
+  position: relative 
   margin-top: 50px
   margin-bottom: 95px
   padding-bottom: 10px
-  background-color: white 
-  position: relative 
-  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+  background-color: $blocks-bg
+  box-shadow: $blocks-shadow
   font-style: italic
   @media (max-width: 1240px)
     display: none 
-  &__header 
+  &__title 
     padding-left: 8%
-    line-height: 10px
+    margin-top: 20px
+    margin-bottom: 20px
     font-size: 20px 
     font-weight: 400 
   &__wrapper
@@ -953,7 +905,6 @@ $second-font: 'Playfair Display', serif
   outline: none
   cursor: pointer
   color: #555
-  font-family: "Roboto Condensed", sans-serif
   font-size: 14px 
 
 #btnPrev
@@ -965,7 +916,6 @@ $second-font: 'Playfair Display', serif
 //Calendar buttons end
 
 //Second column end
-
 
 
 //Third column start 
@@ -989,32 +939,31 @@ $second-font: 'Playfair Display', serif
 .popular 
   margin-top: 80px  
   padding-bottom: 130px 
-  background-image: url('../img/coffee.jpg')
-  background-size: 100% 100%
   padding-right: 5%
   padding-left: 5%
+  background-image: url('../img/coffee.jpg')
+  background-size: 100% 100%
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   @media (max-width: 425px)
     box-shadow: none 
     margin-top: 2px
     padding-top: 30px
     margin-bottom: 2px 
-  &__header 
+  &__title 
     margin-top: 17px
     margin-bottom: 32px
-    font-family: 'Playfair Display', serif
+    font-family: $second-font
     color: #921026
     font-size: 32px 
     font-weight: 900 
     @media (max-width: 1400px)
       text-align: center 
-  &__sub-header 
+  &__sub-title 
     margin: 0
     font-weight: bold 
     font-size: 22px 
     @media (max-width: 425px)
       padding-left: 5%
-
   &__text
     font-weight: 400 
     margin-top: 10px
@@ -1024,7 +973,6 @@ $second-font: 'Playfair Display', serif
     white-space: nowrap
     @media (max-width: 425px)
       padding-left: 5%
- 
   i
     padding-left: 2%
     font-size: 13px
@@ -1033,10 +981,10 @@ $second-font: 'Playfair Display', serif
       display: none 
   a
     display: inline-block
-    padding: 8px 12px 5px 12px  
-    border: 1px solid #999
+    padding: 8px 12px 5px 12px 
     text-transform: uppercase
     font-size: 12px
+    border: 1px solid #999
     @media (max-width: 1400px) and (min-width: 425px)
       display: block 
       margin-left: auto 
@@ -1045,41 +993,38 @@ $second-font: 'Playfair Display', serif
       
 
 .time
-  margin-top: 50px 
-  background-color: white
   width: 100% 
-  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+  margin-top: 50px 
+  box-shadow: $blocks-shadow
+  background-color: $blocks-bg
   @media (max-width: 600px)
     display: none 
-  &__header
+  &__title
     padding-left: 8%
     margin-top: 35px 
-    margin-bottom: 0px
+    margin-bottom: 0
     font-size: 20px 
     font-weight: 400 
     font-style: italic
     &-icons 
-      white-space: nowrap  
-      margin-right: 8%
       float: right
+      margin-right: 8%
+      white-space: nowrap  
       font-size: 16px
       i
         padding-right: 10px
-        color: #555
-        @media( max-width: 768px)
+        color: $second-color
+        @media (max-width: 768px)
           display: none 
       .fa-print
-        @media( max-width: 1024px)
-          display: none 
-      
-        
-        
-  &__sub-header               
+        @media (max-width: 1024px)
+          display: none    
+  &__sub-title               
     padding-left: 11%
     margin-top: 10px 
-    font-family: 'Playfair Display', serif
-    font-weight: 900
     font-size: 20px
+    font-family: $second-font
+    font-weight: 900
     color: #055555
   /* I just drew "lines" element like normal, and turned it on 270*,
     when you add your properties of width/height, paddings/margins to &-item 
@@ -1087,11 +1032,10 @@ $second-font: 'Playfair Display', serif
   &__lines               
     max-width: 50%
     margin: 0 auto 
-    white-space: nowrap     
-    transform: rotate(270deg)
     margin-bottom: -20px
     margin-top: 30px
-    
+    white-space: nowrap     
+    transform: rotate(270deg)
     @media (max-width: 900px)
       margin-top: 50px
     @media (max-width: 768px)
@@ -1105,20 +1049,15 @@ $second-font: 'Playfair Display', serif
         padding-top: 10%
         padding-bottom: 10%
   &__text 
-    margin: 13px auto
     width: 66.666%
     padding-bottom: 40px
-    
-
+    margin: 13px auto
 //Third column end
-
 
 //COLUMNS END
 
 
-
 //FORMS START 
-
 .forms 
   display: flex
   flex-wrap: wrap 
@@ -1146,7 +1085,7 @@ $second-font: 'Playfair Display', serif
   height: 40px 
   width: 100%
   outline-color: #979797
-  color: #555 
+  color: $second-color
   border: 1px solid #c2c2c2
   font-style: italic
   &::-webkit-input-placeholder  
@@ -1155,21 +1094,21 @@ $second-font: 'Playfair Display', serif
 //Login form start 
 .login 
   width: 43% 
-  background-color: #fff
-  align-self: flex-start   //To stop increasing of height because of flexbox and sign-in
-  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   max-width: 330px
+  background-color: $blocks-bg
+  align-self: flex-start   //To stop increasing of height because of flexbox and sign-in
+  box-shadow: $blocks-shadow
   @media (max-width: 600px)
     width: 80%
     margin: 0 auto 
-  &__header 
+  &__title 
     margin-top: 20px 
     margin-bottom: 0
     margin-left: 1%
     font-size: 20px
     font-weight: 400
     font-style: italic
-  &__sub-header 
+  &__sub-title 
     margin-top: 30px 
     margin-bottom: 20px 
     margin-left: 1% 
@@ -1184,11 +1123,11 @@ $second-font: 'Playfair Display', serif
     padding-left: 15px
     margin-bottom: 15px
   &__remember
-    font-size: .75rem /* 12/16 */
+    font-size: 12px
     font-weight: 400 
-    color: rgba(0, 0, 0, 0.5)  
-    cursor: pointer 
+    color: rgba(0, 0, 0, 0.5)  //designer's color...
     font-style: italic
+    cursor: pointer 
     &-checkbox
       outline: none 
     @media (max-width: 1451px)
@@ -1198,9 +1137,9 @@ $second-font: 'Playfair Display', serif
     float: right 
     margin-top: 4px
     padding-left: 20px 
-    font-size: .75rem /* 12/16 */
+    font-size: 12px
     font-weight: 400 
-    color: rgba(0, 0, 0, 0.5) 
+    color: rgba(0, 0, 0, 0.5)  //designer's color...
     font-style: italic
     @media (max-width: 1451px)
       float: none 
@@ -1218,9 +1157,9 @@ $second-font: 'Playfair Display', serif
     cursor: pointer
     border: 1px solid #c2c2c2
     outline-color: #979797
+    text-transform: uppercase 
     font-size: 12px
     line-height: 25px
-    text-transform: uppercase 
     color: #3f3f3f
   &__social
     margin-top: 4px 
@@ -1230,35 +1169,33 @@ $second-font: 'Playfair Display', serif
     &-google
       margin-left: 8px  //for unclickable area between icons 
   &__sign-up
-    padding-bottom: 25px
     text-align: center
-    color: #757575
+    padding-bottom: 25px
     padding-right: 20px
     padding-left: 20px
+    color: #757575
     font-style: italic
   hr 
     width: 100%
-
 //Login form end
-
 
 //Sign-up start
 .sign 
-  background-color: #fff 
   width: 43%
-  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
   max-width: 330px
+  background-color: $blocks-bg
+  box-shadow: $blocks-shadow
   @media (max-width: 600px)
     width: 80%
     margin: 50px auto 
-  &__header 
+  &__title 
     margin-top: 20px 
     margin-bottom: 0
     margin-left: 1%
     font-size: 20px
     font-weight: 400
     font-style: italic
-  &__sub-header 
+  &__sub-title 
     margin-top: 30px 
     margin-bottom: 20px 
     margin-left: 1% 
@@ -1287,30 +1224,26 @@ $second-font: 'Playfair Display', serif
     &-google
       margin-left: 8px  //for unclickable area between icons 
   &__terms 
+    width: 85%
+    margin: 0 auto 
     padding-bottom: 25px
     text-align: center
     color: #757575
     font-size: 14px 
-    width: 85%
-    margin: 0 auto 
     font-style: italic
     &-link
       color: #002dd6
       text-decoration: underline
   hr 
     width: 100%
-
 //Sign-up end
 
 //FORMS END
 
 
-
 //COMMENTS START 
 .comments
   width: 58.3%
-  padding-right: 15px
-  padding-left: 15px
   margin-top: 120px
   margin-left: auto 
   margin-right: auto 
@@ -1326,11 +1259,9 @@ $second-font: 'Playfair Display', serif
   padding-left: 5%
   padding-right: 5% 
   padding-bottom: 31px
-  margin-left: auto 
-  margin-right: auto 
   margin-bottom: 45px 
-  background: #fff
-  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+  background: $blocks-bg
+  box-shadow: $blocks-shadow
   &__text
     padding-top: 25px 
     margin-bottom: 17px 
@@ -1366,7 +1297,7 @@ $second-font: 'Playfair Display', serif
       margin-bottom: 15px
       border: 1px solid #c2c2c2
       outline-color: #979797
-      color: #555 
+      color: $second-color
     &-button 
       align-self: center 
       width: 80px
@@ -1374,28 +1305,25 @@ $second-font: 'Playfair Display', serif
       padding-top: 4px
       margin-left: 1%
       margin-right: 5px 
-      border: 1px solid #c2c2c2
-      background: #383737
-      outline-color: #979797
       color: #fff
       text-transform: uppercase 
       font-weight: 300 
-      font-family: 'Josefin Sans', sans-serif
+      font-family: $main-font
+      border: 1px solid #c2c2c2
+      background: #383737
+      outline-color: #979797
       cursor: pointer
 //Leave a comment end
 
 //Board with comments start 
 .board
-  width: 100% 
   padding-left: 5%
   padding-right: 5%
   padding-bottom: 45px
-  margin-left: auto
-  margin-right: auto
   margin-top: 45px
   margin-bottom: 45px
-  background: white
-  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+  background: $blocks-bg
+  box-shadow: $blocks-shadow
   &__title 
     padding-top: 20px
     margin-bottom: 0
@@ -1404,11 +1332,6 @@ $second-font: 'Playfair Display', serif
     font-style: italic
   hr 
     width: 100%
-    
-%btn-reset
-  border: none
-  background: none
-  cursor: pointer
 
 //top comment start 
 .comment 
@@ -1423,21 +1346,19 @@ $second-font: 'Playfair Display', serif
     display: flex 
     flex-direction: column
     padding-left: 2.5%
-    
     &-top 
       font-weight: 400 
-      
     &-name 
       padding-top: 3px
       padding-bottom: 5px
       font-weight: 600 
-      white-space: nowrap //for fixing a bug
+      white-space: nowrap //for fixing a bug during resize a window
       @media (max-width: 600px)
         white-space: normal 
     &-reply
       @extend %btn-reset
       padding-left: 5px 
-      font-family: 'Josefin Sans', sans-serif
+      font-family: $main-font
       color: #629494
       text-decoration: underline 
       font-size: 12px 
@@ -1446,7 +1367,7 @@ $second-font: 'Playfair Display', serif
       @extend %btn-reset
       align-self: flex-start
       padding-left: 2px 
-      font-family: 'Josefin Sans', sans-serif
+      font-family: $main-font
       color: #629494
       font-size: 12px 
       font-weight: 600 
@@ -1455,7 +1376,6 @@ $second-font: 'Playfair Display', serif
       padding-bottom: 23px
   &__photo 
     margin-top: 12px 
-    width: 100%
   &__likes
     position: absolute 
     top: 37px
@@ -1488,7 +1408,6 @@ $second-font: 'Playfair Display', serif
   width: 88.5%
   @media (max-width: 768px)
     width: 84%
-
   &__face 
     @extend .comment__face 
     margin-top: 20px 
@@ -1512,7 +1431,7 @@ $second-font: 'Playfair Display', serif
     margin-left: 50%
     outline: none
     color: #757575
-    font-family: 'Josefin Sans', sans-serif
+    font-family: $main-font
     font-weight: 300
     font-size: 16px
     white-space: nowrap
@@ -1534,13 +1453,12 @@ $second-font: 'Playfair Display', serif
         color: #629494
     i 
       padding-left: 3px 
-  hr 
+  hr                  //its hr which above this block
     position: absolute
     width: 100%
     margin-top: 0 
 //sub comment end 
     
-
 //next comment start 
 .next-comment
   display: flex 
@@ -1586,8 +1504,8 @@ $second-font: 'Playfair Display', serif
 //Switch start
 .switch 
   margin-bottom: 155px
-  background-color: #fff 
-  box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+  background-color: $blocks-bg
+  box-shadow: $blocks-shadow
   &__numbers
     display: flex 
     justify-content: space-between
@@ -1615,13 +1533,13 @@ $second-font: 'Playfair Display', serif
     
 //COMMENTS END 
 
- //FOOTER START
+
+//FOOTER START
 .footer
   position: relative
   display: flex 
   background-color: #2f2f2f
   box-shadow: 1px 3px 7px rgba(11, 12, 12, 0.14)
-  
   &__logo
     display: block
     height: 36px
@@ -1632,18 +1550,17 @@ $second-font: 'Playfair Display', serif
       position: absolute 
       right: 15%
       top: -55px
-
   &__nav
     align-self: center 
     width: 60%
     margin-left: 5%
     @media (max-width: 1240px)
       margin-left: 0
-    &-items
+    &-menu
       display: flex 
       justify-content: space-around
       list-style: none
-      color: #555
+      color: $second-color
       text-transform: uppercase
       font-size: 12px
       @media (max-width: 768px)
@@ -1652,7 +1569,6 @@ $second-font: 'Playfair Display', serif
       @media (max-width: 425px)
         align-items: flex-start 
         color: rgba(254, 254, 254, 0.5)
-
     &-item 
       @media (max-width: 768px)
         margin-top: 15px 
@@ -1674,9 +1590,7 @@ $second-font: 'Playfair Display', serif
       width: 50%
     p   
       padding-top: 27px
-
   &__social
-    display: inline-block 
     margin-top: 10px 
     float: right
     white-space: nowrap
@@ -1684,3 +1598,4 @@ $second-font: 'Playfair Display', serif
       float: left
     i 
       margin-right: 10px
+//FOOTER END, Dobby is free
