@@ -23,11 +23,11 @@ function openBurger() {
                   z.className = "nav__input"; //First bug in my life was here, it's so cute^^
               }
               
-              var a = document.getElementById("js-nav__menu-icon");
-              if (a.className === "nav__menu-icon") {
-                  a.className += " nav__menu-icon--open";
+              var a = document.getElementById("js-nav__menu-button");
+              if (a.className === "nav__menu-button") {
+                  a.className += " nav__menu-button--open";
               } 
               else {
-                  a.className = "nav__menu-icon";
+                  a.className = "nav__menu-button";
               }
           }
