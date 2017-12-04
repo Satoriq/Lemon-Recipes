@@ -82,7 +82,7 @@ hr {
   color: #bd081b;
 }
 
-.HEADER__logo {
+.header__logo {
   display: block;
   margin-top: 249px;
   margin-bottom: 122px;
@@ -93,7 +93,7 @@ hr {
 }
 
 @media (max-width: 425px) {
-  .HEADER__logo {
+  .header__logo {
     display: none;
   }
 }
@@ -817,7 +817,7 @@ hr {
 
 @media (max-width: 1024px) {
   .feedbacks__404 {
-    background-position-y: 90px;
+    background-position-y: center;
     -webkit-background-size: 100% 60%;
             background-size: 100% 60%;
     background-repeat: no-repeat;
@@ -2519,8 +2519,6 @@ hr {
 
 .footer__logo {
   display: block;
-  height: 36px;
-  width: 87px;
   margin: 70px auto;
   margin-left: 10%;
 }
