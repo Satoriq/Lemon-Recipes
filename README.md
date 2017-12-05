@@ -4,17 +4,17 @@
 
 ## Technologies Used
 
-**HTML/CSS(Sass)**
+* **HTML/CSS(Sass)**
 
-**Vanilla JS** (sliders, tabs, hamburger for mobile version)  
+* **Vanilla JS** (sliders, tabs, hamburger for mobile version)  
 
-**Gulp** (sass to css, browserSync, autoprefixer)   
+* **Gulp** (sass to css, browserSync, autoprefixer)   
 
-**BEM** (naming convention)
+* **BEM** (naming convention)
 
-**Responsive design** (looks good with any resolution, not only "main")  
+* **Responsive design** (looks good with any resolution, not only "main")  
 
-**VSCode and Chrome Devtool**
+* **VSCode and Chrome Devtool**
 
 
 
