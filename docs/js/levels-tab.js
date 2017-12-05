@@ -13,6 +13,5 @@ function openRecipe(evt, difficulty) {
          
          document.getElementById(difficulty).style.display = "block";
          evt.currentTarget.className += " level-recipes__button--picked";  
-         console.log(difficulty);
         }
         document.getElementById("js-default-open").click();

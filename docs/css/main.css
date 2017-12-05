@@ -1415,7 +1415,7 @@ hr {
 }
 
 .level-recipes__img {
-  padding-left: 20px;
+  margin-left: 20px;
   -webkit-align-self: flex-start;
       -ms-flex-item-align: start;
           align-self: flex-start;

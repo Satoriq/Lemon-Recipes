@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Description of Lemon less than 150 characters">
   <meta name="theme-color" content="#ffffff" />
-  
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' fonts.googleapis.com fonts.gstatic.com use.fontawesome.com; style-src 'self' fonts.googleapis.com fonts.gstatic.com use.fontawesome.com; script-src 'self' use.fontawesome.com 'unsafe-inline';"> -->
   <title>LEMON Recipes</title>
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,600,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900" rel="stylesheet">
-  <script src="https://use.fontawesome.com/879e105ff2.js"></script>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <script async src="https://use.fontawesome.com/879e105ff2.js"></script>
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
   <header role="banner">
@@ -23,41 +23,41 @@
 
   <!-- NAV START -->
   <nav class="nav" role="navigation">
-      <a class="nav__logo" id="js-nav__logo" href="https://satoriq.github.io/Lemon-Recipes/"><img src="img/logo--small.png" height="36" width="87" alt="Logo"></a>
+      <a class="nav__logo" id="js-nav__logo" href="#"><img src="img/logo--small.png" height="36" width="87" alt="Logo"></a>
         <ul class="nav__menu" id="js-nav__menu">
-          <li class="nav__menu-item"><a href="https://satoriq.github.io/Lemon-Recipes/">Home</a></li>
-          <li class="nav__menu-item"><a href="https://satoriq.github.io/Lemon-Recipes/">Recipes</a>
+          <li class="nav__menu-item"><a href="#">Home</a></li>
+          <li class="nav__menu-item"><a href="#">Recipes</a>
             <div class="nav__dropdown">
-                <a href=""><p>Recommended</p></a>
-                <a href=""><p>Popular</p></a>
-                <a href=""><p>Quick & easy</p></a>
-                <a href=""><p>Healthy</p></a>
-                <a href=""><p>Newest</p></a>
+                <a href="#"><p>Recommended</p></a>
+                <a href="#"><p>Popular</p></a>
+                <a href="#"><p>Quick & easy</p></a>
+                <a href="#"><p>Healthy</p></a>
+                <a href="#"><p>Newest</p></a>
             </div>
           </li>
-          <li class="nav__menu-item"><a href="https://satoriq.github.io/Lemon-Recipes/">Photo galleries</a>
+          <li class="nav__menu-item"><a href="#">Photo galleries</a>
             <div class="nav__dropdown">
-                <a href=""><p>Recommended</p></a>
-                <a href=""><p>Popular</p></a>
-                <a href=""><p>Quick & easy</p></a>
-                <a href=""><p>Healthy</p></a>
-                <a href=""><p>Newest</p></a>
+                <a href="#"><p>Recommended</p></a>
+                <a href="#"><p>Popular</p></a>
+                <a href="#"><p>Quick & easy</p></a>
+                <a href="#"><p>Healthy</p></a>
+                <a href="#"><p>Newest</p></a>
             </div>
           </li>
-          <li class="nav__menu-item"><a href="https://satoriq.github.io/Lemon-Recipes/">Videos</a>
+          <li class="nav__menu-item"><a href="#">Videos</a>
             <div class="nav__dropdown">
-                <a href=""><p>Recommended</p></a>
-                <a href=""><p>Popular</p></a>
-                <a href=""><p>Quick & easy</p></a>
-                <a href=""><p>Healthy</p></a>
-                <a href=""><p>Newest</p></a>
+                <a href="#"><p>Recommended</p></a>
+                <a href="#"><p>Popular</p></a>
+                <a href="#"><p>Quick & easy</p></a>
+                <a href="#"><p>Healthy</p></a>
+                <a href="#"><p>Newest</p></a>
             </div>
           </li>
-          <li class="nav__menu-item"><a href="https://satoriq.github.io/Lemon-Recipes/">All categories</a>
+          <li class="nav__menu-item"><a href="#">All categories</a>
             <div class="nav__dropdown">
-                <a href=""><p>Recipes</p></a>
-                <a href=""><p>Photo Galleries</p></a>
-                <a href=""><p>Videos</p></a>
+                <a href="#"><p>Recipes</p></a>
+                <a href="#"><p>Photo Galleries</p></a>
+                <a href="#"><p>Videos</p></a>
             </div>
           </li>
           <li>
@@ -76,7 +76,7 @@
     <picture>
       <source media="(max-width: 425px)"
         srcset="img/main-recipe-mobile.jpg">
-      <img class="main-recipe__mobile" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt=" ">  
+      <img class="main-recipe__mobile" src="img/nothing.png" alt=" ">  
       <!-- scr for validation, alt="hold alt + 255", this all for download picture only for mobile -->
     </picture>
     <button class="main-recipe__mobile-get">Get it recipe</button>
@@ -95,7 +95,7 @@
         <h2>Bananas Foster Ice Cream Cake</h2>
         <p>If you're looking for decadence, look no further — you've found the Holy Grail of desserts. Honestly, this cake makes
           us wonder why Bananas Foster hasn't always been served on top of ice cream cake.</p>
-        <a href="https://satoriq.github.io/Lemon-Recipes/">Get Recipe</a>
+        <a href="#">Get Recipe</a>
       </div>
 
       <div class="main-recipe__switcher">
@@ -120,7 +120,7 @@
           <img src="img/logo.png" class="main-recipe__left-logo" alt="">
           <h2>Next recipes</h2>
           <p>Next info next info  next info next info next info next info next info next info next info next info next info next info next info next info next info  next info next info next info next info next info next info next info</p>
-          <a href="https://satoriq.github.io/Lemon-Recipes/">Get Recipe</a>
+          <a href="#">Get Recipe</a>
         </div>
 
         <div class="main-recipe__switcher">
@@ -145,7 +145,7 @@
           <img  src="img/logo.png" class="main-recipe__left-logo" alt="Main recipe logo">
           <h2>Next recipes</h2>
           <p>Next info next info  next info next info next info next info next info next info next info next info next info next info next info next info next info  next info next info next info next info next info next info next info</p>
-          <a href="https://satoriq.github.io/Lemon-Recipes/">Get Recipe</a>
+          <a href="#">Get Recipe</a>
         </div>
 
         <div class="main-recipe__switcher">
@@ -170,7 +170,7 @@
           <img  src="img/logo.png" class="main-recipe__left-logo"  alt="Main recipe logo">
           <h2>Next recipes</h2>
           <p>Next info next info  next info next info next info next info next info next info next info next info next info next info next info next info next info  next info next info next info next info next info next info next info</p>
-          <a href="https://satoriq.github.io/Lemon-Recipes/">Get Recipe</a>
+          <a href="#">Get Recipe</a>
         </div>
 
         <div class="main-recipe__switcher">
@@ -195,7 +195,7 @@
           <img  src="img/logo.png" class="main-recipe__left-logo"  alt="Main recipe logo">
           <h2>Next recipes</h2>
           <p>Next info next info  next info next info next info next info next info next info next info next info next info next info next info next info next info  next info next info next info next info next info next info next info</p>
-          <a href="https://satoriq.github.io/Lemon-Recipes/">Get Recipe</a>
+          <a href="#">Get Recipe</a>
         </div>
 
         <div class="main-recipe__switcher">
@@ -220,7 +220,7 @@
           <img  src="img/logo.png" class="main-recipe__left-logo"  alt="Main recipe logo">
           <h2>Next recipes</h2>
           <p>Next info next info  next info next info next info next info next info next info next info next info next info next info next info next info next info  next info next info next info next info next info next info next info</p>
-          <a href="https://satoriq.github.io/Lemon-Recipes/">Get Recipe</a>
+          <a href="#">Get Recipe</a>
         </div>
 
         <div class="main-recipe__switcher">
@@ -356,7 +356,7 @@
         <p class="feedbacks__404-text">Sorry</p>
         <p class="feedbacks__404-subtext">We couldn't
           <br> find the page</p>
-        <a href="https://satoriq.github.io/Lemon-Recipes/" class="feedbacks__404-back">
+        <a href="#" class="feedbacks__404-back">
           <div>Back</div>
         </a>
       </div>
@@ -371,16 +371,16 @@
             <br>
             <span class="feedbacks__author-location">United States</span>
             <br>
-            <a href="https://satoriq.github.io/Lemon-Recipes/">
+            <a href="#">
               <i class="fa fa-google-plus" aria-hidden="true"></i>
             </a>
-            <a href="https://satoriq.github.io/Lemon-Recipes/">
+            <a href="#">
               <i class="fa fa-twitter" aria-hidden="true"></i>
             </a>
-            <a href="https://satoriq.github.io/Lemon-Recipes/">
+            <a href="#">
               <i class="fa fa-facebook" aria-hidden="true"></i>
             </a>
-            <a href="https://satoriq.github.io/Lemon-Recipes/">
+            <a href="#">
               <i class="fa fa-pinterest" aria-hidden="true"></i>
             </a>
             <hr class="feedbacks__author-hr">
@@ -438,16 +438,16 @@
       <div class="target">
         <p class="target__title">Target
           <span class="target__title-icons">
-            <a href="https://satoriq.github.io/Lemon-Recipes/">
+            <a href="#">
               <i class="fa fa-print" aria-hidden="true"></i>
             </a>
-            <a href="https://satoriq.github.io/Lemon-Recipes/">
+            <a href="#">
               <i class="fa fa-envelope-o" aria-hidden="true"></i>
             </a>
-            <a href="https://satoriq.github.io/Lemon-Recipes/">
+            <a href="#">
               <i class="fa fa-facebook" aria-hidden="true"></i>
             </a>
-            <a href="https://satoriq.github.io/Lemon-Recipes/">
+            <a href="#">
               <i class="fa fa-pinterest" aria-hidden="true"></i>
             </a>
           </span>
@@ -494,16 +494,16 @@
       <div class="level-recipes">
         <p class="level-recipes__title"> Recipe
           <span class="level-recipes__title-icons">
-            <a href="https://satoriq.github.io/Lemon-Recipes/">
+            <a href="#">
               <i class="fa fa-print" aria-hidden="true"></i>
             </a>
-            <a href="https://satoriq.github.io/Lemon-Recipes/">
+            <a href="#">
               <i class="fa fa-envelope-o" aria-hidden="true"></i>
             </a>
-            <a href="https://satoriq.github.io/Lemon-Recipes/">
+            <a href="#">
               <i class="fa fa-facebook" aria-hidden="true"></i>
             </a>
-            <a href="https://satoriq.github.io/Lemon-Recipes/">
+            <a href="#">
               <i class="fa fa-pinterest" aria-hidden="true"></i>
             </a>
           </span>
@@ -518,8 +518,8 @@
         <div id="js-easy" class="level-recipes__content">  
 
           <div class="level-recipes__recipe">
-              <img class="level-recipes__img" src="img/easy-recipes-top.jpg" height="45" width="49" alt="recipe picture">
-            <a class="level-recipes__text" href="https://satoriq.github.io/Lemon-Recipes/">
+              <img class="level-recipes__img" src="img/easy-recipes-top.jpg"  alt="recipe picture">
+            <a class="level-recipes__text" href="#">
               <div>
                 <p class="level-recipes__text-title"><span class="level-recipes__text-by">by</span> Smuckersreg Toppings
                 </p>
@@ -530,8 +530,8 @@
           </div>
           
           <div class="level-recipes__recipe">
-            <img class="level-recipes__img" src="img/easy-recipes-center.jpg" height="45" width="49" alt="recipe picture">
-            <a class="level-recipes__text" href="https://satoriq.github.io/Lemon-Recipes/">
+            <img class="level-recipes__img" src="img/easy-recipes-center.jpg" alt="recipe picture">
+            <a class="level-recipes__text" href="#">
             <div>
               <p class="level-recipes__text-title"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
               </p>
@@ -542,8 +542,8 @@
           </div>
           
           <div class="level-recipes__recipe">
-            <img class="level-recipes__img" src="img/easy-recipes-bottom.jpg" height="45" width="49" alt="recipe picture">
-            <a class="level-recipes__text" href="https://satoriq.github.io/Lemon-Recipes/">
+            <img class="level-recipes__img" src="img/easy-recipes-bottom.jpg" alt="recipe picture">
+            <a class="level-recipes__text" href="#">
             <div>
               <p class="level-recipes__text-title"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
               </p>
@@ -559,7 +559,7 @@
 
             <div class="level-recipes__recipe level-recipes__recipe--first">
                 <img class="level-recipes__img" src="img/easy-recipes-center.jpg" height="45" width="49" alt="recipe picture">
-                <a class="level-recipes__text" href="https://satoriq.github.io/Lemon-Recipes/">
+                <a class="level-recipes__text" href="#">
                 <div>
                   <p class="level-recipes__text-title"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
                   </p>
@@ -571,7 +571,7 @@
 
             <div class="level-recipes__recipe">
                 <img class="level-recipes__img" src="img/easy-recipes-top.jpg" height="45" width="49" alt="recipe picture">
-              <a class="level-recipes__text" href="https://satoriq.github.io/Lemon-Recipes/">
+              <a class="level-recipes__text" href="#">
                 <div>
                   <p class="level-recipes__text-title"><span class="level-recipes__text-by">by</span> Smuckersreg Toppings
                   </p>
@@ -583,7 +583,7 @@
             
             <div class="level-recipes__recipe">
               <img class="level-recipes__img" src="img/easy-recipes-bottom.jpg" height="45" width="49" alt="recipe picture">
-              <a class="level-recipes__text" href="https://satoriq.github.io/Lemon-Recipes/">
+              <a class="level-recipes__text" href="#">
               <div>
                 <p class="level-recipes__text-title"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
                 </p>
@@ -598,7 +598,7 @@
         <div id="js-long" class="level-recipes__content">
             <div class="level-recipes__recipe level-recipes__recipe--first">
                 <img class="level-recipes__img" src="img/easy-recipes-bottom.jpg" height="45" width="49" alt="recipe picture">
-                <a class="level-recipes__text" href="https://satoriq.github.io/Lemon-Recipes/">
+                <a class="level-recipes__text" href="#">
                 <div>
                   <p class="level-recipes__text-title"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
                   </p>
@@ -610,7 +610,7 @@
             
             <div class="level-recipes__recipe">
                 <img class="level-recipes__img" src="img/easy-recipes-center.jpg" height="45" width="49" alt="recipe picture">
-                <a class="level-recipes__text" href="https://satoriq.github.io/Lemon-Recipes/">
+                <a class="level-recipes__text" href="#">
                 <div>
                   <p class="level-recipes__text-title"><span class="level-recipes__text-by" >by</span> Smuckersreg Toppings
                   </p>
@@ -622,7 +622,7 @@
 
             <div class="level-recipes__recipe level-recipes__recipe--first">
                 <img class="level-recipes__img" src="img/easy-recipes-top.jpg" height="45" width="49" alt="recipe picture">
-              <a class="level-recipes__text" href="https://satoriq.github.io/Lemon-Recipes/">
+              <a class="level-recipes__text" href="#">
                 <div>
                   <p class="level-recipes__text-title"><span class="level-recipes__text-by">by</span> Smuckersreg Toppings
                   </p>
@@ -633,7 +633,7 @@
             </div>
         </div>
         <!-- Long recipes end -->
-        <a class="level-recipes__view" href="https://satoriq.github.io/Lemon-Recipes/">View more</a>
+        <a class="level-recipes__view" href="#">View more</a>
       </div>
 
       <div class="tags">
@@ -662,7 +662,7 @@
           <p class="popular__text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia 
             fuga corporis non delectus animi sapiente, exercitat </p>
           <div class="popular__info">
-            <a href="https://satoriq.github.io/Lemon-Recipes/">Get Recipe</a>
+            <a href="#">Get Recipe</a>
             <span>
                 <i class="fa fa-clock-o" aria-hidden="true">27 mins </i>
                 <i class="fa fa-comment-o" aria-hidden="true">75</i>
@@ -674,16 +674,16 @@
       <div class="time">
         <p class="time__title">Timeline 
           <span class="time__title-icons">
-            <a href="https://satoriq.github.io/Lemon-Recipes/">
+            <a href="#">
               <i class="fa fa-print" aria-hidden="true"></i>
             </a>
-            <a href="https://satoriq.github.io/Lemon-Recipes/">
+            <a href="#">
               <i class="fa fa-envelope-o" aria-hidden="true"></i>
             </a>
-            <a href="https://satoriq.github.io/Lemon-Recipes/">
+            <a href="#">
               <i class="fa fa-facebook" aria-hidden="true"></i>
             </a>
-            <a href="https://satoriq.github.io/Lemon-Recipes/">
+            <a href="#">
               <i class="fa fa-pinterest" aria-hidden="true"></i>
             </a>
           </span>
@@ -731,20 +731,20 @@
         <input class="login__password-input" type="password" placeholder="password">
         <label class="login__remember"><input class="login__remember-checkbox" type="checkbox">
          Remember me </label>
-        <div class="login__forgot"><a href="https://satoriq.github.io/Lemon-Recipes/">Forgot your password?</a></div>
+        <div class="login__forgot"><a href="#">Forgot your password?</a></div>
         <button class="login__button">Login</button><br>
       </form>
 
       <div class="login__social">
-        <a href="https://satoriq.github.io/Lemon-Recipes/">
+        <a href="#">
           <i class="fa fa-facebook" aria-hidden="true"></i>
         </a>
-        <a class="login__social-google" href="https://satoriq.github.io/Lemon-Recipes/">
+        <a class="login__social-google" href="#">
           <i class="fa fa-google-plus" aria-hidden="true"></i>
         </a>
       </div><br>
       <div class="login__sign-up">
-        <a href="https://satoriq.github.io/Lemon-Recipes/">Don't have an account? Sing up</a>
+        <a href="#">Don't have an account? Sing up</a>
       </div>
     </div>
     <!-- Login end -->
@@ -763,15 +763,15 @@
         </form>
     
         <div class="sign__social">
-          <a href="https://satoriq.github.io/Lemon-Recipes/">
+          <a href="#">
             <i class="fa fa-facebook" aria-hidden="true"></i>
           </a>
-          <a class="sign__social-google" href="https://satoriq.github.io/Lemon-Recipes/">
+          <a class="sign__social-google" href="#">
             <i class="fa fa-google-plus" aria-hidden="true"></i>
           </a>
         </div><br>
         <div class="sign__terms">
-          <span>By joining LEMON, you agree to our <br> <a href="https://satoriq.github.io/Lemon-Recipes/" class="sign__terms-link" >Term of Service</a></span>
+          <span>By joining LEMON, you agree to our <br> <a href="#" class="sign__terms-link" >Term of Service</a></span>
         </div>
     </div>
     <!-- Sign-up end -->
@@ -882,27 +882,27 @@
         
         <nav class="footer__nav" role="navigation">
           <ul class="footer__nav-menu">
-            <li class="footer__nav-item"><a href="https://satoriq.github.io/Lemon-Recipes/">Home</a></li>      
-            <li class="footer__nav-item"><a href="https://satoriq.github.io/Lemon-Recipes/">Recipes</a></li>
-            <li class="footer__nav-item"><a href="https://satoriq.github.io/Lemon-Recipes/">Photo Galleries</a></li>
-            <li class="footer__nav-item"><a href="https://satoriq.github.io/Lemon-Recipes/">Videos</a></li>
-            <li class="footer__nav-item"><a href="https://satoriq.github.io/Lemon-Recipes/">All categories</a></li>
+            <li class="footer__nav-item"><a href="#">Home</a></li>      
+            <li class="footer__nav-item"><a href="#">Recipes</a></li>
+            <li class="footer__nav-item"><a href="#">Photo Galleries</a></li>
+            <li class="footer__nav-item"><a href="#">Videos</a></li>
+            <li class="footer__nav-item"><a href="#">All categories</a></li>
           </ul>
         </nav>
 
         <div class="footer__copyrighted">
           <div>2016-2017 LEMON all rights reserved<br> 
             <span class="footer__social">
-              <a href="https://satoriq.github.io/Lemon-Recipes/">
+              <a href="#">
                 <i class="fa fa-google-plus" aria-hidden="true"></i>
               </a>
-              <a href="https://satoriq.github.io/Lemon-Recipes/">
+              <a href="#">
                 <i class="fa fa-twitter" aria-hidden="true"></i>
               </a>
-              <a href="https://satoriq.github.io/Lemon-Recipes/">
+              <a href="#">
                 <i class="fa fa-facebook" aria-hidden="true"></i>
               </a>
-              <a href="https://satoriq.github.io/Lemon-Recipes/">
+              <a href="#">
                 <i class="fa fa-pinterest" aria-hidden="true"></i>
               </a>
             </span>
@@ -912,7 +912,17 @@
   </footer>
   <!-- FOOTER END  -->
 
-  <!-- scripts are small, so i dont see reason to min they, also we have http2, so concatenation is useless too -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110728750-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-110728750-1');
+  </script>
+
+  <!-- We have http2, so concatenation is useless here -->
   <script src="js/small-recipe-slider.js"></script>
   <script src="js/main-recipe-slider.js"></script>
   <script src="js/levels-tab.js"></script>
