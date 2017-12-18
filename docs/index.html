@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Description of Lemon less than 150 characters">
   <meta name="theme-color" content="#ffffff" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://www.google-analytics.com; font-src 'self' fonts.googleapis.com fonts.gstatic.com use.fontawesome.com; style-src 'self' fonts.googleapis.com fonts.gstatic.com use.fontawesome.com; script-src 'self' use.fontawesome.com https://www.googletagmanager.com https://www.google-analytics.com 'unsafe-inline';">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' fonts.googleapis.com fonts.gstatic.com use.fontawesome.com; style-src 'self' fonts.googleapis.com fonts.gstatic.com use.fontawesome.com; script-src 'self' use.fontawesome.com 'unsafe-inline';"> -->
   <title>LEMON Recipes</title>
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/main.min.css">
 </head>
+
 <body>
   <header role="banner">
     <h1><img class="header__logo" src="img/logo.png" alt="Logo"></h1>
@@ -689,7 +690,7 @@
           </span>
         </p>
         <hr class="time__title-hr">
-        <p class="time__sub-title">Time line</p>
+        <p class="time__sub-title">Timeline</p>
         <div class="time__lines">
           <div class="time__lines-item">
             <span>EASY</span>
@@ -911,16 +912,6 @@
     </div>
   </footer>
   <!-- FOOTER END  -->
-
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110728750-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-110728750-1');
-  </script>
 
   <!-- We have http2, so concatenation is useless here -->
   <script src="js/small-recipe-slider.js"></script>
